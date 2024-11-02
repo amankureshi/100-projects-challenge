@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function filterIcons(searchQuery) {
     const nothingfound = document.getElementById("nothing-alert");
-    console.log(nothingfound);
     let number = 0;
     cards.forEach(function (card) {
       const name = card.querySelector("h2").textContent.toLowerCase();
