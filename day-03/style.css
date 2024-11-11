@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#btn {
+    background-color: cornflowerblue;
+    color: white;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 2px solid transparent;
+    border-radius: 5px;
+}
+
+#container {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
