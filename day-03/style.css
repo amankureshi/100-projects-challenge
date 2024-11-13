@@ -86,3 +86,53 @@ i {
         opacity: 1;
     }
 }
+
+.toast,
+.succuess,
+.warning {
+    position: relative;
+    overflow: hidden;
+}
+
+.toast::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background-color: #f97373;
+    animation: progress 3s linear forwards;
+}
+
+.succuess::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background-color: #1e311fd6;
+    animation: progress 3s linear forwards;
+}
+
+.warning::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background-color: #803b1dcc;
+    animation: progress 3s linear forwards;
+}
+
+@keyframes progress {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0;
+    }
+}
