@@ -1,4 +1,4 @@
-const text = "Hyeello Duniya";
+const text = "Be yourself; everyone else is already takenn";
 let index = 0;
 
 function writeText() {
@@ -8,4 +8,4 @@ function writeText() {
     index = 0;
   }
 }
-setInterval(writeText, 500);
+setInterval(writeText, 200);
