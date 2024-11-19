@@ -9,13 +9,15 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background-color: black;
 }
 
 .heart {
     position: fixed;
     top: -1vh;
     transform: translateY(0);
-    animation: fall 3s linear;
+    animation: fall 3s linear forwards;
+    font-size: 2rem;
 }
 
 @keyframes fall {
