@@ -54,6 +54,7 @@ img {
     position: relative;
     display: grid;
     gap: 1rem;
+    margin: 10px;
 }
 
 .popup p {
