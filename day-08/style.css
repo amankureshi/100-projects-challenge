@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+    background-color: pink;
+    color: black;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: 0.3s ease-in-out;
+}
+
+h1 {
+    text-transform: capitalize;
+}
+
+p {
+    padding: 1% 10rem;
+
+}
+
+body.dark {
+    background-color: #1f1f1f;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+
+
+.toggle-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+input {
+    visibility: hidden;
+}
+
+.checkbox-label {
+    background-color: #111;
+    padding: 5px;
+    border-radius: 50px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 56px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.checkbox-label .ball {
+    background-color: #fff;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 4px;
+    top: 5px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.checkbox-label .ball {
+    transform: translateX(36px);
+}
+
+.checkbox-label .fa-moon {
+    color: #f5c518;
+    font-size: 1rem;
+    visibility: visible;
+}
+
+.checkbox-label .fa-sun {
+    color: orange;
+    font-size: 1rem;
+
+}
