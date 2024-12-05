@@ -15,7 +15,7 @@ body {
     min-height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .6)), url(https://images.pexels.com/photos/11069123/pexels-photo-11069123.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
 }
 
@@ -40,9 +40,6 @@ button {
     outline: 0;
     border: 0;
     cursor: pointer;
-    will-change: box-shadow,
-        transform;
-    /* background: #973F49; */
     background: linear-gradient(110.1deg, rgb(241, 115, 30) 18.9%, rgb(231, 29, 54) 90.7%);
     padding: 0 32px;
     border-radius: 6px;
