@@ -5,10 +5,66 @@
 }
 
 body {
-    background-color: #242424;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    color: #fff;
+    background: url(https://img.freepik.com/free-photo/gerbera-flower-with-petals-white-table_23-2148069015.jpg?t=st=1733551927~exp=1733555527~hmac=4d9e3502458450d0ff0e09d388a2cf4fdee354b1c088ae8e6213ab61bb13d9ee&w=900);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.container {
+    position: relative;
+}
+
+.clock {
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock span {
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 9px;
+    text-align: center;
+}
+
+.clock span b {
+    transform: rotate(calc(-30deg *var(--i)));
+    display: inline-block;
+    font-size: 1.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    background-color: #101010;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.col i {
+    position: absolute;
+    background-color: var(--clr);
+    width: 4px;
+    height: var(--h);
+    border-radius: 10px;
+}
+
+.col {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
