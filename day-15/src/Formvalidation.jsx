@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./App.css";
 
 const FormValidation = () => {
   const [formData, setFormData] = useState({
@@ -42,6 +43,7 @@ const FormValidation = () => {
 
   return (
     <form onSubmit={handleSubmit}>
+      <h1>Join Us</h1>
       <div>
         <label>Username</label>
         <input
@@ -58,7 +60,7 @@ const FormValidation = () => {
         <input
           type="email"
           name="email"
-          placeholder="abcd123@gmail.com"
+          placeholder="example@gmail.com"
           autoComplete="off"
           onChange={handleChange}
         />
@@ -69,7 +71,7 @@ const FormValidation = () => {
         <input
           type="password"
           name="password"
-          placeholder="*******"
+          placeholder="Enter your password"
           onChange={handleChange}
         />
         {errors.password && <span>{errors.password}</span>}
@@ -79,7 +81,7 @@ const FormValidation = () => {
         <input
           type="password"
           name="confirmPassword"
-          placeholder="******"
+          placeholder="confirm password"
           onChange={handleChange}
         />
         {errors.confirmPassword && <span>{errors.confirmPassword}</span>}
