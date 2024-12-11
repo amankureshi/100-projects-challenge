@@ -11,6 +11,10 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+::selection {
+    background-color: #FF4D6D;
+}
+
 h1,
 h2 {
     color: #101010;
@@ -99,8 +103,8 @@ h2 {
 }
 
 .left-content .text span {
-    color: crimson;
-    font-size: 1rem;
+    color: FF4D6D;
+    font-size: 1.1rem;
 }
 
 .left-content .text2 {
@@ -137,12 +141,13 @@ h2 {
 }
 
 @media screen and (max-width: 768px) {
-    .home {
+    #home {
         flex-direction: column;
     }
 
     .left-content,
     .right-content {
+        position: relative;
         width: 100%;
     }
 
@@ -150,7 +155,13 @@ h2 {
         position: relative;
     }
 
-    .right-content {
-        position: relative;
+    .home-img img {
+        position: absolute;
+        left: -80%;
+        top: -0%;
+        height: 100vh;
+        z-index: -1;
     }
+
+    .right-content {}
 }

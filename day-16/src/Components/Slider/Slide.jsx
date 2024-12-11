@@ -19,7 +19,7 @@ const Slide = () => {
         <Slider {...settings}>
           {Sdata.map((value) => {
             return (
-              <div className="box">
+              <div className="box" key={value.id}>
                 <div className="img">
                   <img src={value.cover} alt="" />
                 </div>

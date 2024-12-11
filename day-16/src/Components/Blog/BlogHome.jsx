@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "../Slider/Slide";
 import Card from "./Card";
 import Footer from "../Footer/Footer";
+import CardTwo from "./CardTwo";
 
 const BlogHome = () => {
   const data = [
@@ -23,7 +24,7 @@ const BlogHome = () => {
         <div className="left-content">
           {data.map((value) => {
             return (
-              <div className="content">
+              <div className="content" key={value.id}>
                 <div className="logo">
                   <h1>A</h1>
                 </div>
@@ -51,6 +52,7 @@ const BlogHome = () => {
           <h2>Fashion Trends</h2>
           <Slider />
           <Card />
+          <CardTwo />
           <Footer />
         </div>
       </section>

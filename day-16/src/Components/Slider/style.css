@@ -1,6 +1,5 @@
 .slide .box {
     display: flex !important;
-    /* padding: 1rem; */
 }
 
 
@@ -17,10 +16,75 @@
 
 .slide .text {
     width: 50%;
-    padding: 2rem 0px 0rem 2rem;
+    padding: 2rem 0px 1rem 2rem;
 }
 
 .slick-dots li button::before {
     font-size: 1rem;
     color: #715443;
+}
+
+.img {
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+img {
+    transition: 0.5s;
+}
+
+.img img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.slick-dots {}
+
+/*<------- Card-Two ------->*/
+.cardTwo {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.cardTwo.slide .box:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.cardTwo.slide img:hover {
+    cursor: default;
+}
+
+@media (max-width: 768px) {
+    .slide .box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slide .img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .slide .text {
+        width: 90%;
+        padding: 1rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide .img {
+        width: 100%;
+        height: auto;
+    }
+
+    .slide .text {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .slick-dots li button::before {
+        font-size: 0.8rem;
+    }
 }
