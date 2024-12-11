@@ -1,0 +1,28 @@
+.slide .box {
+    display: flex !important;
+    padding: 1rem;
+}
+
+.box :where(h1, span) {
+    padding-left: 10px;
+}
+
+.slide .img {
+    width: 350px;
+    height: 350px;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide .text {
+    width: 50%;
+    padding: 60px 0 70px 30px;
+}
+
+.slick-dots li button::before {
+    font-size: 10px;
+}
