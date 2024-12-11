@@ -12,7 +12,8 @@ const BlogHome = () => {
       paraOne: "How women are redirecting hollywood",
       paraTwo: "New ways to wear denim belst bags make a comeback",
       name: "By Hina",
-      qrCode: "/images/qr-code.png",
+      subTitle: "How to Shop Mindfully",
+      qrCode: "/images/qr.png",
       cover: "/images/bg.jpg",
     },
   ];
@@ -24,7 +25,7 @@ const BlogHome = () => {
             return (
               <div className="content">
                 <div className="logo">
-                  <h1>Logo</h1>
+                  <h1>A</h1>
                 </div>
                 <div className="home-img">
                   <img src={value.cover} alt="cover-image" />
@@ -40,7 +41,7 @@ const BlogHome = () => {
                   <span>{value.subTitle}</span>
                 </div>
                 <div className="qr-code">
-                  <img src={value.qrCode} alt="tow-image" width={300} />
+                  <img src={value.qrCode} alt="qr-code" />
                 </div>
               </div>
             );

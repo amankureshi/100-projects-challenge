@@ -24,5 +24,6 @@
 }
 
 .slick-dots li button::before {
-    font-size: 10px;
+    font-size: 1rem;
+    color: #715443;
 }

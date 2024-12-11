@@ -1,8 +1,6 @@
-.box {}
-
 .card .iamge {
     width: 100%;
-    height: 110px;
+    height: 220px;
     margin-bottom: 20px;
     padding: 10px;
 }
@@ -14,6 +12,6 @@
 }
 
 .card h2 {
-    font-size: 0.8rem;
+    font-size: 20px;
     line-height: 30px;
 }

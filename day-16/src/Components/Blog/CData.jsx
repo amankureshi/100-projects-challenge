@@ -19,19 +19,19 @@ const CData = [
   },
   {
     id: 4,
-    cover: "./images/card-1.jpg",
+    cover: "./images/card-4.jpg",
     category: "lifestyle",
     title: "What is the best about Travelling?",
   },
   {
     id: 5,
-    cover: "./images/card-2.jpg",
+    cover: "./images/card-5.jpg",
     category: "lifestyle",
     title: "What are the best countries to visit?",
   },
   {
     id: 6,
-    cover: "./images/card-3.jpg",
+    cover: "./images/card-6.jpg",
     category: "lifestyle",
     title: "What do you Gain from Traveling?",
   },

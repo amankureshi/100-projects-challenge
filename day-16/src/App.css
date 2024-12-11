@@ -34,7 +34,6 @@ h2 {
 }
 
 #home {
-    background-color: red !important;
     display: flex;
 }
 
@@ -74,6 +73,8 @@ h2 {
     z-index: -1;
 }
 
+
+
 .logo {
     width: 70px;
     height: 70px;
@@ -85,7 +86,7 @@ h2 {
 
 .left-content .text {
     width: 45%;
-    margin-top: 15%;
+    margin-top: 2rem;
 }
 
 .left-content .text h1 {
@@ -111,6 +112,7 @@ h2 {
     width: 20%;
 }
 
+
 /* Left-content */
 
 .right-content {
@@ -132,4 +134,23 @@ h2 {
 .img img:hover {
     transform: scale(1.1);
     cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .home {
+        flex-direction: column;
+    }
+
+    .left-content,
+    .right-content {
+        width: 100%;
+    }
+
+    .left-content {
+        position: relative;
+    }
+
+    .right-content {
+        position: relative;
+    }
 }
