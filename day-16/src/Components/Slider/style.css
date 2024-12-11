@@ -1,11 +1,8 @@
 .slide .box {
     display: flex !important;
-    padding: 1rem;
+    /* padding: 1rem; */
 }
 
-.box :where(h1, span) {
-    padding-left: 10px;
-}
 
 .slide .img {
     width: 350px;
@@ -20,7 +17,7 @@
 
 .slide .text {
     width: 50%;
-    padding: 60px 0 70px 30px;
+    padding: 2rem 0px 0rem 2rem;
 }
 
 .slick-dots li button::before {

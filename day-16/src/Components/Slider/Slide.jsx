@@ -8,7 +8,7 @@ const Slide = () => {
   var settings = {
     dots: true,
     infinite: true,
-    arrow: false,
+    arrows: false,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -26,6 +26,7 @@ const Slide = () => {
                 <div className="text">
                   <span>{value.category}</span>
                   <h2>{value.title}</h2>
+                  <p>{value.desc}</p>
                 </div>
               </div>
             );

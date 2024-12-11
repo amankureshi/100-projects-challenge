@@ -40,7 +40,7 @@ h2 {
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid: 2rem;
+    grid-gap: 30px;
 }
 
 .top {
@@ -116,7 +116,7 @@ h2 {
 /* Left-content */
 
 .right-content {
-    padding: 40px;
+    padding: 10px;
     color: #000;
     position: absolute;
     right: 0;

@@ -1,17 +1,17 @@
 import React from "react";
 import Slider from "../Slider/Slide";
 import Card from "./Card";
-// import Slide from "../Slider/Slide";
+import Footer from "../Footer/Footer";
 
 const BlogHome = () => {
   const data = [
     {
       id: 1,
-      titleOne: "You Can Change The world",
+      titleOne: "Latest Fashion Trends",
       titletwo: "Strong Style",
       paraOne: "How women are redirecting hollywood",
       paraTwo: "New ways to wear denim belst bags make a comeback",
-      name: "By Hina",
+      name: "By Anamat",
       subTitle: "How to Shop Mindfully",
       qrCode: "/images/qr.png",
       cover: "/images/bg.jpg",
@@ -48,9 +48,10 @@ const BlogHome = () => {
           })}
         </div>
         <div className="right-content">
-          <h2>Right content here</h2>
+          <h2>Fashion Trends</h2>
           <Slider />
           <Card />
+          <Footer />
         </div>
       </section>
     </>
