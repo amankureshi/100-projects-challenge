@@ -16,3 +16,4 @@ CSS: For clean, simple styling.
 A great starting point for anyone looking to create a basic fashion blog or build a personal fashion website.
 🔗 GitHub Repository: [https://lnkd.in/g_34i4j5]
 🌐 Live Demo: [https://lnkd.in/gPNZfm_q]
+![Screenshot 2024-12-12 103300](https://github.com/user-attachments/assets/3372241c-5fc7-4cb9-886e-14afa7747c03)
