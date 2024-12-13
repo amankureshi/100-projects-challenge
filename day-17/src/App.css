@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.total_amount_card {
+    background: linear-gradient(to right, rgba(253, 230, 90, 100%), rgba(204, 254, 87, 100%));
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    background-color: #ccc9ccbd;
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.heading_two {
+    padding-top: 5px;
+}
+
+.total_amount_card {
+    height: 24rem;
+    background-color: #D6FF58;
+    border-radius: 27px;
+}
+
+.total_amount_heading {
+    font-size: 4rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    float: right;
+    margin-top: -1.3rem;
+}
+
+.btn_collection {
+    margin-top: 1rem;
+}
+
+.btn_one {
+    background-color: #F2F2F2 !important;
+    width: 170px;
+    height: 75px;
+    color: black !important;
+    font-weight: 600;
+    font-size: 20px !important;
+
+}
+
+.btn_two {
+    background-color: #F2F2F2 !important;
+    width: 170px;
+    height: 75px;
+    color: black !important;
+    font-size: 20px !important;
+
+}
