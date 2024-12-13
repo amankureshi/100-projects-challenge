@@ -80,11 +80,27 @@ button {
 
 button:hover {
     background-position: right center;
-    /* change the direction of the change here */
     color: #fff;
     text-decoration: none;
 }
 
 button:active {
     transform: scale(0.95);
+}
+
+@media (max-width: 480px) {
+    form {
+        min-width: 17rem;
+        margin: 0 auto;
+    }
+
+    input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 12px 20px;
+    }
 }
