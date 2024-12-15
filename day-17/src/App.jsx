@@ -7,15 +7,11 @@ import { FaMinus, FaPlus } from "react-icons/fa6";
 
 function App() {
   const [counter, setCounter] = useState(0);
-  const handleClick1 = () => {
+  const incrementQuantity = () => {
     setCounter(counter + 1);
   };
-  const handleClick2 = () => {
-    if (counter === 0) {
-      return 0;
-    } else {
-      setCounter(counter - 1);
-    }
+  const decrementQuantity = () => {
+    setCounter(counter - 1);
   };
   const reseteClick = () => {
     setCounter(counter === 0);
@@ -38,16 +34,19 @@ function App() {
             <div className="btn_collection">
               <Stack spacing={2} direction="row">
                 <Button
-                  onClick={handleClick1}
+                  onClick={incrementQuantity}
                   variant="contained"
                   className="btn_one"
+                  size="large"
                 >
                   <FaPlus />
                 </Button>
                 <Button
-                  onClick={handleClick2}
+                  disabled={counter == 0}
+                  onClick={decrementQuantity}
                   variant="contained"
                   className="btn_two"
+                  size="large"
                 >
                   <FaMinus />
                 </Button>
