@@ -1,0 +1,40 @@
+body {
+    background-color: #6069ce;
+}
+
+.btn_div {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn_age {
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    transition: box-shadow 0.15s ease,
+        transform 0.15s ease;
+    will-change: box-shadow,
+        transform;
+    background: #FCFCFD;
+    box-shadow: 0px 2px 4px rgb(45 35 66 / 40%),
+        0px 7px 13px -3px rgb(45 35 66 / 30%),
+        inset 0px -3px 0px #d6d6e7;
+    height: 48px;
+    padding: 0 32px;
+    font-size: 18px;
+    border-radius: 6px;
+    color: #36395a;
+    transition: box-shadow 0.15s ease,
+        transform 0.15s ease;
+}
+
+.btn_age:hover {
+    box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #d6d6e7;
+    transform: translateY(-2px);
+}
+
+.btn_age:active {
+    box-shadow: inset 0px 3px 7px #d6d6e7;
+    transform: translateY(2px);
+}
