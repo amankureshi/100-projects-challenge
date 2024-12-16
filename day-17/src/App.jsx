@@ -7,23 +7,13 @@ import { FaMinus, FaPlus } from "react-icons/fa6";
 
 function App() {
   const [counter, setCounter] = useState(0);
-  const incrementQuantity = () => {
-    setCounter(counter + 1);
-  };
-  const decrementQuantity = () => {
-    setCounter(counter - 1);
-  };
-  const reseteClick = () => {
-    setCounter(counter === 0);
-    window.location.reload();
-  };
 
   return (
     <>
       <div className="app">
         <div className="container">
           <div className="right">
-            <IoMdRefresh onClick={reseteClick} />
+            <IoMdRefresh onClick={() => setCounter(0)} />
           </div>
           <div className="total_amount_card">
             <div className="card_text">
@@ -34,7 +24,7 @@ function App() {
             <div className="btn_collection">
               <Stack spacing={2} direction="row">
                 <Button
-                  onClick={incrementQuantity}
+                  onClick={() => setCounter(counter + 1)}
                   variant="contained"
                   className="btn_one"
                   size="large"
@@ -43,7 +33,7 @@ function App() {
                 </Button>
                 <Button
                   disabled={counter == 0}
-                  onClick={decrementQuantity}
+                  onClick={() => setCounter(counter - 1)}
                   variant="contained"
                   className="btn_two"
                   size="large"
