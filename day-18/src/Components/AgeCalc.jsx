@@ -26,9 +26,10 @@ const AgeCalc = () => {
     <>
       <section className="container">
         <h1>Age Calculator</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Calculate your age in years, months, and days effortlessly </p>
         <div className="container_middle">
           <div className="right">
+            <h2>Date of Birth</h2>
             <div className="btn_div">
               <input
                 className="date"
@@ -45,7 +46,6 @@ const AgeCalc = () => {
                 Reset
               </button>
             </div>
-            <h2>Date of Birth</h2>
           </div>
           <div className="left">
             <div className="container_fluid">

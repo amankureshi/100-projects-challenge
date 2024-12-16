@@ -2,19 +2,89 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: #6069ce;
+    background-color: #e7deb5;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
+}
+
+.container {
+    max-width: 685px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 2rem;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.container_middle {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.right,
+.left {
+    flex: 1;
+    background: #f1f1f1;
+    border-radius: 8px;
+    padding: 15px;
 }
 
 .btn_div {
     display: flex;
-    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.date {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+h2 {
+    margin-top: 10px;
+    color: #555;
+    text-align: center;
+}
+
+.container_fluid {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container_fluid h1 {
+    color: #007bff;
+}
+
+.age_heading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
 }
 
 .btn_age {
@@ -49,19 +119,6 @@ body {
     transform: translateY(2px);
 }
 
-
-.age_heading {
-    color: #5E5AF9;
-    font-family: Inter;
-    font-size: 5rem;
-    font-style: normal;
-    font-weight: 900;
-    line-height: normal;
-    display: flex;
-    justify-content: center;
-
-}
-
 .para {
     color: #505050;
     font-family: Inter;
@@ -75,7 +132,7 @@ body {
 input[type="date"] {
     background: #F4F9FF;
     border: 2px solid #DEDEDE;
-    padding: 20px;
+    padding: 1rem;
     font-family: "Roboto Mono", monospace;
     color: #000000;
     font-size: 18px;
@@ -84,27 +141,17 @@ input[type="date"] {
     border-radius: 5px;
 }
 
-.container_fluid {
-    display: flex;
-    justify-content: space-between;
-}
+@media (max-width: 768px) {
+    .container_middle {
+        flex-direction: column;
+    }
 
-.left {
-    width: 500px;
-    background-color: #EEF1F6;
+    .btn_div {
+        flex-wrap: wrap;
+    }
 
-}
-
-.Container_middle_para {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-@media (min-width: 768px) {
-    .button-65 {
-        padding: 14px 22px;
-        width: 176px;
+    .container {
+        margin: 12px;
+        padding: 5px;
     }
 }
