@@ -17,9 +17,14 @@ body {
     border-radius: 12px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     padding: 20px 40px;
-    width: 100%;
+    width: 90%;
     max-width: 650px;
-    min-width: 450px;
+    margin: 0 auto;
+}
+
+.quote_container h1 {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .quote-box {
@@ -79,4 +84,12 @@ body {
     background-color: #373d4b;
     box-shadow: -1px 2px 5px rgba(81, 41, 10, 0.15), 0px 1px 1px rgba(81, 41, 10, 0.15);
     transform: translateY(0.125rem);
+}
+
+@media (max-width:786px) {
+    .quote-text {
+        font-size: 1rem;
+        color: #333333;
+        font-style: italic;
+    }
 }
