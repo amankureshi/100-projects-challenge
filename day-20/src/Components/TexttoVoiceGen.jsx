@@ -1,7 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./TexttoVoice.css";
 import { MdKeyboardVoice } from "react-icons/md";
 const TexttoVoiceGen = () => {
+  const [text, setText] = useState('');
+  const [voice, setVoice] = useState(null);
+  const [voices, setVoices] = useState([]);
+
+  useEffect(() => {
+    const synth = window.speechSynthesis
+    const handleVoiceChanged = () => {
+      setVoices(synth.getVoices())
+    }
+    handleVoiceChanged();
+    synth.onvoiceschanged = handleVoiceChanged;
+    return () => {
+      synth.onvoiceschanged = null;
+    }
+  }, [])
+  const handleTextChange=(e) => {
+    setText(e.target.value);
+  }
+  const handleVoiceChange = (e) => {
+    setVoice(e.target.value)
+  }
+  const speak = () => {
+    if (text !== "" && voice) {
+      const speech = new SpeechSynthesisUtterance(text)
+      speech.voice = speechSynthesis.getVoices().find((v) => v.name === voice)
+      speechSynthesis.speak(speech)
+    }
+  }
+
+
   return (
     <div>
       <div className="container">
@@ -12,14 +42,22 @@ const TexttoVoiceGen = () => {
         </div>
         <div className="card p-4">
           <div className="mb-3">
-            <textarea name="" id="" className="form-control"></textarea>
+            <textarea name="text" id="text" placeholder="Enter Text here" className="form-control" rows={6}
+            value={text} onChange={handleTextChange}></textarea>
           </div>
           <div className="mb-3">
-            <select name="select-name" id="" className="form-select">
-              <option value="Select option">Select option</option>
+            <select name="select-name" id="" className="form-select" onChange={handleVoiceChange}>
+              <option value="">Select option</option>
+              {
+                voices.map((voice,index) => (
+                  <option key={index} value={voice.name}>
+                    {voice.name}
+                  </option>
+                ))
+              }
             </select>
           </div>
-          <div className="btn btn-dark">
+          <div className="btn btn-dark" onClick={speak}>
             Listen <MdKeyboardVoice />
           </div>
         </div>
