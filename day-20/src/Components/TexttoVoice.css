@@ -1,0 +1,77 @@
+.card {
+    margin: auto;
+    width: 90%;
+    max-width: 100rem;
+    padding: 1rem;
+    border: 1px solid rgb(198, 195, 195);
+    gap: 0.4rem;
+}
+
+.container h1 {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    font-weight: 600;
+}
+
+.container span {
+    color: #ff4f5a;
+}
+
+.btn-dark {
+    background-color: #ff4f5a;
+    border: none;
+    font-size: 1.2rem;
+    margin: auto;
+    padding: 1rem 5rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+}
+
+.container {
+    position: relative;
+}
+
+.bottom-image img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    height: auto;
+    margin: 10px;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        position: relative;
+        min-height: 100vh;
+        padding-bottom: 200px;
+    }
+
+    .bottom-image {
+        position: absolute;
+        right: 2rem;
+        bottom: 0;
+        max-width: 150px;
+        height: auto;
+        z-index: -1;
+    }
+
+    .card {
+        width: 95%;
+    }
+
+    .container h1 {
+        font-size: 1.5rem;
+    }
+
+    .btn-dark {
+        background-color: #ff4f5a;
+        border: none;
+        font-size: 1.2rem;
+        margin: auto;
+        padding: 10px 20px;
+    }
+}
