@@ -21,5 +21,4 @@ Technologies Used
 React JS
 CSS
 
-Live Demo
-()
+Live Demo:-(https://accordion-faq-reactjs.onrender.com/)
