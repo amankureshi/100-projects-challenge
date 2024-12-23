@@ -1,0 +1,103 @@
+/* App.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d5cece;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.accordian {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.title:hover {
+    background-color: #f1f1f1;
+}
+
+.title h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.title span {
+    font-size: 24px;
+    color: #888;
+    transition: transform 0.3s ease;
+}
+
+.item .content {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    background-color: #f9f9f9;
+    border-left: 4px solid #2a7b1a;
+    margin-top: 5px;
+    border-radius: 4px;
+}
+
+.item .content {
+    animation: slideDown 0.3s ease;
+}
+
+
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.selected .title span {
+    transform: rotate(45deg);
+    color: #007bff;
+}
+
+@media (max-width:786px) {
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wrapper {
+        margin: 13px;
+    }
+
+    .title h3 {
+        font-size: 1rem;
+    }
+}
