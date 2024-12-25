@@ -14,18 +14,26 @@ const RandomColor = () => {
         for (let i = 0; i < 6; i++) {
             hexColor += hex[RandomColorUtility(hex.length)];
         }
+        setColor(hexColor)
         console.log(hexColor);
     }
     function handleCreateRandomRgbColor() {
+        const r = RandomColorUtility(256);
+        const g = RandomColorUtility(256);
+        const b = RandomColorUtility(256);
 
+        setColor(`rgb(${r},${g},${b})`);
     }
 
-
     return (
-        <div className='random_body'>
+        <div className='random_body' style={{ width: "100vw", height: "100vh", background: color, }}>
             <button onClick={() => setTypeofColor('hex')}>Create HEX Color</button>
             <button onClick={() => setTypeofColor('rgb')}>Create RGB Color</button>
             <button onClick={typeofColor === 'hex' ? handleCreateRandomHexColor : handleCreateRandomRgbColor}>Generator Random Color </button>
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", fontSize: '2rem', marginTop: "4rem", flexDirection: "column", gap: "20px" }}>
+                <h3>{typeofColor === 'rgb' ? "RGB Color" : "HEX color"}</h3>
+                <h1>{color}</h1>
+            </div>
         </div>
     )
 }
