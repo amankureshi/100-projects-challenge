@@ -34,9 +34,19 @@ const RandomColor = () => {
 
     return (
         <div className='random_body' style={{ width: "100vw", height: "100vh", background: color, }}>
-            <button onClick={handleHexaColorbtn}>Create HEX Color</button>
+            {/* <button onClick={handleHexaColorbtn}>Create HEX Color</button>
             <button onClick={handleRgbColorbtn}>Create RGB Color</button>
-            <button onClick={typeofColor === 'hex' ? handleCreateRandomHexColor : handleCreateRandomRgbColor}>Generator Random Color </button>
+            <button onClick={typeofColor === 'hex' ? handleCreateRandomHexColor : handleCreateRandomRgbColor}>Generator Random Color </button> */}
+            <button onClick={() => { setTypeofColor('hex'); handleCreateRandomHexColor(); }}>
+                Create HEX Color
+            </button>
+            <button onClick={() => { setTypeofColor('rgb'); handleCreateRandomRgbColor(); }}>
+                Create RGB Color
+            </button>
+            <button onClick={() => { setTypeofColor('rgb'); handleCreateRandomRgbColor(); }}>
+                Generator Random Color
+            </button>
+
             <div style={{ display: "flex", justifyContent: "center", alignItems: "center", fontSize: '2rem', marginTop: "4rem", flexDirection: "column", gap: "20px" }}>
                 <h3>{typeofColor === 'rgb' ? "RGB Color" : "HEX color"}</h3>
                 <h1>{color}</h1>
