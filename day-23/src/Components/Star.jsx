@@ -8,15 +8,12 @@ const Star = ({ noOfStar = 5 }) => {
     const [hover, setHover] = useState(0);
 
     function handleClick(getCurrentIndex) {
-        console.log(getCurrentIndex);
         setRating(getCurrentIndex)
     }
     function handleMouseEnter(getCurrentIndex) {
-        console.log(getCurrentIndex);
         setHover(getCurrentIndex)
     }
     function handleMouseLeave() {
-        console.log(getCurrentIndex);
         setHover(rating)
     }
     return (

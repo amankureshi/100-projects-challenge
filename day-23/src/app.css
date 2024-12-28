@@ -29,3 +29,20 @@ svg {
 .inactive {
     fill: black;
 }
+
+@media (max-width:786px) {
+    .star-rating {
+        text-align: center;
+        background: rgba(90, 58, 58, 0.863);
+        /* max-width: 10rem; */
+        padding: 1rem;
+        border-radius: 10px;
+        margin-top: 8rem;
+
+    }
+
+    svg {
+        padding: 10px;
+        width: 26px;
+    }
+}
