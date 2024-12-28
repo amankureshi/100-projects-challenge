@@ -1,24 +1,36 @@
 import React from 'react'
 import { useState } from 'react'
-import { CiStar } from "react-icons/ci";
-
+import { FaStar } from "react-icons/fa";
+import "../app.css"
 
 const Star = ({ noOfStar = 5 }) => {
     const [rating, setRating] = useState(0);
     const [hover, setHover] = useState(0);
 
-
-
+    function handleClick(getCurrentIndex) {
+        console.log(getCurrentIndex);
+        setRating(getCurrentIndex)
+    }
+    function handleMouseEnter(getCurrentIndex) {
+        console.log(getCurrentIndex);
+        setHover(getCurrentIndex)
+    }
+    function handleMouseLeave() {
+        console.log(getCurrentIndex);
+        setHover(rating)
+    }
     return (
-        <div className='star-rating'>
+        <div className='star-rating' >
             {
                 [...Array(noOfStar)].map((_, index) => {
                     index + 1;
-                    return <CiStar
+
+                    return <FaStar
                         key={index}
+                        className={index <= (hover || rating) ? 'active' : "inactive"}
                         onclick={() => handleClick(index)}
                         onMouseMove={() => handleMouseEnter(index)}
-                        onMouseLeave={() => handleMouseLeave(index)}
+                        onMouseLeave={() => handleMouseLeave()}
                         size={40}
                     />
                 })
