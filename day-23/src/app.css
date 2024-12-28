@@ -1,3 +1,27 @@
+body {
+    display: grid;
+    place-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+}
+
+.star-rating {
+    text-align: center;
+    background: rgba(90, 58, 58, 0.863);
+    max-width: 30rem;
+    padding: 4rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+svg {
+    padding: 10px;
+    width: 50px;
+}
+
 .active {
     fill: yellow;
 }
