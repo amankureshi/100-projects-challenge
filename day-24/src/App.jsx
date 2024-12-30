@@ -7,6 +7,7 @@ function App() {
 
   return (
     <>
+      <h1>Delte</h1>
       <JokeGenerator />
     </>
   )
