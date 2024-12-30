@@ -1,12 +1,13 @@
-import JokeGen from './Components/JokeGen'
+import { useState } from 'react'
 import './App.css'
+import JokeGenerator from './Components/JokeGenerator'
 
 function App() {
 
 
   return (
     <>
-      <JokeGen />
+      <JokeGenerator />
     </>
   )
 }
