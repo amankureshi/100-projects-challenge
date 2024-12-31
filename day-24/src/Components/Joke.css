@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #eef2f3, #d4dee5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+}
+
+
+.joke-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 300px;
+
+}
+
+
+.joke-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+.joke-button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #007bff;
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.joke-button:hover {
+    background-color: #0056b3;
+
+    transform: scale(1.05);
+}
+
+
+.joke-text {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #555;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+
+.joke-text::before {
+    content: "";
+
+    display: inline-block;
+    height: 1rem;
+    visibility: hidden;
+}
+
+
+@media (max-width: 768px) {
+    .joke-title {
+        font-size: 1.8rem;
+    }
+
+    .joke-button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .joke-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .joke-title {
+        font-size: 1.5rem;
+    }
+
+    .joke-button {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    .joke-text {
+        font-size: 1rem;
+    }
+}
