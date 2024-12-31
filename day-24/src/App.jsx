@@ -1,5 +1,5 @@
 import './App.css'
-import Joke from './Components/Joke'
+import JokeApp from './Components/Joke'
 
 function App() {
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <h1>Joke Generator</h1>
-      <Joke />
+      <JokeApp />
     </>
   )
 }
