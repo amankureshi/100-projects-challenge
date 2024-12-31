@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+
+svg {
+  color: rgb(83, 171, 235);
+  font-size: 5rem;
+  padding-top: 2rem;
+
+}
