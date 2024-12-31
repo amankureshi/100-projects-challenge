@@ -4,13 +4,87 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #f4f7fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 h1 {
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
 svg {
   color: rgb(83, 171, 235);
-  font-size: 5rem;
-  padding-top: 2rem;
+  font-size: 3rem;
+  margin-left: 10px;
+  animation: rotate 5s linear infinite;
+}
 
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.joke {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+}
+
+button {
+  background-color: #539bea;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 1.5rem;
+}
+
+button:hover {
+  background-color: #4078b3;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 1.5rem;
+  font-weight: 500;
+}
+
+@media (max-width:786px) {
+  svg {
+    svg {
+      color: rgb(83, 171, 235);
+      font-size: 1rem;
+      margin-left: 2px;
+      animation: rotate 5s linear infinite;
+    }
+
+  }
 }
