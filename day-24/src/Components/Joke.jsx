@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './Joke.css'
 
 const JokeApp = () => {
     const [joke, setJoke] = useState("");
@@ -10,11 +11,12 @@ const JokeApp = () => {
     };
 
     return (
-        <div className="joke">
+        <div className="joke-container">
+            <h1 className="joke-title">Joke Generator using React</h1>
+            <p className="joke-text">{joke}</p>
             <button className="joke-button" onClick={fetchApi}>
-                Click to generate a joke.
+                Click here
             </button>
-            <p>{joke}</p>
         </div>
     );
 };
