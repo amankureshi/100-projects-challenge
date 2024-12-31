@@ -22,5 +22,4 @@ A fun and interactive app to generate random jokes using an API, built with Reac
 - Managing component state and lifecycle methods  
 - Improving UI with conditional rendering  
 
-🔗 Live Demo:  
-[Coming Soon...]
+🔗 Live Demo:[https://joke-generator-2024.onrender.com/]
