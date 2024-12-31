@@ -11,13 +11,15 @@ const JokeApp = () => {
     };
 
     return (
-        <div className="joke-container">
+        <>
             <h1 className="joke-title">Joke Generator using React</h1>
-            <p className="joke-text">{joke}</p>
-            <button className="joke-button" onClick={fetchApi}>
-                Click here
-            </button>
-        </div>
+            <div className="joke-container">
+                <p className="joke-text">{joke}</p>
+                <button className="joke-button" onClick={fetchApi}>
+                    Click here
+                </button>
+            </div>
+        </>
     );
 };
 
