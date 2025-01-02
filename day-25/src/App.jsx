@@ -11,13 +11,16 @@ const App = () => {
 
   const searchMovies = async (title) => {
     const response = await fetch(`${API_URL}&s=${title}`);
+    console.log(response);
+
     const data = await response.json();
     setMovies(data.Search)
   };
 
 
   useEffect(() => {
-    searchMovies("SpiderMan");
+    searchMovies("cartoon");
+    // console.log(setSearchTerm);
   }, []);
 
   return (
@@ -25,8 +28,15 @@ const App = () => {
     <div className="app">
       <h1>Movie App</h1>
       <div className="search">
-        <input type="text" placeholder='Search for movies' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
-        <IoMdSearch onClick={() => searchMovies(searchTerm)} />
+        <div className="search-container">
+          <input
+            type="text"
+            placeholder="Search for movies"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          <IoMdSearch onClick={() => searchMovies(searchTerm)} />
+        </div>
       </div>
 
       {movies?.length > 0 ? (

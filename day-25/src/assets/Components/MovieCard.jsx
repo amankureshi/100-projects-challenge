@@ -8,11 +8,11 @@ const MovieCard = ({ movie }) => {
                 <p>{movie.year}</p>
             </div>
             <div className="image-section">
-                <img src={movie.Poster !== "N/A" ? movie.Poster : "https://via.placeholder.com/400"} alt="movie-image" />
+                <img src={movie.Poster !== "N/A" ? movie.Poster : "https://placehold.jp/3d4070/ffffff/150x150.png"} alt="movie-image" />
             </div>
-            <div className="movie-contnet">
-                <span>{movie.Type}</span>
+            <div className="movie-content">
                 <h3>{movie.Title}</h3>
+                <span>{movie.Type}</span>
             </div>
         </div>
     )
