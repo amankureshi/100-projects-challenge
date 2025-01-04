@@ -1,10 +1,9 @@
 import React from 'react'
 import "../index.css"
-const SignalLight = () => {
+const SignalLight = ({ color, isActice }) => {
     return (
         <div>
-            <div className="signal">
-                <p>First</p>
+            <div className="signal" style={{ backgroundColor: `${isActice ? color : "grey"}` }}>
             </div>
         </div>
     )
