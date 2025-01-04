@@ -1,0 +1,13 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.signal {
+  width: 4rem;
+  height: 4rem;
+  border: 2px solid black;
+  border-radius: 50%;
+}
