@@ -1,4 +1,4 @@
-✨ Project 24: Traffic Signal using React.js  
+✨ Project 26: Traffic Signal using React.js  
 
 🔗 Live Demo:-[https://traffic-signal-react.onrender.com/]  
 
