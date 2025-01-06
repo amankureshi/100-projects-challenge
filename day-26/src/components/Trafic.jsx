@@ -23,4 +23,4 @@ const Trafic = ({ lights = ["green", "yellow", "red"] }) => {
     )
 }
 
-export default Trafic
+export default Trafic;
