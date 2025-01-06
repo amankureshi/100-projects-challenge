@@ -9,6 +9,7 @@ A responsive and interactive image slider built with React.js, fetching random i
 - React.js  
 - CSS  
 - Picsum API  
+- React Icon
 
 🌟 Features:  
 - Dynamically fetches images from the Picsum API  
