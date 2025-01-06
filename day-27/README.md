@@ -1,4 +1,4 @@
-✨ Project 25: Image Slider using React.js with Picsum API  
+✨ Project 27: Image Slider using React.js with Picsum API  
 
 🔗 Live Demo:-[https://image-slider-2025.onrender.com/]  
 
