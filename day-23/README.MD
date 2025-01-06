@@ -1,4 +1,4 @@
-✨ Project 22: Star Rating using React.js  
+✨ Project 23: Star Rating using React.js  
 
 📄 Description:  
 An interactive star rating component built with React.js, allowing users to select ratings dynamically with smooth UI updates.  
