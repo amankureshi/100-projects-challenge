@@ -54,7 +54,19 @@ const CryptoTracking = () => {
                         </tr>
                     </thead>
                     <tbody>
-
+                        {filteredCryptoList.length && filteredCryptoList.map((value) => {
+                            return <tr>
+                                <td>{value.rank}</td>
+                                <div className="icons d-flex gap-3 align-items-center ">
+                                    <td><img src={value.icon} className='icon ' alt="icon" /></td>
+                                    <td >{value.name}</td>
+                                </div>
+                                <td>{value.symbol}</td>
+                                <td>{value.marketCap.toFixed(1)}</td>
+                                <td>{value.price}</td>
+                                <td>{value.availableSupply}</td>
+                            </tr>
+                        })}
                     </tbody>
                 </table>
             </div>
