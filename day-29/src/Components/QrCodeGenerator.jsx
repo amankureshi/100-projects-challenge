@@ -6,6 +6,7 @@ const QrCodeGenerator = () => {
 
     function handleGeneraterQrCode() {
         setQrCode(input)
+        console.log(setQrCode);
     }
 
     return (
@@ -13,11 +14,10 @@ const QrCodeGenerator = () => {
             <h1>Qr code generator</h1>
             <div className="input-info">
                 <input type="text" name='qr-code' placeholder='Enter your value' />
-                <button>Generator</button>
+                <button disabled={input && input.trim() !== '' ? false : true} onClick={handleGeneraterQrCode} >Generator</button>
             </div>
             <div className="qr-code">
                 <QrCodeGenerator id="qrCode-value" />
-
             </div>
         </div>
     )
