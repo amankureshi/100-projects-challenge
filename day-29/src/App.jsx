@@ -3,11 +3,11 @@ import './App.css'
 import ScrollIndicators from './components/ScrollIndicators'
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-      <ScrollIndicators />
+      <ScrollIndicators url={"https://dummyjson.com/products?limit=100"} />
     </>
   )
 }
