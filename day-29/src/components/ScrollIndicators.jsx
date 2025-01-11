@@ -55,8 +55,16 @@ const ScrollIndicators = ({ url }) => {
 
   return (
     <div className="container">
-      <h1>Custom Scroll Indicator</h1>
-      <div className="data-content">
+      <div className="top">
+        <h1>Custom Scroll Indicator</h1>
+        <div className="scroll-progess-tracking">
+          <div
+            className="current-progress-bar"
+            style={{ width: `${scrollPercentage}%` }}
+          ></div>
+        </div>
+      </div>
+      <div classsName="data-content">
         {data && data.length > 0
           ? data.map((dataItem) => <p>{dataItem.title}</p>)
           : null}
