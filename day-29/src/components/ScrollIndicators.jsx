@@ -42,7 +42,7 @@ const ScrollIndicators = ({ url }) => {
 
     const height =
       document.documentElement.scrollHeight -
-      documentElement.documentElement.clientHeight;
+      document.documentElement.clientHeight;
     setScrollPercentage((howMuchScrolled / height) * 100);
   }
   useEffect(() => {
@@ -64,7 +64,7 @@ const ScrollIndicators = ({ url }) => {
           ></div>
         </div>
       </div>
-      <div classsName="data-content">
+      <div className="data-content">
         {data && data.length > 0
           ? data.map((dataItem) => <p>{dataItem.title}</p>)
           : null}
