@@ -1,6 +1,6 @@
 ✨ Project 28: Cryptocurrency App using React.js  
 
-🔗 Live Demo:[]  
+🔗 Live Demo:[https://crypto-currency-2025.onrender.com/]  
 
 📄 Description:  
 A cryptocurrency app built using React.js and styled with Bootstrap 5, allowing users to view real-time cryptocurrency data fetched from a cryptocurrency API.  
