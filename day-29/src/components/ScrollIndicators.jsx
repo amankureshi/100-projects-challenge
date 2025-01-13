@@ -18,7 +18,7 @@ const ScrollIndicators = ({ url }) => {
       }
 
       // alert(data)
-      console.log(data);
+      console.log("update", data);
     } catch (e) {
       console.log(e);
       setErrorMessage(e.message);
@@ -66,7 +66,7 @@ const ScrollIndicators = ({ url }) => {
       </div>
       <div className="data-content">
         {data && data.length > 0
-          ? data.map((dataItem) => <p>{dataItem.title}</p>)
+          ? data.map((dataItem) => <p key={dataItem.id}>{dataItem.title}</p>)
           : null}
       </div>
     </div>
