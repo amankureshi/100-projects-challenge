@@ -18,6 +18,11 @@ const Tabs = () => {
               allows you to create reusable UI components and efficiently update
               the DOM using a virtual DOM.
             </p>
+            <p>
+              With React, you can create single-page applications (SPAs) that
+              dynamically update content without needing to reload the entire
+              page, making the user experience faster and smoother.
+            </p>
           </div>
         )}
         {activeTab === 1 && (
@@ -27,6 +32,13 @@ const Tabs = () => {
               JSX (JavaScript XML) is a syntax extension for JavaScript that
               allows you to write HTML-like code within JavaScript. It makes
               writing React components easier and more intuitive.
+            </p>
+            <p>
+              It allows you to combine HTML structure and JavaScript logic in a
+              single file, which helps in creating a declarative user interface.
+              With JSX, it becomes easier to manage the UI since you can
+              directly embed dynamic content inside your HTML code using curly
+              braces.
             </p>
           </div>
         )}
@@ -38,6 +50,11 @@ const Tabs = () => {
               time, while props are used to pass data from one component to
               another. Together, they make React components dynamic and
               interactive.
+            </p>
+            <p>
+              Together, state and props give React components the ability to be
+              dynamic and flexible, leading to the creation of interactive web
+              applications.
             </p>
           </div>
         )}
