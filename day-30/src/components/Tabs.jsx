@@ -9,6 +9,39 @@ const Tabs = () => {
         <button onClick={() => setActiveTab(1)}>Tab 2</button>
         <button onClick={() => setActiveTab(2)}>Tab 3</button>
       </div>
+      <div className="tab-content">
+        {activeTab === 0 && (
+          <div>
+            <h1>Tab 1 - Introduction to React</h1>
+            <p>
+              React is a JavaScript library for building user interfaces. It
+              allows you to create reusable UI components and efficiently update
+              the DOM using a virtual DOM.
+            </p>
+          </div>
+        )}
+        {activeTab === 1 && (
+          <div>
+            <h1>Tab 2 - JSX Syntax</h1>
+            <p>
+              JSX (JavaScript XML) is a syntax extension for JavaScript that
+              allows you to write HTML-like code within JavaScript. It makes
+              writing React components easier and more intuitive.
+            </p>
+          </div>
+        )}
+        {activeTab === 2 && (
+          <div>
+            <h1>Tab 3 - State and Props</h1>
+            <p>
+              In React, state allows you to store data that can change over
+              time, while props are used to pass data from one component to
+              another. Together, they make React components dynamic and
+              interactive.
+            </p>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
