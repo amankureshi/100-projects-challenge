@@ -15,9 +15,11 @@ const ModalTest = () => {
 
   return (
     <>
-      <button className="modal-btn" onClick={handleToggleModal}>
-        Open modal popup
-      </button>
+      <div className="modal-btn-container">
+        <button className="modal-btn" onClick={handleToggleModal}>
+          Open modal popup
+        </button>
+      </div>
       {showModalpPopup && <Modal onClose={onClose} />}
     </>
   );
