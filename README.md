@@ -1,4 +1,4 @@
-# 100 Projects Challenge - HTML/CSS and JavaScript
+# 100 Projects Challenge - HTML/CSS , Js and React Js
 
 Started on 1st November 2024 with a goal to complete 100 projects by 5th February 2025.
 
