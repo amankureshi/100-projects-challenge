@@ -1,8 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const GithubProfileFinder = () => {
   const [userName, setUserName] = useState("amankureshi");
+
   function handleSubmit() {}
+
+  useEffect(() => {
+    fetcGithubUserData();
+  }, []);
+
   return (
     <>
       <div className="github-profile-container">
@@ -11,6 +17,8 @@ const GithubProfileFinder = () => {
             type="text"
             placeholder="Search Github Username"
             name="search-username"
+            value={userName}
+            onChange={(event) => setUserName(event.target.value)}
           />
           <button onClick={handleSubmit}>Search</button>
         </div>
