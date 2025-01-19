@@ -129,12 +129,23 @@ a:hover {
   }
 
   .last-content {
-    flex-direction: column;
     align-items: center;
+  }
+
+  h2 {
+    font-size: 1rem;
   }
 
   .last-content h1,
   .last-content p {
     font-size: 16px;
+  }
+
+  .user-container {
+    margin: 12px;
+  }
+
+  .input-wrapper input {
+    margin-bottom: 10px;
   }
 }
