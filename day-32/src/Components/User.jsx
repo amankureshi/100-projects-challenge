@@ -17,10 +17,11 @@ const User = ({ user }) => {
     <div className="user-container">
       <div className="user-image">
         <img src={avatar_url} alt="user" className="avatar" />
-        <h1>Aman</h1>
       </div>
       <div>
-        <a href={`https://github.com/${login}`}>{name || login}</a>
+        <a href={`https://github.com/${login}`} className="Heading">
+          {name || login}
+        </a>
         <p>
           user joined on{" "}
           {`${createDate.getDate()}${createDate.toLocaleString("en-us", {
@@ -29,15 +30,15 @@ const User = ({ user }) => {
         </p>
       </div>
       <div className="last-content">
-        <h1>Public Repos</h1>
+        <h2>Public Repos</h2>
         <p>{public_repos}</p>
       </div>
       <div className="last-content">
-        <h1>Followers</h1>
+        <h2>Followers</h2>
         <p>{followers}</p>
       </div>
       <div className="last-content">
-        <h1>Following</h1>
+        <h2>Following</h2>
         <p>{following}</p>
       </div>
     </div>
