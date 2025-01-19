@@ -18,7 +18,9 @@ const GithubProfileFinder = () => {
     }
   }
 
-  function handleSubmit() {}
+  function handleSubmit() {
+    fetchGithubUserData();
+  }
 
   useEffect(() => {
     fetchGithubUserData();
