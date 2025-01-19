@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import User from "./User";
 
 const GithubProfileFinder = () => {
   const [userName, setUserName] = useState("amankureshi");
@@ -40,6 +41,7 @@ const GithubProfileFinder = () => {
           />
           <button onClick={handleSubmit}>Search</button>
         </div>
+        {userData !== null ? <User user={userData} /> : null}
       </div>
     </>
   );
