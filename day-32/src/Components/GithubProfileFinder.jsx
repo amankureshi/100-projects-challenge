@@ -2,11 +2,19 @@ import React, { useEffect, useState } from "react";
 
 const GithubProfileFinder = () => {
   const [userName, setUserName] = useState("amankureshi");
+  const [userData, setUserData] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   async function fetchGithubUserData() {
+    setLoading(true);
     const res = await fetch(`https://api.github.com/users/${userName}`);
     const data = await res.json();
     console.log(data);
+
+    if (data) {
+      setUserData(data);
+      setLoading(false);
+    }
   }
 
   function handleSubmit() {}
@@ -14,6 +22,10 @@ const GithubProfileFinder = () => {
   useEffect(() => {
     fetchGithubUserData();
   }, []);
+
+  if (loading) {
+    return <h1>Loading Data ! please wait </h1>;
+  }
 
   return (
     <>
