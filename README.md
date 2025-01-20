@@ -36,4 +36,5 @@ Started on 1st November 2024 with a goal to complete 100 projects by 5th Februar
 | 28  | [Crypto Currency](https://github.com/amankureshi/100-projects-challenge/tree/main/day-28)                                 | [Live Demo](https://crypto-currency-2025.onrender.com/)                          |
 | 29  | [Scrollbar Indicator](https://github.com/amankureshi/100-projects-challenge/tree/main/day-29)                            | [Live Demo](https://scrollbar-indicator.onrender.com/)                            |
 | 30  | [Tabs React](https://github.com/amankureshi/100-projects-challenge/tree/main/day-30)                                       | [Live Demo](https://tabs-react-q0eu.onrender.com/)                                |
+| 31  | [Modal Popup using Reactjs](https://github.com/amankureshi/100-projects-challenge/tree/main/day-31)                                       | [Live Demo](https://modal-popup-2025.onrender.com/)                                |
 
