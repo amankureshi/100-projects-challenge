@@ -40,6 +40,10 @@ body {
   color: #fff;
 }
 
+.hero-content {
+  text-align: center;
+}
+
 .user-container {
   display: flex;
   flex-direction: column;
@@ -49,8 +53,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 400px;
-  min-width: 400px;
-  /* height: auto; */
+  min-width: 440px;
   margin: auto;
 }
 
@@ -73,6 +76,10 @@ h2 {
   margin-top: 10px;
   font-size: 1.2rem;
   color: #203142;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 .Heading {
@@ -109,11 +116,17 @@ a:hover {
   color: #2c3e50;
 }
 
+.last-content svg {
+  font-size: 1.2rem;
+
+}
+
 .user-container p {
   font-size: 16px;
   color: #95a5a6;
   margin-top: 10px;
 }
+
 
 @media (max-width: 600px) {
   .user-container {

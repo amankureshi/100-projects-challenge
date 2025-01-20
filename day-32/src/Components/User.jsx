@@ -1,4 +1,6 @@
 import React from "react";
+import { LuUsers } from "react-icons/lu";
+import { RiGitRepositoryLine } from "react-icons/ri";
 
 const User = ({ user }) => {
   const {
@@ -18,7 +20,7 @@ const User = ({ user }) => {
       <div className="user-image">
         <img src={avatar_url} alt="user" className="avatar" />
       </div>
-      <div>
+      <div className="hero-content">
         <a href={`https://github.com/${login}`} className="Heading">
           {name || login}
         </a>
@@ -30,11 +32,16 @@ const User = ({ user }) => {
         </p>
       </div>
       <div className="last-content">
-        <h2>Public Repos</h2>
+        <h2>
+          Public Repos
+          <RiGitRepositoryLine />
+        </h2>
         <p>{public_repos}</p>
       </div>
       <div className="last-content">
-        <h2>Followers</h2>
+        <h2>
+          Followers <LuUsers />
+        </h2>
         <p>{followers}</p>
       </div>
       <div className="last-content">
