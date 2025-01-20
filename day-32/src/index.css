@@ -9,6 +9,9 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 :root {
@@ -45,7 +48,9 @@ body {
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 450px;
+  max-width: 400px;
+  min-width: 400px;
+  /* height: auto; */
   margin: auto;
 }
 
@@ -113,6 +118,7 @@ a:hover {
 @media (max-width: 600px) {
   .user-container {
     padding: 20px;
+    min-width: 200px;
   }
 
   .avatar {
