@@ -1,6 +1,6 @@
 import React from "react";
 
-const Suggestion = () => {
+const Suggestion = ({ data }) => {
   return (
     <div>
       <ul>

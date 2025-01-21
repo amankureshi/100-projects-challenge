@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Suggestion from "./Suggestion";
 
 const SearchAutoComplate = () => {
   const [loading, setLoading] = useState(false);
@@ -49,14 +50,19 @@ const SearchAutoComplate = () => {
 
   return (
     <div>
-      <h1>Search</h1>
-      <input
-        value={searchParam}
-        onChange={handleChange}
-        type="text"
-        name="search-user"
-        placeholder="Search here"
-      />
+      {loading ? (
+        <h1>Loading data ! please wait</h1>
+      ) : (
+        <input
+          value={searchParam}
+          onChange={handleChange}
+          type="text"
+          name="search-user"
+          placeholder="Search here"
+        />
+      )}
+
+      {showDropdown && <Suggestion data={filterdUsers} />}
     </div>
   );
 };
