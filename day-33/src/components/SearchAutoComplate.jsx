@@ -24,6 +24,10 @@ const SearchAutoComplate = () => {
     }
   }
 
+  function handleClick(event) {
+    console.log(event.target.innerText);
+  }
+
   async function fetchListOfUsers() {
     try {
       setLoading(true);
@@ -63,7 +67,7 @@ const SearchAutoComplate = () => {
       )}
 
       {showDropdown && (
-        <Suggestion handleClick="handleClick" data={filterdUsers} />
+        <Suggestion handleClick={handleClick} data={filterdUsers} />
       )}
     </div>
   );

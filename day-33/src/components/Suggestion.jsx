@@ -5,7 +5,11 @@ const Suggestion = ({ data, handleClick }) => {
     <div>
       <ul>
         {data && data.length
-          ? data.map((item, index) => <li onClick={handleClick}>{item}</li>)
+          ? data.map((item, index) => (
+              <li key={index} onClick={handleClick}>
+                {item}
+              </li>
+            ))
           : null}
       </ul>
     </div>
