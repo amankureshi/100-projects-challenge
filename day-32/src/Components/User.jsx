@@ -21,7 +21,11 @@ const User = ({ user }) => {
         <img src={avatar_url} alt="user" className="avatar" />
       </div>
       <div className="hero-content">
-        <a href={`https://github.com/${login}`} className="Heading">
+        <a
+          href={`https://github.com/${login}`}
+          className="Heading"
+          target="_blank"
+        >
           {name || login}
         </a>
         <p>
