@@ -11,7 +11,7 @@ const SearchAutoComplate = () => {
   function handleChange(event) {
     const query = event.target.value.toLowerCase();
     setSearchParam(query);
-    if (query > 1) {
+    if (query.length > 1) {
       const filterData =
         users && users.length
           ? users.filter((item) => item.toLowerCase().indexOf(query) > -1)
@@ -19,7 +19,7 @@ const SearchAutoComplate = () => {
       setFilterdUsers(filterData);
       setShowDropdown(true);
     } else {
-      showDropdown(false);
+      setShowDropdown(false);
     }
   }
 
