@@ -25,7 +25,9 @@ const SearchAutoComplate = () => {
   }
 
   function handleClick(event) {
+    setShowDropdown(false);
     console.log(event.target.innerText);
+    setFilterdUsers([]);
   }
 
   async function fetchListOfUsers() {
