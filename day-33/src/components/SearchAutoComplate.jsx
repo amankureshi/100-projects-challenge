@@ -62,7 +62,9 @@ const SearchAutoComplate = () => {
         />
       )}
 
-      {showDropdown && <Suggestion data={filterdUsers} />}
+      {showDropdown && (
+        <Suggestion handleClick="handleClick" data={filterdUsers} />
+      )}
     </div>
   );
 };
