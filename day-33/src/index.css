@@ -6,14 +6,20 @@ div {
   font-family: Arial, sans-serif;
 }
 
+.top-content {
+  text-align: center;
+}
+
 input[type="text"] {
+  margin: 20px;
+  font-size: 1.4rem;
   width: 300px;
-  padding: 10px;
-  font-size: 16px;
+  padding: 0.6rem;
   border: 2px solid #ddd;
   border-radius: 4px;
   outline: none;
   transition: border-color 0.3s ease-in-out;
+
 }
 
 input[type="text"]:focus {
@@ -26,7 +32,7 @@ ul {
   padding: 0;
   border: 1px solid #ddd;
   border-radius: 4px;
-  max-height: 200px;
+  max-height: 300px;
   overflow-y: auto;
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -36,6 +42,7 @@ li {
   padding: 10px 15px;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
+  font-size: 1.2rem;
 }
 
 li:hover {

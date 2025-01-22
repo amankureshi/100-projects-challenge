@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Suggestion from "./Suggestion";
+import Loader from "../assets/Loader.gif";
 
 const SearchAutoComplate = () => {
   const [loading, setLoading] = useState(false);
-  const [users, setUsers] = useState([]);
+  // const [users, setUsers] = useState([]);
   const [error, setError] = useState(null);
   const [searchParam, setSearchParam] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
@@ -12,34 +13,31 @@ const SearchAutoComplate = () => {
   function handleChange(event) {
     const query = event.target.value.toLowerCase();
     setSearchParam(query);
-    if (query.length > 1) {
-      const filterData =
-        users && users.length
-          ? users.filter((item) => item.toLowerCase().indexOf(query) > -1)
-          : [];
-      setFilterdUsers(filterData);
+
+    if (query.length > 2) {
+      fetchListOfUsers(query);
       setShowDropdown(true);
     } else {
       setShowDropdown(false);
     }
   }
 
-  function handleClick(event) {
-    setShowDropdown(false);
-    console.log(event.target.innerText);
-    setFilterdUsers([]);
-  }
-
-  async function fetchListOfUsers() {
+  async function fetchListOfUsers(query) {
     try {
       setLoading(true);
-      const response = await fetch("https://dummyjson.com/users");
+      const response = await fetch(
+        `https://dummyjson.com/users/search?q=${query}`
+      );
       const data = await response.json();
       console.log(data);
+
       if (data && data.users && data.users.length) {
-        setUsers(data.users.map((userItem) => userItem.firstName));
+        setFilterdUsers(data.users.map((userItem) => userItem.firstName));
         setLoading(false);
         setError(null);
+      } else {
+        setLoading(false);
+        setFilterdUsers([]);
       }
     } catch (error) {
       setLoading(false);
@@ -49,28 +47,41 @@ const SearchAutoComplate = () => {
   }
 
   useEffect(() => {
-    fetchListOfUsers();
+    fetchListOfUsers(searchParam);
   }, []);
 
-  console.log(users, filterdUsers);
-
   return (
-    <div>
-      {loading ? (
-        <h1>Loading data ! please wait</h1>
-      ) : (
-        <input
-          value={searchParam}
-          onChange={handleChange}
-          type="text"
-          name="search-user"
-          placeholder="Search here"
-        />
-      )}
+    <div className="top-content">
+      <input
+        value={searchParam}
+        onChange={handleChange}
+        type="text"
+        name="search-user"
+        placeholder="Search here"
+      />
 
       {showDropdown && (
-        <Suggestion handleClick={handleClick} data={filterdUsers} />
+        <div className="dropdown-menu">
+          {loading && (
+            <img
+              src={Loader}
+              alt="loader-image"
+              className="loader"
+              width={"150px"}
+            />
+          )}
+          <Suggestion
+            handleClick={(event) => setSearchParam(event.target.innerText)}
+            data={filterdUsers}
+          />
+        </div>
       )}
+      <div className="footer">
+        <p>
+          1. Cheak out Console <br />
+          2. Search First name
+        </p>
+      </div>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React from "react";
 
 const Suggestion = ({ data, handleClick }) => {
   return (
-    <div>
+    <div className="suggest-container">
       <ul>
         {data && data.length
           ? data.map((item, index) => (
