@@ -38,4 +38,5 @@ Started on 1st November 2024 with a goal to complete 100 projects by 5th Februar
 | 30  | [Tabs React](https://github.com/amankureshi/100-projects-challenge/tree/main/day-30)                                       | [Live Demo](https://tabs-react-q0eu.onrender.com/)                                |
 | 31  | [Modal Popup using Reactjs](https://github.com/amankureshi/100-projects-challenge/tree/main/day-31)                                       | [Live Demo](https://modal-popup-2025.onrender.com/)                                |
 | 32  | [Github profile finder](https://github.com/amankureshi/100-projects-challenge/tree/main/day-32)                                       | [Live Demo](https://github-profile-finder-2025.onrender.com/)                                |
+| 33  | [Search Auto complate](https://github.com/amankureshi/100-projects-challenge/tree/main/day-33)                                       | [Live Demo](https://search-auto-complate.onrender.com/)                                |
 
