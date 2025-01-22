@@ -53,3 +53,31 @@ h1 {
   font-size: 18px;
   color: #555;
 }
+
+.dropdown-menu {
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  width: 100%;
+}
+
+.loader {
+  height: 150px;
+  width: auto;
+}
+
+.suggest-container {
+  display: block;
+  margin: auto;
+  text-align: center;
+  margin: 20px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  font-size: 1.2rem;
+  font-style: italic;
+}
