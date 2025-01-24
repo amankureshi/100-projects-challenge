@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Suggestion from "./Suggestion";
 import Loader from "../assets/Loader.gif";
+import { IoSearch } from "react-icons/io5";
 
 const SearchAutoComplate = () => {
   const [loading, setLoading] = useState(false);
-  // const [users, setUsers] = useState([]);
   const [error, setError] = useState(null);
   const [searchParam, setSearchParam] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
@@ -57,8 +57,9 @@ const SearchAutoComplate = () => {
         onChange={handleChange}
         type="text"
         name="search-user"
-        placeholder="Search here"
+        placeholder="e.g., John Doe, Elon"
       />
+      <IoSearch />
 
       {showDropdown && (
         <div className="dropdown-menu">
@@ -76,12 +77,6 @@ const SearchAutoComplate = () => {
           />
         </div>
       )}
-      <div className="footer">
-        <p>
-          1. Cheak out Console <br />
-          2. Search First name
-        </p>
-      </div>
     </div>
   );
 };
