@@ -52,14 +52,16 @@ const SearchAutoComplate = () => {
 
   return (
     <div className="top-content">
-      <input
-        value={searchParam}
-        onChange={handleChange}
-        type="text"
-        name="search-user"
-        placeholder="e.g., John Doe, Elon"
-      />
-      <IoSearch />
+      <div className="input-container">
+        <input
+          value={searchParam}
+          onChange={handleChange}
+          type="text"
+          name="search-user"
+          placeholder="e.g., John Doe, James"
+        />
+        <IoSearch className="search-icon" />
+      </div>
 
       {showDropdown && (
         <div className="dropdown-menu">
