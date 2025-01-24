@@ -15,10 +15,11 @@ const UseWindowResize = () => {
 
   useLayoutEffect(() => {
     handleResize();
+
     window.addEventListener("resize", handleResize);
 
     return () => {
-      window.addEventListener("resize,handleResize");
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 

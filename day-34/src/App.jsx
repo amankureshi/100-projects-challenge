@@ -1,10 +1,10 @@
 import "./App.css";
-import UseWindowResize from "./components/UseWindowResize";
+import Test from "./components/Test";
 
 function App() {
   return (
     <>
-      <UseWindowResize />
+      <Test />
     </>
   );
 }
