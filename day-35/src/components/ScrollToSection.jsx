@@ -49,17 +49,21 @@ const ScrollToSection = () => {
     },
   ];
   return (
-    <div>
-      <h1>Scroll to a particular section</h1>
-      <button>Click to scroll</button>
-      {data.map((dataItem) => {
-        return (
-          <div style={dataItem.style}>
-            <h3>{data.label}</h3>
-          </div>
-        );
-      })}
-    </div>
+    <>
+      <div className="top-section">
+        <h1>Scroll to a particular section</h1>
+        <button className="btn">Click to scroll</button>
+      </div>
+      <div>
+        {data.map((dataItem) => {
+          return (
+            <div style={dataItem.style}>
+              <h3>{data.label}</h3>
+            </div>
+          );
+        })}
+      </div>
+    </>
   );
 };
 
