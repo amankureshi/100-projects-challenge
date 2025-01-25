@@ -1,5 +1,5 @@
 import "./App.css";
-import ScrollToSection from "./assets/components/ScrollToSection";
+import ScrollToSection from "./components/ScrollToSection";
 
 function App() {
   return (
