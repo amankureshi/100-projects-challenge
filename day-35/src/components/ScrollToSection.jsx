@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 
 const ScrollToSection = () => {
+  const ref = useRef();
   const data = [
     {
       label: "First Background",
@@ -52,12 +53,14 @@ const ScrollToSection = () => {
     <>
       <div className="top-section">
         <h1>Scroll to a particular section</h1>
-        <button className="btn">Click to scroll</button>
+        <button onClick={handleScrollToSection} className="btn">
+          Click to scroll
+        </button>
       </div>
       <div>
-        {data.map((dataItem) => {
+        {data.map((dataItem, index) => {
           return (
-            <div style={dataItem.style}>
+            <div ref={index === 3 ? red : null} style={dataItem.style}>
               <h3>{data.label}</h3>
             </div>
           );
