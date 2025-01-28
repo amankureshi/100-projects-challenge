@@ -1,34 +1,86 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+
+  const [email, setEmail] = useState('');
+  const [pageLoader, setPageLoader] = useState(true);
+  const [userInfo, setUserInfo] = useState({});
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [password, setPassword] = useState('');
   const [error, setError] = useState({ email: "", password: "" });
 
-  const validationForm = () => {
+  const validateForm = () => {
     let emailError = "";
     let passwordError = "";
 
-    if (email === "") {
-      emailError = "Please enter email";
-    } else if (!email.includes("@")) {
+    if (email == '') {
+      emailError = "Please Enter email";
+    }
+    else if (!email.includes("@")) {
       emailError = "Please include @ in the email";
     }
-    if (password === "") {
-      passwordError = "Please enter password";
-    } else if (password.length < 3) {
-      passwordError = "Password must be least 6 characters";
+    if (password.length < 3) {
+      passwordError = "Password must be at least 6 characters long";
     }
     setError({ email: emailError, password: passwordError });
-    return !emailError && passwordError;
-  };
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (validationForm()) {
-      console.log("Form is valid");
+
+    return !emailError && !passwordError;
+  }
+
+  const getUserProfile = async (token: string) => {
+    try {
+      const response = await fetch("https://api.escuelajs.co/api/v1/auth/profile", {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (!response.ok) throw new Error("Failed to fetch user profile");
+
+      const profile = await response.json();
+      // console.log("User Profile:", profile);
+      setUserInfo(profile)
+      setLoggedIn(true);
+      setPageLoader(false);
+      return profile;
+    } catch (error) {
+      console.error("Error fetching user profile:", error.message);
     }
   };
+
+  useEffect(() => {
+    const localToken = localStorage.getItem('token')
+    console.log('localToken', localToken)
+    localToken ? getUserProfile(localToken) : setPageLoader(false)
+  }, [])
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (validateForm()) {
+      try {
+        const response = await fetch("https://api.escuelajs.co/api/v1/auth/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, password }),
+        });
+
+        if (!response.ok) throw new Error("Login failed");
+
+        const data = await response.json();
+        console.log(data);
+        getUserProfile(data.access_token)
+        setEmail("");
+        setPassword("");
+        setError({ email: "", password: "" });
+        localStorage.setItem("token", data.access_token)
+      } catch (error: { message: string }) {
+        alert(error.message);
+      }
+    }
+  }
+
 
   return (
     <>
@@ -112,7 +164,6 @@ function App() {
                       </label>
                     </div>
                   </div>
-                  {/* <a href="#" className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Forgot password?</a> */}
                   <a
                     href="#"
                     className="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500"
