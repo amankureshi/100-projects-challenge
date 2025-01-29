@@ -116,7 +116,7 @@ function App() {
       <section className="bg-gray-50 dark:bg-gray-900">
         {pageLoader ? <div className="flex justify-center align-middle"><img src={loader} alt="" /></div> : <>
           {!loggedIn &&
-            <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+            <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 ">
               <a
                 href="#"
                 className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
@@ -223,8 +223,8 @@ function App() {
             </div>}
           {
             loggedIn && userInfo && <div
-              className="w-full flex justify-center">
-              <div className="w-full  max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+              className="w-full flex justify-center min-h-screen">
+              <div className="w-full  max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 flex-col justify-between" >
 
                 <div className="flex flex-col items-center pb-10">
                   <img
