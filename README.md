@@ -37,4 +37,4 @@
 | 31  | [Modal Popup using Reactjs](https://github.com/amankureshi/100-projects-challenge/tree/main/day-31)                                       | [Live Demo](https://modal-popup-2025.onrender.com/)                                |
 | 32  | [Github profile finder](https://github.com/amankureshi/100-projects-challenge/tree/main/day-32)                                       | [Live Demo](https://github-profile-finder-2025.onrender.com/)                                |
 | 33  | [Search Auto complate](https://github.com/amankureshi/100-projects-challenge/tree/main/day-33)                                       | [Live Demo](https://search-auto-complate.onrender.com/)                                |
-
+| 34  | [Window Resize](https://github.com/amankureshi/100-projects-challenge/tree/main/day-34)                                       | [Live Demo](https://window-resize-nb73.onrender.com/)                                |
