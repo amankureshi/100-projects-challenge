@@ -86,6 +86,30 @@ function App() {
     setLoggedIn(false);
     setUserInfo({});
   }
+  async function createUser(name, avtar, role) {
+    try {
+      const response = await fetch('https://api.escuelajs.co/api/v1/users/', {
+        method: 'POST',
+        headers: {
+          'Content-type': 'appication/json',
+        },
+        body: JSON.stringify({
+          name,
+          avtar,
+          role,
+        }),
+      });
+      if (!response.ok) {
+        throw new Error('Faild to create')
+      }
+      const data = await response.json();
+      console.log('user created successfullu', data);
+      return data;
+    }
+    catch (error) {
+      console.error("Error", error)
+    }
+  }
 
   return (
     <>
@@ -199,13 +223,13 @@ function App() {
             </div>}
           {
             loggedIn && userInfo && <div
-              className="flex justify-center">
+              className="w-full flex justify-center">
               <div className="w-full  max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
 
                 <div className="flex flex-col items-center pb-10">
                   <img
                     className="w-24 h-24 mb-3 rounded-full shadow-lg"
-                    src={userInfo.avtar}
+                    src={userInfo.avatar}
                     alt="avatar"
                   />
                   <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
