@@ -1,6 +1,6 @@
-✨ Project 30: Window Resize Detector using React.js  
+✨ Project 34: Window Resize Detector using React.js  
 
-🔗 Live Demo:[]  
+🔗 Live Demo:[https://window-resize-nb73.onrender.com/]  
 
 📄 Description:  
 A simple React.js app that detects and displays the current window size dynamically as the user resizes the browser window.  
