@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import loader from "./assets/spiner.gif";
 import "./App.css";
 
 function App() {
@@ -86,11 +87,10 @@ function App() {
     setUserInfo({});
   }
 
-
   return (
     <>
       <section className="bg-gray-50 dark:bg-gray-900">
-        {pageLoader ? <div>Loading</div> : <>
+        {pageLoader ? <div className="flex justify-center align-middle"><img src={loader} alt="" /></div> : <>
           {!loggedIn &&
             <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
               <a
@@ -205,22 +205,22 @@ function App() {
                 <div className="flex flex-col items-center pb-10">
                   <img
                     className="w-24 h-24 mb-3 rounded-full shadow-lg"
-                    src="/docs/images/people/profile-picture-3.jpg"
-                    alt="Bonnie image"
+                    src={userInfo.avtar}
+                    alt="avatar"
                   />
                   <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
-                    Bonnie Green
+                    {userInfo.name}
                   </h5>
                   <span className="text-sm text-gray-500 dark:text-gray-400">
-                    Visual Designer
+                    {userInfo.role}
                   </span>
                   <div className="flex mt-4 md:mt-6">
-                    <a
-                      href="#"
+                    <button
+                      onClick={handleLogout}
                       className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     >
                       Log Out
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
