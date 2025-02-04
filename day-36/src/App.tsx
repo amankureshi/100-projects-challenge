@@ -114,7 +114,7 @@ function App() {
   return (
     <>
       <section className="bg-gray-50 dark:bg-gray-900">
-        {pageLoader ? <div className="flex justify-center align-middle"><img src={loader} alt="" /></div> : <>
+        {pageLoader ? <div className="flex justify-center align-middle loader"><img src={loader} alt="" /></div> : <>
           {!loggedIn &&
             <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 ">
               <a
@@ -222,29 +222,31 @@ function App() {
               </div>
             </div>}
           {
-            loggedIn && userInfo && <div
-              className="w-full flex justify-center min-h-screen">
-              <div className="w-full  max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 flex-col justify-between" >
-
-                <div className="flex flex-col items-center pb-10">
-                  <img
-                    className="w-24 h-24 mb-3 rounded-full shadow-lg"
-                    src={userInfo.avatar}
-                    alt="avatar"
-                  />
-                  <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
-                    {userInfo.name}
-                  </h5>
-                  <span className="text-sm text-gray-500 dark:text-gray-400">
-                    {userInfo.role}
-                  </span>
-                  <div className="flex mt-4 md:mt-6">
-                    <button
-                      onClick={handleLogout}
-                      className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                    >
-                      Log Out
-                    </button>
+            loggedIn && userInfo &&
+            <div className="last-card">
+              <div
+                className="w-full flex justify-center ">
+                <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 flex flex-col items-center mx-auto my-8 p-6 card-demo">
+                  <div className="flex flex-col items-center">
+                    <img
+                      className="w-24 h-24 mb-3 rounded-full shadow-lg"
+                      src={userInfo.avatar}
+                      alt="avatar"
+                    />
+                    <h2 className="mb-1 text-3xl font-medium text-gray-900 dark:text-white">
+                      {userInfo.name}
+                    </h2>
+                    <span className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                      {userInfo.role}
+                    </span>
+                    <div className="flex mt-4">
+                      <button
+                        onClick={handleLogout}
+                        className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                      >
+                        Log Out
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
