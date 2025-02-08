@@ -1,10 +1,11 @@
 import { useState } from "react";
 import "./App.css";
+import ButtonsStories from "./stories/Buttons.stories";
 
 function App() {
   return (
     <>
-      <h1>Aman kureshi</h1>
+      <ButtonsStories />
     </>
   );
 }
