@@ -23,4 +23,11 @@ function Button({
   );
 }
 
+Button.propTypes = {
+  label: PropTypes.string,
+  backgroundColor: PropTypes.string,
+  size: PropTypes.oneOf(["sm", "md", "lg"]),
+  handleClick: PropTypes.func,
+};
+
 export default Button;
