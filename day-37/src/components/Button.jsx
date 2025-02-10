@@ -2,10 +2,10 @@ import PropTypes from "prop-types";
 
 function Button({
   label,
-  backgroundColor = "red",
+  backgroundColor = "silver",
   size = "md",
   handleClick,
-  color = "white",
+  color = "#101010",
 }) {
   let scale = 1;
   if (size === "sm") scale = 0.75;
