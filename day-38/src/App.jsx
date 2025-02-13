@@ -5,13 +5,16 @@ function App() {
     <>
       <div className="container">
         <form>
-          <div class="row mb-3 mt-4">
-            <label for="inputPassword3" class="col-sm-2 col-form-label">
-              Password
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">
+              Example label
             </label>
-            <div class="col-sm-5">
-              <input type="password" class="form-control" id="inputPassword3" />
-            </div>
+            <input
+              type="text"
+              class="form-control w-auto"
+              id="formGroupExampleInput"
+              placeholder="Example input placeholder"
+            />
           </div>
           <button type="submit" class="btn btn-primary btn-md">
             Sign in
