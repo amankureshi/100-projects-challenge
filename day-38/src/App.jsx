@@ -4,6 +4,7 @@ import "./App.css";
 function App() {
   const [password, setPassword] = useState();
   const [message, setMessage] = useState();
+  const [showPassword, setShowPassword] = useState(false);
 
   function handleChange(e) {
     setPassword(e.target.value);
@@ -32,14 +33,24 @@ function App() {
               <label htmlFor="password" className="form-label">
                 Password
               </label>
-              <input
-                type="password"
-                className="form-control"
-                placeholder="Enter password"
-                onChange={handleChange}
-                value={password}
-              />
-              <p style={{ color: "red" }}>{message}</p>
+              <div className="input-group">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  className="form-control"
+                  placeholder="Enter password"
+                  onChange={handleChange}
+                  value={password}
+                />
+                <button type="button" className="btn ">
+                  <i
+                    onClick={() => setShowPassword(!showPassword)}
+                    className={`fas ${
+                      showPassword ? "fa-eye-slash" : "fa-eye"
+                    }`}
+                  ></i>
+                </button>
+                <p style={{ color: "red" }}>{message}</p>
+              </div>
             </div>
             <button className="btn btn-primary btn-md">Sign in</button>
           </form>
