@@ -29,15 +29,15 @@ function App() {
           <h2>Password Validation</h2>
           <form onSubmit={handleValidation}>
             <div className="mb-3">
-              <label htmlFor="formGroupExampleInput" className="form-label">
+              <label htmlFor="password" className="form-label">
                 Password
               </label>
               <input
                 type="password"
-                className="form-control "
-                id="formGroupExampleInput"
+                className="form-control"
                 placeholder="Enter password"
                 onChange={handleChange}
+                value={password}
               />
               <p style={{ color: "red" }}>{message}</p>
             </div>
