@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body {
+  background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
@@ -12,4 +16,9 @@
   padding: 2.4rem;
   border-radius: 10px;
   line-height: 2rem;
+}
+
+.form-control {
+  border: 2px solid rgba(35, 34, 34, 0.6);
+  background: transparent;
 }
