@@ -4,24 +4,42 @@ import "./App.css";
 function App() {
   const [password, setPassword] = useState();
   const [message, setMessage] = useState();
+
+  function handleChange(e) {
+    setPassword(e.target.value);
+    console.log(password);
+  }
+  const handleValidation = (e) => {
+    const regExp = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/;
+    if (password === "") {
+      setMessage("Please enter password");
+    } else if (regExp.test(password)) {
+      setMessage("Password in Valid");
+    } else if (!regExp.test(password)) {
+      setMessage("password is not Valid");
+    } else {
+      setMessage("Password is Valid");
+    }
+  };
   return (
     <>
       <main className="d-flex justify-content-center align-items-center min-vh-100">
         <div className="container" style={{ width: "26rem" }}>
           <h2>Password Validation</h2>
           <form onSubmit={handleValidation}>
-            <div class="mb-3">
-              <label for="formGroupExampleInput" class="form-label">
+            <div className="mb-3">
+              <label htmlFor="formGroupExampleInput" className="form-label">
                 Password
               </label>
               <input
                 type="password"
-                class="form-control "
+                className="form-control "
                 id="formGroupExampleInput"
                 placeholder="Enter password"
+                onChange={handleChange}
               />
             </div>
-            <button type="submit" class="btn btn-primary btn-md">
+            <button type="submit" className="btn btn-primary btn-md">
               Sign in
             </button>
           </form>
