@@ -22,3 +22,24 @@ body {
   border: 2px solid rgba(35, 34, 34, 0.6);
   background: transparent;
 }
+
+.btn:focus {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.input_group {
+  position: relative;
+}
+
+.btn-eye {
+  position: absolute;
+  right: 14px;
+  top: 18px;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}

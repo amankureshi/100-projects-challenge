@@ -33,7 +33,7 @@ function App() {
               <label htmlFor="password" className="form-label">
                 Password
               </label>
-              <div className="input-group">
+              <div className="input_group">
                 <input
                   type={showPassword ? "text" : "password"}
                   className="form-control"
@@ -41,7 +41,7 @@ function App() {
                   onChange={handleChange}
                   value={password}
                 />
-                <button type="button" className="btn ">
+                <button type="button" className="btn btn-eye">
                   <i
                     onClick={() => setShowPassword(!showPassword)}
                     className={`fas ${
