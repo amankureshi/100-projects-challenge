@@ -10,6 +10,7 @@ function App() {
     console.log(password);
   }
   const handleValidation = (e) => {
+    e.preventDefault();
     const regExp = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/;
     if (password === "") {
       setMessage("Please enter password");
@@ -38,10 +39,9 @@ function App() {
                 placeholder="Enter password"
                 onChange={handleChange}
               />
+              <p style={{ color: "red" }}>{message}</p>
             </div>
-            <button type="submit" className="btn btn-primary btn-md">
-              Sign in
-            </button>
+            <button className="btn btn-primary btn-md">Sign in</button>
           </form>
         </div>
       </main>
