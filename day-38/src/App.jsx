@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [password, setPassword] = useState();
+  const [password, setPassword] = useState("");
   const [message, setMessage] = useState();
   const [showPassword, setShowPassword] = useState(false);
 
@@ -16,11 +16,11 @@ function App() {
     if (password === "") {
       setMessage("Please enter password");
     } else if (regExp.test(password)) {
-      setMessage("Password in Valid");
+      alert("Password is Valid");
     } else if (!regExp.test(password)) {
-      setMessage("password is not Valid");
+      setMessage("Password is Not Valid");
     } else {
-      setMessage("Password is Valid");
+      setMessage("");
     }
   };
   return (
