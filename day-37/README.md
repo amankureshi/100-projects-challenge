@@ -1,7 +1,6 @@
-  📖 Project 37: Storybook with Button Component using React.js  
+  ![37-storybook](https://github.com/user-attachments/assets/c66b7bb4-a948-4065-aa54-bc8163a7ed2f)
 
-🔗 Live Demo:[(https://github.com/user-attachments/assets/cdb5e662-46bd-4463-ba9e-75f532ee1366)]  
-
+📖 Project 37: Storybook with Button Component using React.js  
 Excited to share my **Storybook Button Component** project, part of my **100 Projects Challenge!** 🎉  
 
 This project demonstrates how to create and document a **Button component** using **Storybook** in a React.js application. It helps in building reusable UI components with an interactive preview.  
