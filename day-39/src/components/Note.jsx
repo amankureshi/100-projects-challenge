@@ -1,7 +1,7 @@
 import React from "react";
 
-function Note() {
-  return <div></div>;
+function Note({ note }) {
+  return <div>{note}</div>;
 }
 
 export default Note;
