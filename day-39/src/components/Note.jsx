@@ -23,7 +23,17 @@ const Note = ({ note, binnedItems }) => {
     []
   );
 
-  return <div ref={drag}>{note}</div>;
+  return (
+    <div className="flex justify-center">
+      <div
+        className="card"
+        style={{ opacity: isDragging ? 0.5 : 1 }}
+        ref={drag}
+      >
+        {note}
+      </div>
+    </div>
+  );
 };
 
 export default Note;

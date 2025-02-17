@@ -37,13 +37,17 @@ function App() {
   return (
     <>
       <DndProvider backend={HTML5Backend}>
-        <h1 className="text-3xl font-bold text-center">Aman Kureshi</h1>
+        <h1 className="text-3xl font-bold text-center pt-10 pb-3">
+          Drag and Drop - DnD Library
+        </h1>
         {notes.map((item) => (
-          <Note
-            key={new Date().getTime() + Math.floor(Math.random() * 1000)}
-            note={item}
-            binnedItems={binnedItems}
-          />
+          <div className="notes-container">
+            <Note
+              key={new Date().getTime() + Math.floor(Math.random() * 1000)}
+              note={item}
+              binnedItems={binnedItems}
+            />
+          </div>
         ))}
         <Bin binnedItems={binnedItems} />
       </DndProvider>
