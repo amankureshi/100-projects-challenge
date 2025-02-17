@@ -23,12 +23,14 @@ function App() {
     if (array) {
       setBinnedItems(JSON.parse(array));
       for (let i = 0; i < notes.length; i++) {
-        if (notes[i] === binnedItems[j]) {
-          notes.splice(i, 1);
+        for (let j = 0; j < binnedItems.length; j++) {
+          if (notes[i] === binnedItems[j]) {
+            notes.splice(i, 1);
+          }
         }
       }
     }
-  }, []);
+  }, [notes]);
 
   console.log(notes);
 
