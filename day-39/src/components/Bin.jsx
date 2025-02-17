@@ -1,5 +1,6 @@
 import React from "react";
 import { useDrop } from "react-dnd";
+import { TbDragDrop2 } from "react-icons/tb";
 
 const Bin = ({ binnedItems }) => {
   const [{ canDrop, isOver }, drop] = useDrop(
@@ -15,14 +16,16 @@ const Bin = ({ binnedItems }) => {
   );
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center align-middle text-center">
       <div
-        className="border m-2 rounded-sm h-48 flex text-center justify-center items-center w-4xl"
+        className="border-2 border-amber-950 p-3 mt-20 rounded-sm flex flex-col justify-center align-middle  text-center "
         ref={drop}
       >
-        <h2 className="text-cetner font-medium py-2 ">Drop Here.......</h2>
+        <h2 className="text-cetner flex gap-2 font-medium">
+          Drop Here <TbDragDrop2 className="mt-1 text-[20px] " />
+        </h2>
         {binnedItems.map((item, i) => (
-          <div key={i}>
+          <div key={i} className="card">
             <p>{item}</p>
           </div>
         ))}
