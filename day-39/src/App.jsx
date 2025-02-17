@@ -22,6 +22,11 @@ function App() {
 
     if (array) {
       setBinnedItems(JSON.parse(array));
+      for (let i = 0; i < notes.length; i++) {
+        if (notes[i] === binnedItems[j]) {
+          notes.splice(i, 1);
+        }
+      }
     }
   }, []);
 
@@ -38,7 +43,7 @@ function App() {
             binnedItems={binnedItems}
           />
         ))}
-        <Bin />
+        <Bin binnedItems={binnedItems} />
       </DndProvider>
     </>
   );
