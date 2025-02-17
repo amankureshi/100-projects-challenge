@@ -17,6 +17,14 @@ function App() {
     setNotes(JSON.parse(array));
   }, []);
 
+  useEffect(() => {
+    let array = localStorage.getItem("binnedItems");
+
+    if (array) {
+      setBinnedItems(JSON.parse(array));
+    }
+  }, []);
+
   console.log(notes);
 
   return (
@@ -27,6 +35,7 @@ function App() {
           <Note
             key={new Date().getTime() + Math.floor(Math.random() * 1000)}
             note={item}
+            binnedItems={binnedItems}
           />
         ))}
         <Bin />
