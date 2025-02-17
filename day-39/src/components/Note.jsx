@@ -19,7 +19,7 @@ const Note = ({ note }) => {
     []
   );
 
-  return <div>{note}</div>;
+  return <div ref={drag}>{note}</div>;
 };
 
 export default Note;

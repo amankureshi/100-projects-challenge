@@ -23,8 +23,13 @@ function App() {
     <>
       <DndProvider backend={HTML5Backend}>
         <h1 className="text-3xl font-bold text-center">Aman Kureshi</h1>
+        {notes.map((item) => (
+          <Note
+            key={new Date().getTime() + Math.floor(Math.random() * 1000)}
+            note={item}
+          />
+        ))}
         <Bin />
-        <Note />
       </DndProvider>
     </>
   );
