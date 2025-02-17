@@ -1,7 +1,6 @@
 🖱️ Project 40: Drag and Drop using React DnD Library + Tailwind CSS  
 
-🔗 Live Demo:  
-[Coming Soon...]  
+🔗 Live Demo:[https://drag-drop-react.onrender.com/]  
 
 Excited to share my **Drag and Drop** project, part of my **100 Projects Challenge!** 🎉  
 
