@@ -6,8 +6,6 @@ Excited to share my **Drag and Drop** project, part of my **100 Projects Challen
 
 This project implements a **drag and drop** feature using the **React DnD (Drag and Drop) Library**, styled with **Tailwind CSS** for a modern and responsive UI.  
 
----
-
 ## 🚀 Installation & Setup  
 1. Install Dependencies
 npm i
