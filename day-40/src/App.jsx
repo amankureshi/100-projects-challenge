@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import EmojiPicker from "emoji-picker-react";
 import "./App.css";
 
 function App() {
@@ -22,6 +23,13 @@ function App() {
   return (
     <>
       <h1>Emoji</h1>
+      <div className="selected-emoji">
+        <p>selected Emoji :</p>
+        <span>{chooseEmoji}</span>
+      </div>
+      <div className="emoji-picker">
+        <EmojiPicker onEmojiClick={emojiPickerFunction}></EmojiPicker>
+      </div>
     </>
   );
 }
