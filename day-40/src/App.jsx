@@ -13,6 +13,12 @@ function App() {
     document.body.removeChild(textArea);
   };
 
+  const emojiPickerFunction = (emojiObject) => {
+    const emoji = emojiObject.emoji;
+    setChooseEmoji(emoji);
+    copyEmojiFuction(emoji);
+  };
+
   return (
     <>
       <h1>Emoji</h1>
