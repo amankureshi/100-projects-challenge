@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Arial", sans-serif;
+    min-height: 100vh;
+}
+
+.emoji-container {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.selected-emoji {
+    background-color: #5f93a1;
+    width: 15rem;
+    margin: auto;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.selected-emoji:hover {
+    background-color: #81acb8;
+    transform: scale(1.05);
+}
+
+.selected-emoji span {
+    font-size: 3rem;
+    margin-left: 10px;
+}
+
+.selected-emoji p {
+    text-transform: capitalize;
+}
+
+.emoji-picker {
+    margin-top: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.Toastify__toast-container {
+    z-index: 9999;
+}
+
+.Toastify__toast {
+    background-color: #4caf50;
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 8px;
+}

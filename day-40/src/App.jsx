@@ -31,16 +31,18 @@ function App() {
 
   return (
     <>
-      <h1>Emoji</h1>
-      {chooseEmoji && (
-        <div className="selected-emoji">
-          <p>selected Emoji : {chooseEmoji}</p>
+      <div className="emoji-container">
+        <h1>Emoji</h1>
+        {chooseEmoji && (
+          <div className="selected-emoji">
+            <p>selected Emoji : {chooseEmoji}</p>
+          </div>
+        )}
+        <div className="emoji-picker">
+          <EmojiPicker onEmojiClick={emojiPickerFunction}></EmojiPicker>
         </div>
-      )}
-      <div className="emoji-picker">
-        <EmojiPicker onEmojiClick={emojiPickerFunction}></EmojiPicker>
+        <ToastContainer />
       </div>
-      <ToastContainer />
     </>
   );
 }
