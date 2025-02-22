@@ -1,6 +1,7 @@
 /* <------- Google Fonts ------>*/
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     margin: 0;
@@ -9,15 +10,19 @@
 }
 
 body {
-    font-family: "Poppins", sans-serif;
     font-style: normal;
 }
 
 .container a {
-    display: inline-block;
     text-decoration: none;
-    padding: 10px;
+    padding-left: 5px;
     text-transform: capitalize;
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+}
+
+.container h1 {
+    font-family: "Poppins", sans-serif;
 }
 
 .hundred {
@@ -25,13 +30,37 @@ body {
     font-size: 2.4rem;
     font-family: "Edu AU VIC WA NT Arrows", cursive;
     font-optical-sizing: auto;
+    display: inline-block;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 5px;
+    gap: 1rem;
 }
 
 h1 {
@@ -115,6 +144,8 @@ h1 {
     }
 }
 
+
+
 .social-icon .fa-github {
     color: #101010;
 }
@@ -132,5 +163,11 @@ h1 {
 
     a {
         font-size: 0.9rem;
+    }
+}
+
+@media (max-width:786px) {
+    .hundred {
+        font-size: 1.5rem;
     }
 }
