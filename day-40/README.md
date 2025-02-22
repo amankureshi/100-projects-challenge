@@ -1,6 +1,6 @@
 ✨ Project 41: Emoji Picker using React.js  
 
-🔗 Live Demo:[Coming Soon...]  
+🔗 Live Demo:[https://emoji-picker-react.onrender.com/]  
 
 📄 Description:  
 A simple **React.js** app that allows users to select and insert emojis using an interactive emoji picker.  
