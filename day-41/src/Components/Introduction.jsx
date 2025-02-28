@@ -1,4 +1,3 @@
-// src/components/Introduction.js
 import React from "react";
 
 const Introduction = () => {
