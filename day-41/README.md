@@ -1,8 +1,27 @@
-# React + Vite
+📸 Project 42: Photography Website using React Router & CSS Grid  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔗 Live Demo:[Coming Soon...]  
 
-Currently, two official plugins are available:
+📄 Description:  
+A **React.js** photography portfolio website featuring multiple pages for galleries, about, and contact, built using **React Router** for navigation and **CSS Grid** for a responsive layout.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔧 Technologies Used:  
+- React.js  
+- React Router  
+- CSS Grid  
+- useState & useEffect Hooks  
+
+🌟 Features:  
+- Multi-page navigation using **React Router**  
+- Responsive **CSS Grid** layout for displaying images  
+- Lightbox-style image preview  
+- Smooth page transitions  
+
+🚀 Challenges Faced:  
+- Implementing client-side routing effectively  
+- Optimizing image loading and layout for better performance  
+
+🎯 Key Learnings:  
+- Using **React Router** for single-page app navigation  
+- Creating flexible and responsive layouts with **CSS Grid**  
+- Enhancing UX with smooth transitions and interactive image previews  
