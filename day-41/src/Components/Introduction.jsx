@@ -19,6 +19,7 @@ const Introduction = () => {
           <img
             src="https://images.pexels.com/photos/840666/pexels-photo-840666.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             alt="Photography Introduction"
+            className="hero-image"
           />
         </div>
       </div>

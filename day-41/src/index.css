@@ -7,12 +7,19 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background-color: #2c3e50;
+  background-color: #2e4a32eb;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
@@ -126,9 +133,8 @@
   max-width: 500px;
 }
 
-.introduction .image img {
-  width: 100%;
-  height: auto;
+.introduction .hero-image {
+  width: 30rem;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -220,4 +226,16 @@
   .subscription-option {
     width: 80%;
   }
+}
+
+.navbar-container .logo img {
+  width: 10%;
+}
+
+.logo h2 {
+  color: rgb(237, 240, 233);
+}
+
+span {
+  color: #e67e22;
 }
