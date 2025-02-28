@@ -15,8 +15,11 @@ const Introduction = () => {
           </p>
           <button className="explore-button">Start Exploring</button>
         </div>
-        <div className="image">
-          <img src="" alt="Photography Introduction" />
+        <div className="image photo-gallery">
+          <img
+            src="https://images.pexels.com/photos/840666/pexels-photo-840666.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            alt="Photography Introduction"
+          />
         </div>
       </div>
       <div className="buy-plans">
