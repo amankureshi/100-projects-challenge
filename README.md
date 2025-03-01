@@ -43,5 +43,5 @@
 | 37  | [stroybook Button component](https://github.com/amankureshi/100-projects-challenge/tree/main/day-37)     | [Live Demo](https://github.com/amankureshi/100-projects-challenge/tree/main/day-37#readme) |
 | 38  | [Password Validator](https://github.com/amankureshi/100-projects-challenge/tree/main/day-38)             | [Live Demo](https://password-validator-mwhv.onrender.com/)                                 |
 | 39  | [Drag & Drop - DnD Library](https://github.com/amankureshi/100-projects-challenge/tree/main/day-39)      | [Live Demo](https://drag-drop-react.onrender.com/)                                         |
-| 40  | [Drag & Drop - DnD Library](https://github.com/amankureshi/100-projects-challenge/tree/main/day-40)      | [Live Demo](https://emoji-picker-react.onrender.com/)                                      |
+| 40  | [Emoji Picker](https://github.com/amankureshi/100-projects-challenge/tree/main/day-40)                   | [Live Demo](https://emoji-picker-react.onrender.com/)                                      |
 | 41  | [photography-website](https://github.com/amankureshi/100-projects-challenge/tree/main/day-41)            | [Live Demo](https://photography-website-4rho.onrender.com/)                                |
