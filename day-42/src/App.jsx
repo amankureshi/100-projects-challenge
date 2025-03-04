@@ -1,6 +1,10 @@
+import { useState } from "react";
 import "./App.css";
 
 function App() {
+  const [principale, setPrincipale] = useState(0);
+  const [interst, setInterest] = useState(0);
+  const [year, setYear] = useState(0);
   return (
     <>
       <div className="loan-calc">
