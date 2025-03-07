@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
@@ -30,7 +30,9 @@ function App() {
       setEmi(amount);
     }
   };
-
+  useEffect(() => {
+    calculateEMI();
+  }, [principale, interest, year]);
   return (
     <>
       <div className="loan-calc">
