@@ -5,6 +5,20 @@ function App() {
   const [principale, setPrincipale] = useState(0);
   const [interst, setInterest] = useState(0);
   const [year, setYear] = useState(0);
+
+  const handleChange = (e) => {
+    console.log(e.target.id, e.target.value);
+    const id = e.target.id;
+    const value = parseInt(e.target.value);
+    if (id === "principle") {
+      setPrincipale(value);
+    } else if (id === interest) {
+      setInterest(value);
+    } else {
+      setYear(value);
+    }
+  };
+
   return (
     <>
       <div className="loan-calc">
@@ -12,12 +26,12 @@ function App() {
 
         <div className="inputes">
           <p>Principle:</p>
-          <input type="number" id="principle" />
+          <input onChange={handleChange} type="number" id="principle" />
           <p>Interest:</p>
-          <input type="number" id="interest" />
+          <input onChange={handleChange} type="number" id="interest" />
 
           <p>Years:</p>
-          <input type="number" id="years" />
+          <input onChange={handleChange} type="number" id="years" />
         </div>
         <div className="output">Your EMI is 3000</div>
       </div>
