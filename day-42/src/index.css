@@ -21,7 +21,7 @@ body {
 
 .loan-calc {
   background-color: white;
-  padding: 30px;
+  padding: 2.5rem;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -31,7 +31,7 @@ body {
 
 .loan-calc h1 {
   font-size: 24px;
-  color: #333;
+  color: #342f7d;
   margin-bottom: 20px;
 }
 
@@ -64,7 +64,7 @@ body {
 .output {
   font-size: 18px;
   font-weight: bold;
-  color: #333;
+  color: #342f7d;
   margin-top: 20px;
   background-color: #f1f1f1;
   padding: 10px;
