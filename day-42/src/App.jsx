@@ -27,7 +27,7 @@ function App() {
       r = r / 12 / 100; // Per month
       const calcPower = Math.pow(1 + r, year * 12);
       const amount = principale * ((r * calcPower) / (calcPower - 1));
-      setEmi(amount);
+      setEmi(Math.round(amount));
     }
   };
   useEffect(() => {
