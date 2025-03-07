@@ -3,8 +3,9 @@ import "./App.css";
 
 function App() {
   const [principale, setPrincipale] = useState(0);
-  const [interst, setInterest] = useState(0);
+  const [interest, setInterest] = useState(0);
   const [year, setYear] = useState(0);
+  const [emi, setEmi] = useState(0);
 
   const handleChange = (e) => {
     console.log(e.target.id, e.target.value);
@@ -16,6 +17,17 @@ function App() {
       setInterest(value);
     } else {
       setYear(value);
+    }
+  };
+
+  //P(r(1+r)^n/((1+r)^n)-1))
+  const calculateEMI = () => {
+    let r = interest;
+    if (principale && r && year) {
+      r = r / 12 / 100; // Per month
+      const calcPower = Math.pow(1 + r, year * 12);
+      const amount = principale * ((r * calcPower) / (calcPower - 1));
+      setEmi(amount);
     }
   };
 
@@ -33,7 +45,7 @@ function App() {
           <p>Years:</p>
           <input onChange={handleChange} type="number" id="years" />
         </div>
-        <div className="output">Your EMI is 3000</div>
+        <div className="output">Your EMI is {emi}</div>
       </div>
     </>
   );
