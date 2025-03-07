@@ -13,7 +13,7 @@ function App() {
     const value = parseInt(e.target.value);
     if (id === "principle") {
       setPrincipale(value);
-    } else if (id === interest) {
+    } else if (id === "interest") {
       setInterest(value);
     } else {
       setYear(value);
@@ -45,7 +45,7 @@ function App() {
           <input onChange={handleChange} type="number" id="interest" />
 
           <p>Years:</p>
-          <input onChange={handleChange} type="number" id="years" />
+          <input onChange={handleChange} type="number" id="year" />
         </div>
         <div className="output">Your EMI is {emi}</div>
       </div>
