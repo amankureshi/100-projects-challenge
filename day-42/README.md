@@ -1,6 +1,6 @@
 💰 Project 43: EMI Calculator using React.js
 
-🔗 Live Demo:[Coming Soon...]
+🔗 Live Demo:[(https://emi-calculator-react.onrender.com/)]
 
 📄 Description:  
 A simple **EMI (Equated Monthly Installment) Calculator** built with **React.js** that helps users calculate monthly loan payments based on principal amount, interest rate, and loan tenure.
