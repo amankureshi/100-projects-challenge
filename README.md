@@ -45,4 +45,4 @@
 | 39  | [Drag & Drop - DnD Library](https://github.com/amankureshi/100-projects-challenge/tree/main/day-39)      | [Live Demo](https://drag-drop-react.onrender.com/)                                         |
 | 40  | [Emoji Picker](https://github.com/amankureshi/100-projects-challenge/tree/main/day-40)                   | [Live Demo](https://emoji-picker-react.onrender.com/)                                      |
 | 41  | [photography-website](https://github.com/amankureshi/100-projects-challenge/tree/main/day-41)            | [Live Demo](https://photography-website-4rho.onrender.com/)                                |
-| 42  | [photography-website](https://github.com/amankureshi/100-projects-challenge/tree/main/day-42)            | [Live Demo](https://emi-calculator-react.onrender.com/)                                    |
+| 42  | [EMI Calculator](https://github.com/amankureshi/100-projects-challenge/tree/main/day-42)                 | [Live Demo](https://emi-calculator-react.onrender.com/)                                    |
