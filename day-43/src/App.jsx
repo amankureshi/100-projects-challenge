@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 
 function App() {
@@ -31,14 +32,20 @@ function App() {
       ButtonName: "Next",
     },
   ];
+  const [form, setForm] = useState(data);
+  const [index, setIndex] = useState(0);
   return (
     <>
       <div className="container">
         <div className="form-group">
-          <label htmlFor="name">Name</label>
-          <input type="text" id="name" placeholder="Enter your name" />
+          <label htmlFor="name">{form[index].label}</label>
+          <input
+            type={form[index].inputType}
+            id="name"
+            placeholder={form[index].placeholder}
+          />
         </div>
-        <button>Next</button>
+        <button>{form[index].ButtonName}</button>
       </div>
     </>
   );
