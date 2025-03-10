@@ -34,18 +34,30 @@ function App() {
   ];
   const [form, setForm] = useState(data);
   const [index, setIndex] = useState(0);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (index === form.length - 1) {
+      console.log("Form submited");
+    } else {
+      setIndex((idx) => idx + 1);
+    }
+  };
+
   return (
     <>
       <div className="container">
-        <div className="form-group">
-          <label htmlFor="name">{form[index].label}</label>
-          <input
-            type={form[index].inputType}
-            id="name"
-            placeholder={form[index].placeholder}
-          />
-        </div>
-        <button>{form[index].ButtonName}</button>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="name">{form[index].label}</label>
+            <input
+              type={form[index].inputType}
+              id="name"
+              placeholder={form[index].placeholder}
+            />
+          </div>
+          <button>{form[index].ButtonName}</button>
+        </form>
       </div>
     </>
   );
