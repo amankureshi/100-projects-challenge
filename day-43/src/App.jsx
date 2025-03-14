@@ -56,8 +56,11 @@ function App() {
   const handleInputChange = (e) => {
     const id = e.target.id;
     const val = e.target.value;
-    console.log(id, val);
+    const copyFormData = { ...formData };
+    copyFormData[id] = val;
+    setFormData(copyFormData);
   };
+  console.log("formData-->", formData);
   return (
     <>
       <div className="container">
