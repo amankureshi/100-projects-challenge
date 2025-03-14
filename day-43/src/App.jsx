@@ -29,12 +29,17 @@ function App() {
       label: "Password",
       inputType: "password",
       placeholder: "Your password...",
-      ButtonName: "Next",
+      ButtonName: "Submit",
     },
   ];
   const [form, setForm] = useState(data);
   const [index, setIndex] = useState(0);
-
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    dob: "",
+    password: "",
+  });
   const handleSubmit = (e) => {
     e.preventDefault();
     if (index === form.length - 1) {
@@ -44,15 +49,30 @@ function App() {
     }
   };
 
+  const handleBack = (e) => {
+    e.preventDefault();
+    setIndex((idx) => idx - 1);
+  };
+  const handleInputChange = (e) => {
+    const id = e.target.id;
+    const val = e.target.value;
+    console.log(id, val);
+  };
   return (
     <>
       <div className="container">
         <form onSubmit={handleSubmit}>
           <div className="form-group">
+            {index > 0 && (
+              <a href="/" onClick={handleBack}>
+                Back
+              </a>
+            )}
             <label htmlFor="name">{form[index].label}</label>
             <input
+              id={form[index].id}
+              onChange={handleInputChange}
               type={form[index].inputType}
-              id="name"
               placeholder={form[index].placeholder}
             />
           </div>
