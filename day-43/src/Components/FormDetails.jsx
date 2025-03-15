@@ -3,8 +3,8 @@ import React from "react";
 const FormDetails = (props) => {
   const { formData } = props;
   return (
-    <div>
-      <h1>Success !</h1>
+    <div className="success-container">
+      <h2>Success !</h2>
       <hr />
       <span>Name: {formData.name}</span>
       <br />

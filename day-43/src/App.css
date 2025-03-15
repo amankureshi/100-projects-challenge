@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-  width: 300px;
+  width: 310px;
   padding: 1.2rem;
   background-color: #f9f9f9;
   border-radius: 5px;
@@ -39,7 +39,7 @@ input {
 button {
   width: 100%;
   padding: 10px;
-  background-color: #305179;
+  background-color: #000;
   color: white;
   border: none;
   border-radius: 4px;
@@ -49,4 +49,51 @@ button {
 
 button:hover {
   background-color: #556e8d;
+}
+
+svg {
+  font-size: 1.5rem;
+  color: #082a54;
+}
+
+h1 {
+  text-align: center;
+  color: #171a1d;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* FormDetails Css */
+
+.success-container {
+  font-family: Arial, sans-serif;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 500px;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #4CAF50;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+hr {
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+span {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 10px;
+  display: block;
+}
+
+br {
+  margin-bottom: 10px;
 }
