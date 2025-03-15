@@ -46,3 +46,5 @@
 | 40  | [Emoji Picker](https://github.com/amankureshi/100-projects-challenge/tree/main/day-40)                   | [Live Demo](https://emoji-picker-react.onrender.com/)                                      |
 | 41  | [photography-website](https://github.com/amankureshi/100-projects-challenge/tree/main/day-41)            | [Live Demo](https://photography-website-4rho.onrender.com/)                                |
 | 42  | [EMI Calculator](https://github.com/amankureshi/100-projects-challenge/tree/main/day-42)                 | [Live Demo](https://emi-calculator-react.onrender.com/)                                    |
+
+| 43 | [EMI Calculator](https://github.com/amankureshi/100-projects-challenge/tree/main/day-43) | [Live Demo](https://multi-step-form-e6vr.onrender.com) |
