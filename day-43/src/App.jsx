@@ -40,6 +40,8 @@ function App() {
     dob: "",
     password: "",
   });
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (index === form.length - 1) {
@@ -63,38 +65,41 @@ function App() {
   console.log("formData-->", formData);
   return (
     <>
-      <div className="container">
-        <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            {index > 0 && (
-              <a href="/" onClick={handleBack}>
-                Back
-              </a>
-            )}
-            <label htmlFor="name">{form[index].label}</label>
-            <input
-              value={formData[form[index].id]}
-              id={form[index].id}
-              onChange={handleInputChange}
-              type={form[index].inputType}
-              placeholder={form[index].placeholder}
-            />
-          </div>
-          <button>{form[index].ButtonName}</button>
-        </form>
-      </div>
-      <div>
-        <h1>Success !</h1>
-        <hr />
-        <span>Name : {formData.name}</span>
-        <br />
-        <span>Email : {formData.email}</span>
-        <br />
-        <span>dob : {formData.dob}</span>
-        <br />
-        <span>password : {formData.password}</span>
-        <br />
-      </div>
+      {isFormSubmitted ? (
+        <div>
+          <h1>Success !</h1>
+          <hr />
+          <span>Name: {formData.name}</span>
+          <br />
+          <span>Email: {formData.email}</span>
+          <br />
+          <span>dob: {formData.dob}</span>
+          <br />
+          <span>password: {formData.password}</span>
+          <br />
+        </div>
+      ) : (
+        <div className="container">
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              {index > 0 && (
+                <a href="/" onClick={handleBack}>
+                  Back
+                </a>
+              )}
+              <label htmlFor={form[index].id}>{form[index].label}</label>
+              <input
+                value={formData[form[index].id]}
+                id={form[index].id}
+                onChange={handleInputChange}
+                type={form[index].inputType}
+                placeholder={form[index].placeholder}
+              />
+            </div>
+            <button>{form[index].ButtonName}</button>
+          </form>
+        </div>
+      )}
     </>
   );
 }
