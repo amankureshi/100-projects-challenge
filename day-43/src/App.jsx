@@ -73,6 +73,7 @@ function App() {
             )}
             <label htmlFor="name">{form[index].label}</label>
             <input
+              value={formData[form[index].id]}
               id={form[index].id}
               onChange={handleInputChange}
               type={form[index].inputType}
@@ -81,6 +82,18 @@ function App() {
           </div>
           <button>{form[index].ButtonName}</button>
         </form>
+      </div>
+      <div>
+        <h1>Success !</h1>
+        <hr />
+        <span>Name : {formData.name}</span>
+        <br />
+        <span>Email : {formData.email}</span>
+        <br />
+        <span>dob : {formData.dob}</span>
+        <br />
+        <span>password : {formData.password}</span>
+        <br />
       </div>
     </>
   );
