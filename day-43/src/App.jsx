@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./App.css";
+import FormDetails from "./Components/FormDetails";
+import UserForm from "./Components/UserForm";
 
 function App() {
   const data = [
@@ -46,6 +48,7 @@ function App() {
     e.preventDefault();
     if (index === form.length - 1) {
       console.log("Form submited");
+      setIsFormSubmitted(true);
     } else {
       setIndex((idx) => idx + 1);
     }
@@ -65,40 +68,17 @@ function App() {
   console.log("formData-->", formData);
   return (
     <>
-      {isFormSubmitted ? (
-        <div>
-          <h1>Success !</h1>
-          <hr />
-          <span>Name: {formData.name}</span>
-          <br />
-          <span>Email: {formData.email}</span>
-          <br />
-          <span>dob: {formData.dob}</span>
-          <br />
-          <span>password: {formData.password}</span>
-          <br />
-        </div>
+      {!isFormSubmitted ? (
+        <UserForm
+          index={index}
+          form={form}
+          formData={formData}
+          handleBack={handleBack}
+          handleInputChange={handleInputChange}
+          handleSubmit={handleSubmit}
+        />
       ) : (
-        <div className="container">
-          <form onSubmit={handleSubmit}>
-            <div className="form-group">
-              {index > 0 && (
-                <a href="/" onClick={handleBack}>
-                  Back
-                </a>
-              )}
-              <label htmlFor={form[index].id}>{form[index].label}</label>
-              <input
-                value={formData[form[index].id]}
-                id={form[index].id}
-                onChange={handleInputChange}
-                type={form[index].inputType}
-                placeholder={form[index].placeholder}
-              />
-            </div>
-            <button>{form[index].ButtonName}</button>
-          </form>
-        </div>
+        <FormDetails formData={formData} />
       )}
     </>
   );
