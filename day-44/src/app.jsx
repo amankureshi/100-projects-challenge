@@ -22,16 +22,18 @@ export function App() {
   ];
   return (
     <>
-      <h1>Aman Kureshi</h1>
-      <form>
-        <input type="text" />
-      </form>
-      <div className="form-container">
-        {arr.map((item, idx) => (
-          <button key={idx} id={item}>
-            {item}
-          </button>
-        ))}
+      <div className="container">
+        <h1>Aman Kureshi</h1>
+        <form>
+          <input type="text" onChange={handleChange} />
+        </form>
+        <div className="form-container">
+          {arr.map((item, idx) => (
+            <button key={idx} id={item}>
+              {item}
+            </button>
+          ))}
+        </div>
       </div>
     </>
   );
