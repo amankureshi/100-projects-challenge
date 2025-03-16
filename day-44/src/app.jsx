@@ -2,23 +2,23 @@ import "./app.css";
 import { useState } from "react";
 export function App() {
   const arr = [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
     "7",
     "8",
     "9",
+    "/",
+    "4",
+    "5",
+    "6",
+    "*",
+    "1",
+    "2",
+    "3",
+    "-",
+    ".",
     "0",
     "+",
-    "-",
-    "/",
-    "*",
-    "=",
     "c",
-    ".",
+    "=",
   ];
   const [value, setValue] = useState("");
   const handleChange = (e) => {
@@ -27,7 +27,7 @@ export function App() {
   return (
     <>
       <div className="container">
-        <h1>Aman Kureshi</h1>
+        <h1>Calculator </h1>
         <form>
           <input type="text" onChange={handleChange} />
         </form>
