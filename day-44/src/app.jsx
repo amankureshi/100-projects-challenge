@@ -26,7 +26,7 @@ export function App() {
   };
   const handleClick = (e) => {
     const id = e.target.id;
-    if (id === "C") {
+    if (id === "c") {
       setValue("");
     } else if (id === "=") {
       //prouduce a result
@@ -35,13 +35,24 @@ export function App() {
     }
     console.log();
   };
+  console.log(value);
+
+  const handleSubmit = (e) => {
+    e?.preventDefault();
+    try {
+      const ans = eval(value);
+      setValue(ans);
+    } catch (err) {
+      alert("Invalid Inputs");
+    }
+  };
 
   return (
     <>
       <div className="container">
         <h1>Calculator </h1>
-        <form>
-          <input type="text" onChange={handleChange} />
+        <form onSubmit={handleSubmit}>
+          <input type="text" value={value} onChange={handleChange} />
         </form>
         <div className="form-container" onClick={handleClick}>
           {arr.map((item, idx) => (
