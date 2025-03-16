@@ -24,6 +24,18 @@ export function App() {
   const handleChange = (e) => {
     setValue(e.target.value);
   };
+  const handleClick = (e) => {
+    const id = e.target.id;
+    if (id === "C") {
+      setValue("");
+    } else if (id === "=") {
+      //prouduce a result
+    } else {
+      setValue((val) => val + id);
+    }
+    console.log();
+  };
+
   return (
     <>
       <div className="container">
@@ -31,7 +43,7 @@ export function App() {
         <form>
           <input type="text" onChange={handleChange} />
         </form>
-        <div className="form-container">
+        <div className="form-container" onClick={handleClick}>
           {arr.map((item, idx) => (
             <button key={idx} id={item}>
               {item}

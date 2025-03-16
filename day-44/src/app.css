@@ -80,7 +80,7 @@ button:focus {
 }
 
 button#c {
-    background-color: #ff6666;
+    background-color: #e31616;
     color: white;
 }
 
@@ -104,6 +104,7 @@ button#\/ {
     background-color: #f0a500;
     color: white;
 }
+
 
 @media (max-width: 768px) {
     .container {
