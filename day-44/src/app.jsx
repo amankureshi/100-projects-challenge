@@ -1,5 +1,5 @@
 import "./app.css";
-
+import { useState } from "react";
 export function App() {
   const arr = [
     "1",
@@ -20,6 +20,10 @@ export function App() {
     "c",
     ".",
   ];
+  const [value, setValue] = useState("");
+  const handleChange = (e) => {
+    setValue(e.target.value);
+  };
   return (
     <>
       <div className="container">
