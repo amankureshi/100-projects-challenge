@@ -4,21 +4,25 @@
     box-sizing: border-box;
 }
 
-html,
 body {
     height: 100%;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f7f7f7;
+    background-image: linear-gradient(to top, #f096d7 0%, #a6c1ee 100%);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: right;
 }
 
 .container {
-    width: 360px;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 340px;
+    padding: 1.2rem;
+    background-color: transparent;
+    backdrop-filter: blur(21px);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     border-radius: 12px;
     text-align: center;
 }
@@ -30,7 +34,7 @@ h1 {
 }
 
 form {
-    margin-bottom: 20px;
+    margin-bottom: 1.1rem;
 }
 
 input {
@@ -44,10 +48,11 @@ input {
     border-radius: 8px;
     outline: none;
     transition: border-color 0.3s;
+
 }
 
 input:focus {
-    border-color: #4caf50;
+    border-color: rgb(25, 86, 161);
 }
 
 .form-container {
@@ -68,7 +73,7 @@ button {
 }
 
 button:hover {
-    background-color: #ddd;
+    box-shadow: rgba(126, 126, 126, 0.35) 0px -50px 36px -28px inset;
 }
 
 button:active {
@@ -79,22 +84,20 @@ button:focus {
     outline: none;
 }
 
+
 button#c {
     background-color: #e31616;
     color: white;
+    box-shadow: none;
 }
 
 button#c:hover {
     background-color: #ff4d4d;
 }
 
-button#equals {
-    background-color: #4caf50;
-    color: white;
-}
 
-button#equals:hover {
-    background-color: #45a049;
+button#\=:hover {
+    background-color: rgb(25, 86, 161);
 }
 
 button#\*,
@@ -103,6 +106,7 @@ button#\+,
 button#\/ {
     background-color: #f0a500;
     color: white;
+    box-shadow: none;
 }
 
 

@@ -30,6 +30,7 @@ export function App() {
       setValue("");
     } else if (id === "=") {
       //prouduce a result
+      handleSubmit();
     } else {
       setValue((val) => val + id);
     }
