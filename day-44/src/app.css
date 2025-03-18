@@ -84,6 +84,12 @@ button:focus {
     outline: none;
 }
 
+button#\= {
+    background-color: rgb(11, 71, 143);
+    box-shadow: none;
+    color: white;
+    grid-column: span 4;
+}
 
 button#c {
     background-color: #e31616;
