@@ -47,3 +47,4 @@
 | 41  | [photography-website](https://github.com/amankureshi/100-projects-challenge/tree/main/day-41)            | [Live Demo](https://photography-website-4rho.onrender.com/)                                |
 | 42  | [EMI Calculator](https://github.com/amankureshi/100-projects-challenge/tree/main/day-42)                 | [Live Demo](https://emi-calculator-react.onrender.com/)                                    |
 | 43  | [Mulit Step Form](https://github.com/amankureshi/100-projects-challenge/tree/main/day-43)                | [Live Demo](https://multi-step-form-e6vr.onrender.com)                                     |
+| 44  | [calculator](https://github.com/amankureshi/100-projects-challenge/tree/main/day-44)                     | [Live Demo](https://calculator-react-2025.onrender.com/)                                   |
