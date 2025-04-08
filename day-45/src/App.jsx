@@ -8,7 +8,7 @@ function App() {
   const [brushOpacity, setBurshOpacity] = useState();
   return (
     <>
-      <h1>Aman Kureshi</h1>
+      <h1>Paint App</h1>
       <div className="drow-area">
         <Menu
           setBrush={setBrushColor}

@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2rem;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+    font-size: 1.8rem;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.drow-area {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 70vh;
+    background-color: #fff;
+    border: 2px dashed #ddd;
+    margin: 20px auto;
+    width: 80%;
+    position: relative;
+    padding: 10px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #555;
+    display: block;
+}
+
+input[type="color"] {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 3rem;
+    padding: 5px 0;
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin-bottom: 20px;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    background: #ddd;
+    border-radius: 4px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #4CAF50;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+.drow-area {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+input[type="color"],
+input[type="range"] {
+    margin-bottom: 15px;
+}
