@@ -27,7 +27,13 @@ function App() {
     setIsDraw(true);
   };
 
-  const endDraw = (e) => {};
+  const draw = (e) => {
+    if (!isDraw) {
+      return;
+    }
+    ctxRef.current.lineTo(e.nativeEvent.offsetX, e.nativeEvent.offsetY);
+    ctxRef.current.stroke();
+  };
   return (
     <>
       <h1>Paint App</h1>
