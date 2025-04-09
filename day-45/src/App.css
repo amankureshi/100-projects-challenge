@@ -41,6 +41,12 @@ footer {
     width: 80%;
     position: relative;
     padding: 10px;
+    overflow: hidden;
+}
+
+canvas {
+    width: 100%;
+    height: auto;
 }
 
 .menu {
