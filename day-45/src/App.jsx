@@ -37,6 +37,16 @@ function App() {
     ctxRef.current.lineTo(e.nativeEvent.offsetX, e.nativeEvent.offsetY);
     ctxRef.current.stroke();
   };
+
+  const resetCanvas = () => {
+    const canvas = canvasRef.current;
+    const ctx = ctxRef.current;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    setBrushColor("green");
+    setBrushWidth(8);
+    setBurshOpacity(0.1);
+  };
+
   return (
     <>
       <h1>Paint App</h1>
@@ -45,6 +55,7 @@ function App() {
           setBrush={setBrushColor}
           setBurshOpacity={setBurshOpacity}
           setBrushWidth={setBrushWidth}
+          resetCanvas={resetCanvas}
         />
         <canvas
           width={"1200px"}

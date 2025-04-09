@@ -1,6 +1,11 @@
 import React from "react";
 
-const Menu = ({ setBrushColor, setBurshOpacity, setBrushWidth }) => {
+const Menu = ({
+  setBrushColor,
+  setBurshOpacity,
+  setBrushWidth,
+  resetCanvas,
+}) => {
   return (
     <div>
       <div className="menu">
@@ -31,6 +36,7 @@ const Menu = ({ setBrushColor, setBurshOpacity, setBrushWidth }) => {
             setBurshOpacity(e.target.value);
           }}
         />
+        <button onClick={resetCanvas}>Reset</button>
       </div>
     </div>
   );
