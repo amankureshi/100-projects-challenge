@@ -8,6 +8,7 @@ function App() {
   const [brushOpacity, setBurshOpacity] = useState(0.5);
   const canvasRef = useRef(null);
   const ctxRef = useRef(null);
+  const [isDraw, setIsDraw] = useState("false");
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -20,7 +21,11 @@ function App() {
     ctxRef.current = ctx;
   }, [brushColor, brushOpacity, brushWidth]);
 
-  const startDraw = (e) => {};
+  const startDraw = (e) => {
+    ctxRef.current.beginPath();
+    ctxRef.current.moveTo(e.nativeEvent.offsetX, e.nativeEvent.offsetXY);
+    setIsDraw(true);
+  };
 
   const endDraw = (e) => {};
   return (
