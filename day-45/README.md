@@ -1,12 +1,31 @@
-# React + Vite
+🎨 Project 45: Paint App using React.js
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔗 Live Demo:  
+[Coming Soon...]
 
-Currently, two official plugins are available:
+📄 Description:  
+A simple **Paint App** built with **React.js**, allowing users to draw freely on a canvas using mouse events.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔧 Technologies Used:
 
-## Expanding the ESLint configuration
+- React.js
+- HTML Canvas API
+- useRef & useEffect Hooks
+- CSS
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🌟 Features:
+
+- Freehand drawing with mouse
+- Change brush color and size
+- Clear canvas button
+
+🚀 Challenges Faced:
+
+- Handling canvas drawing events efficiently
+- Managing brush settings and real-time updates
+
+🎯 Key Learnings:
+
+- Using the **Canvas API** with React
+- Handling mouse events for custom interactions
+- Managing refs with **useRef** for direct DOM manipulation
