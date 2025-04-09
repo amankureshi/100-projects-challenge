@@ -38,7 +38,9 @@ const Menu = ({
             setBurshOpacity(e.target.value);
           }}
         />
-        <button onClick={resetCanvas}>Reset</button>
+        <button className="reset-btn" onClick={resetCanvas}>
+          Reset
+        </button>
       </div>
     </div>
   );

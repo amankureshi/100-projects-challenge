@@ -59,8 +59,8 @@ function App() {
           resetCanvas={resetCanvas}
         />
         <canvas
-          width={"1200px"}
-          height={"500px"}
+          // width={"1200px"}
+          // height={"500px"}
           ref={canvasRef}
           onMouseDown={startDraw}
           onMouseUp={endDraw}
