@@ -1,7 +1,6 @@
 🎨 Project 45: Paint App using React.js
 
-🔗 Live Demo:  
-[Coming Soon...]
+🔗 Live Demo:[https://paint-app-react.onrender.com/]
 
 📄 Description:  
 A simple **Paint App** built with **React.js**, allowing users to draw freely on a canvas using mouse events.
