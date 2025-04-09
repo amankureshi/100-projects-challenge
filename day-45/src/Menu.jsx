@@ -1,6 +1,7 @@
 import React from "react";
 
 const Menu = ({
+  brushColor,
   setBrushColor,
   setBurshOpacity,
   setBrushWidth,
@@ -12,6 +13,7 @@ const Menu = ({
         <label htmlFor="bursh">Brush Color:</label>
         <input
           type="color"
+          value={brushColor}
           onChange={(e) => {
             setBrushColor(e.target.value);
           }}

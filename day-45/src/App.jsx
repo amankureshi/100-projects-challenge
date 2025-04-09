@@ -14,7 +14,7 @@ function App() {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     ctx.lineCap = "round";
-    ctx.lineJoine = "round ";
+    ctx.lineJoin = "round ";
     ctx.globalAlpha = brushOpacity;
     ctx.strokeStyle = brushColor;
     ctx.lineWidth = brushWidth;
@@ -52,7 +52,8 @@ function App() {
       <h1>Paint App</h1>
       <div className="drow-area">
         <Menu
-          setBrush={setBrushColor}
+          setBrushColor={setBrushColor}
+          brushColor={brushColor}
           setBurshOpacity={setBurshOpacity}
           setBrushWidth={setBrushWidth}
           resetCanvas={resetCanvas}
