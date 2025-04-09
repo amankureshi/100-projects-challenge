@@ -5,14 +5,14 @@ import "./App.css";
 function App() {
   const [brushColor, setBrushColor] = useState("green");
   const [brushWidth, setBrushWidth] = useState(8);
-  const [brushOpacity, setBurshOpacity] = useState(0.5);
+  const [brushOpacity, setBurshOpacity] = useState(0.1);
   const canvasRef = useRef(null);
   const ctxRef = useRef(null);
-  const [isDraw, setIsDraw] = useState("false");
+  const [isDraw, setIsDraw] = useState(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const ctx = canvas.getContext("wd");
+    const ctx = canvas.getContext("2d");
     ctx.lineCap = "round";
     ctx.lineJoine = "round ";
     ctx.globalAlpha = brushOpacity;
@@ -25,6 +25,9 @@ function App() {
     ctxRef.current.beginPath();
     ctxRef.current.moveTo(e.nativeEvent.offsetX, e.nativeEvent.offsetXY);
     setIsDraw(true);
+  };
+  const endDraw = () => {
+    setIsDraw(false);
   };
 
   const draw = (e) => {
