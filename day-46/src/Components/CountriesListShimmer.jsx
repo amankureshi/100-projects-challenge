@@ -1,8 +1,8 @@
 import React from "react";
-import "./Shimmer.css";
-const shimmer = () => {
+import "./CountriesList.css";
+const CountriesListShimmer = () => {
   return (
-    <div>
+    <>
       <div className="countries-container">
         <div className="country-card">
           <h1>Aman Kureshi</h1>
@@ -18,8 +18,8 @@ const shimmer = () => {
           <div className="country-card shimmer-card"></div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
-export default shimmer;
+export default CountriesListShimmer;

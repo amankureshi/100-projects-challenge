@@ -1,10 +1,10 @@
 import "./App.css";
-import Shimmer from "./Components/Shimmer";
+import CountrieaShimmer from "./Components/CountriesListShimmer";
 
 function App() {
   return (
     <>
-      <Shimmer />
+      <CountrieaShimmer />
     </>
   );
 }
