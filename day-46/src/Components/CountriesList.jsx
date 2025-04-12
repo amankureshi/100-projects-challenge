@@ -11,13 +11,20 @@ const CountriesList = ({ query }) => {
       });
   }, []);
   console.log(data);
-  if (countriesData.length === 0) {
+  if (countriesData.length) {
     return <CountrieaShimmer />;
   }
   return (
     <>
       <div className="Countries-container">
         <h1>Countries List</h1>
+        {countriesData
+          .filter((coutry) => {
+            coutry.name.common.toLowerCase().includes(query);
+          })
+          .map((coutry) => {
+            return;
+          })}
       </div>
     </>
   );

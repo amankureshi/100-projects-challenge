@@ -4,19 +4,9 @@ const CountriesListShimmer = () => {
   return (
     <>
       <div className="countries-container">
-        <div className="country-card">
-          <h1>Aman Kureshi</h1>
-          <div className="country-card shimmer-card"></div>
-          <div className="country-card shimmer-card"></div>
-          <div className="country-card shimmer-card"></div>
-          <div className="country-card shimmer-card"></div>
-          <div className="country-card shimmer-card"></div>
-          <div className="country-card shimmer-card"></div>
-          <div className="country-card shimmer-card"></div>
-          <div className="country-card shimmer-card"></div>
-          <div className="country-card shimmer-card"></div>
-          <div className="country-card shimmer-card"></div>
-        </div>
+        {Array.from({ length: 10 }).map((el, i) => {
+          return <div key={i} className="country-card shimmer-card"></div>;
+        })}
       </div>
     </>
   );
