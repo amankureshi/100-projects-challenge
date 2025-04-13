@@ -1,25 +1,30 @@
-/* Navbar.css */
 .navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #111916;
+    background-color: #18182e;
     color: white;
     padding: 1rem 2rem;
+    flex-wrap: wrap;
 }
 
-.navbar-container .logo {
+.logo {
     display: flex;
     align-items: center;
 }
 
-.navbar-container .logo img {
+.logo img {
     width: 40px;
     margin-right: 10px;
 }
 
-.navbar-container .logo h2 span {
-    color: #00bcd4;
+.logo h2 {
+    font-size: 1.5rem;
+}
+
+.logo h2 span {
+    color: #ffd700;
+
 }
 
 .nav-links {
@@ -31,10 +36,34 @@
 .nav-links li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
-    color: #00bcd4;
+    color: #ffd700;
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links li a {
+        display: block;
+        width: 100%;
+    }
 }

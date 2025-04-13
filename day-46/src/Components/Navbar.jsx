@@ -1,16 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+
 const Navbar = () => {
   return (
     <nav className="navbar-container">
       <div className="logo">
-        <img
-          src="https://img.icons8.com/?size=200&id=11772&format=png&color=111916"
-          alt="Logo"
-        />
         <h2>
-          Photo<span>Graphy</span>
+          World<span>Explorer</span>
         </h2>
       </div>
       <ul className="nav-links">
@@ -18,7 +15,7 @@ const Navbar = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/gallery">Gallery</Link>
+          <Link to="/gallery">About</Link>
         </li>
       </ul>
     </nav>
