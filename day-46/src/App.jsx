@@ -3,7 +3,7 @@ import "./App.css";
 import Navbar from "./Components/Navbar";
 import Introduction from "./Components/Introduction";
 import About from "./Components/About";
-import CountryDetails from "./Components/CountryDetails ";
+import CountryDetails from "./Components/CountryDetails";
 
 function App() {
   return (
