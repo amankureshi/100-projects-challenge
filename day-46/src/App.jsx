@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import Introduction from "./Components/Introduction";
-import PhotoGallery from "./Components/PhotoGallery ";
+import About from "./Components/About";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Introduction />} />
-        <Route path="/gallery" element={<PhotoGallery />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 
-const PhotoGallery = () => {
+const About = () => {
   return (
     <div>
       <h2>Photo Gallery</h2>
@@ -9,4 +9,4 @@ const PhotoGallery = () => {
   );
 };
 
-export default PhotoGallery;
+export default About;
