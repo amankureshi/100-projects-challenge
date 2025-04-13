@@ -1,6 +1,7 @@
 .card-container {
     width: 100%;
     height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .country-card {
@@ -34,9 +35,10 @@
 }
 
 .card-title {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: #2c3e50;
+    font-size: 1.4rem;
+    margin-bottom: 0.7rem;
+    color: #1f4062;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .card-text p {
@@ -48,4 +50,5 @@
 .card-text b {
     font-weight: 600;
     margin-right: 4px;
+    color: #555;
 }
