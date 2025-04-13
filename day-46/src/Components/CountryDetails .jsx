@@ -15,30 +15,35 @@ const CountryDetails = () => {
 
   if (!country) return <h2>Loading....</h2>;
   return (
-    <div>
-      <h2>{country.name.common}</h2>
-      <img
-        src={country.flags.svg}
-        alt={`${country.name.common}flag`}
-        width={200}
-      />
-      <p>
-        <strong>Capital:</strong>
-        {country.capital?.[0] || "N/A"}
-      </p>
-      <p>
-        <strong>Region:</strong> {country.region}
-      </p>
-      <p>
-        <strong>Subregion:</strong> {country.subregion}
-      </p>
-      <p>
-        <strong>Population:</strong>{" "}
-        {country.population.toLocaleString("en-In")}
-      </p>
-      <p>
-        <strong>Area:</strong> {country.area} km²
-      </p>
+    <div className="country-details-container">
+      <Link className="back-button" to="/">
+        ← Back to Countries
+      </Link>
+      <div className="country-details-card">
+        <img
+          src={country.flags.svg}
+          alt={`${country.name.common} flag`}
+          className="country-flag"
+        />
+        <div className="country-info">
+          <h2>{country.name.common}</h2>
+          <p>
+            <b>Capital:</b> {country.capital?.[0] || "N/A"}
+          </p>
+          <p>
+            <b>Region:</b> {country.region}
+          </p>
+          <p>
+            <b>Subregion:</b> {country.subregion}
+          </p>
+          <p>
+            <b>Population:</b> {country.population.toLocaleString()}
+          </p>
+          <p>
+            <b>Area:</b> {country.area} km²
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
