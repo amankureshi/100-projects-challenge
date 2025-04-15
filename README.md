@@ -49,3 +49,4 @@
 | 43  | [Mulit Step Form](https://github.com/amankureshi/100-projects-challenge/tree/main/day-43)                | [Live Demo](https://multi-step-form-e6vr.onrender.com)                                     |
 | 44  | [calculator](https://github.com/amankureshi/100-projects-challenge/tree/main/day-44)                     | [Live Demo](https://calculator-react-2025.onrender.com/)                                   |
 | 45  | [Paint app](https://github.com/amankureshi/100-projects-challenge/tree/main/day-45)                      | [Live Demo](https://paint-app-react.onrender.com/)                                         |
+| 46  | [country app](https://github.com/amankureshi/100-projects-challenge/tree/main/day-46)                    | [Live Demo](https://country-explorer-m2lf.onrender.com/)                                   |
