@@ -1,6 +1,12 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }

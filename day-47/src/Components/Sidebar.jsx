@@ -22,8 +22,13 @@ const DesktopSidebar = () => {
             src="./public/rest-logo.png"
             alt="logo"
             className="hidden md:block"
+            width={130}
           />
-          <img src="/" alt="logo" className="block md:hidden" />
+          <img
+            src="./public/spoon.png"
+            alt="logo"
+            className="block md:hidden"
+          />
         </div>
         <div className="flex flex-col items-center md:items-center gap-8">
           <Link to={"/"} className="flex gap-1">
@@ -31,7 +36,7 @@ const DesktopSidebar = () => {
             <span className="font-bold hidden md:block">Home</span>
           </Link>
           <Link to={"/"} className="flex gap-1">
-            <FaRegHeart size={"24"} />
+            <FaRegHeart size={"20"} />
             <span className="font-bold hidden md:block">Favorites</span>
           </Link>
         </div>
