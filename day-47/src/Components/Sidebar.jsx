@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { RiHome4Line } from "react-icons/ri";
+import { FaRegHeart } from "react-icons/fa";
 
 const Sidebar = () => {
   return (
@@ -24,7 +26,14 @@ const DesktopSidebar = () => {
           <img src="/" alt="logo" className="block md:hidden" />
         </div>
         <div className="flex flex-col items-center md:items-center gap-8">
-          <Link></Link>
+          <Link to={"/"} className="flex gap-1">
+            <RiHome4Line size={"24"} />
+            <span className="font-bold hidden md:block">Home</span>
+          </Link>
+          <Link to={"/"} className="flex gap-1">
+            <FaRegHeart size={"24"} />
+            <span className="font-bold hidden md:block">Favorites</span>
+          </Link>
         </div>
       </div>
     </div>
