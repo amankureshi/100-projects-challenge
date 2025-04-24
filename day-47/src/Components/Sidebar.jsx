@@ -7,6 +7,7 @@ const Sidebar = () => {
   return (
     <>
       <DesktopSidebar />
+      <MobileSibar />
     </>
   );
 };
@@ -35,12 +36,25 @@ const DesktopSidebar = () => {
             <RiHome4Line size={"24"} />
             <span className="font-bold hidden md:block">Home</span>
           </Link>
-          <Link to={"/"} className="flex gap-1">
+          <Link to={"/favorites"} className="flex gap-1">
             <FaRegHeart size={"20"} />
             <span className="font-bold hidden md:block">Favorites</span>
           </Link>
         </div>
       </div>
+    </div>
+  );
+};
+
+const MobileSibar = () => {
+  return (
+    <div className="flex justify-center gap-10 border-t fixed w-full bottom-0 left-0 bg-white z-10 p-2 sm:hidden">
+      <Link to={"/"}>
+        <RiHome4Line size={"24"} className="cursor-pointer" />
+      </Link>
+      <Link to={"/favorites"}>
+        <FaRegHeart size={"20"} className="cursor-pointer" />
+      </Link>
     </div>
   );
 };
