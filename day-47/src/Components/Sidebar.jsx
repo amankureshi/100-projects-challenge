@@ -7,7 +7,7 @@ const Sidebar = () => {
   return (
     <>
       <DesktopSidebar />
-      <MobileSibar />
+      <MobileSidebar />
     </>
   );
 };
@@ -46,14 +46,14 @@ const DesktopSidebar = () => {
   );
 };
 
-const MobileSibar = () => {
+const MobileSidebar = () => {
   return (
-    <div className="flex justify-center gap-10 border-t fixed w-full bottom-0 left-0 bg-white z-10 p-2 sm:hidden">
+    <div className="flex justify-center gap-10 border-t fixed w-full bottom-0 left-0 bg-white z-10 p-1 sm:hidden">
       <Link to={"/"}>
         <RiHome4Line size={"24"} className="cursor-pointer" />
       </Link>
       <Link to={"/favorites"}>
-        <FaRegHeart size={"20"} className="cursor-pointer" />
+        <FaRegHeart size={"20"} className="cursor-pointer " />
       </Link>
     </div>
   );
