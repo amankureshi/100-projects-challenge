@@ -31,8 +31,8 @@ const Home = () => {
                 alt="recipe-image"
                 className="rounded-md w-full h-full object-cover cursor-pointer"
               />
-              <div className="absolute bottom-2 left-2 bg-white rounded-full p-1 cursor-pointer flex items-center gap-1 text-sm">
-                <LuSoup size={18} />4 Searving
+              <div className="absolute bottom-2 left-2 bg-white rounded-full p-4 cursor-pointer flex items-center gap-1 text-sm">
+                <LuSoup size={18} className="text-red-500 " />4 Searving
               </div>
               <div className="absolute top-1 right-2 bg-white rounded-full p-20 cursor-pointer">
                 <FaRegHeart
@@ -41,6 +41,24 @@ const Home = () => {
                 />
               </div>
             </a>
+            <div className="flex mt-1">
+              <p className="font-bold tracking-wide">Rosted Chiken</p>
+            </div>
+            <p className="my-2">Turkish Kitchen</p>
+            <div className="flex gap-2 mx-auto">
+              <div className="flex gap-1 bg-[#d6f497] items-center p-1 rotate-1">
+                <FaRegHeart size={"20"} />
+                <span className="text-sm tracking-tighter font-semibold">
+                  Gluten-free
+                </span>
+              </div>
+              <div className="flex gap-1 bg-[#d6f497] items-center p-1 rotate-1">
+                <FaRegHeart size={"20"} />
+                <span className="text-sm tracking-tighter font-semibold">
+                  Gluten-free
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
