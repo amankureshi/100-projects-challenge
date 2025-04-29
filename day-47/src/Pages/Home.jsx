@@ -2,6 +2,7 @@ import React from "react";
 import { IoSearchSharp } from "react-icons/io5";
 import { LuSoup } from "react-icons/lu";
 import { FaRegHeart } from "react-icons/fa";
+import { PiHeartbeat } from "react-icons/pi";
 
 const Home = () => {
   return (
@@ -47,13 +48,13 @@ const Home = () => {
             <p className="my-2">Turkish Kitchen</p>
             <div className="flex gap-2 mx-auto">
               <div className="flex gap-1 bg-[#d6f497] items-center p-1 rotate-1">
-                <FaRegHeart size={"20"} />
+                <PiHeartbeat />
                 <span className="text-sm tracking-tighter font-semibold">
                   Gluten-free
                 </span>
               </div>
               <div className="flex gap-1 bg-[#d6f497] items-center p-1 rotate-1">
-                <FaRegHeart size={"20"} />
+                <PiHeartbeat />
                 <span className="text-sm tracking-tighter font-semibold">
                   Gluten-free
                 </span>
