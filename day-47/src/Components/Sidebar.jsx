@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { RiHome4Line } from "react-icons/ri";
 import { FaRegHeart } from "react-icons/fa";
-import "./Sidebar.css";
 const Sidebar = () => {
   return (
     <>
