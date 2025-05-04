@@ -27,7 +27,7 @@ const Home = () => {
     } catch (error) {
       console.log(error.message);
     } finally {
-      setLoading(false);
+      // setLoading(false);
     }
   };
 
@@ -57,6 +57,24 @@ const Home = () => {
         <div className="grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
           <RecipeCard />
           <RecipeCard />
+          {loading &&
+            [...Array(9)].map((_, index) => (
+              <div key={index} className="flex flex-col gap-4 w-full">
+                <div className="flex w-52 flex-col gap-4">
+                  <div className="skeleton h-32 w-full"></div>
+                  <div className="flex items-center gap-4">
+                    <div className="flex flex-col gap-4">
+                      <div className="skeleton h-4 w-20"></div>
+                      <div className="skeleton h-4 w-28"></div>
+                      <div className="flex gap-2">
+                        <div className="skeleton h-5 w-20"></div>
+                        <div className="skeleton h-5 w-20"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
         </div>
       </div>
     </div>
