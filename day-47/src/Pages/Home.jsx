@@ -1,11 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { IoSearchSharp } from "react-icons/io5";
-import { LuSoup } from "react-icons/lu";
-import { FaRegHeart } from "react-icons/fa";
-import { PiHeartbeat } from "react-icons/pi";
 import "./Home.css";
 import RecipeCard from "../Components/RecipeCard";
+
+const APP_ID = "8ee0c0b8";
+const APP_KEY = "946fae770d1ce37836ca681af06db6c5	";
+
 const Home = () => {
+  const [recipes, setRecipes] = useState([]);
+  const [loading, setLoading] = useState("");
+
+  const fetchRecipes = async (searchQuery) => {
+    setLoading(true);
+    setRecipes([]);
+    try {
+      const res = await fetch(
+        `https://api.edamam.com/api/recipes/v2/?app_id=${APP_ID}&app_key=${APP_KEY}&q=${searchQuery}&type=public`,
+        {
+          headers: {
+            "Edamam-Account-User": "your-edamam-username", // 👈 yaha apna Edamam user ID daalo
+          },
+        }
+      );
+      const data = await res.json();
+      console.log(data);
+    } catch (error) {
+      console.log(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchRecipes("burger");
+  }, []);
+
   return (
     <div className="bg-[#faf9fb] w-full flex justify-center p-10 Home">
       <div className="max-w-screen-lg mx-auto">

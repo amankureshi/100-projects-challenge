@@ -1,7 +1,8 @@
 import React from "react";
+import RecipeCard from "../Components/RecipeCard";
 
 const FavoritesPage = () => {
-  const fav = false;
+  const fav = true;
   return (
     <div className="bg-[#faf9fb] flex-1 p-10 min-h-screen">
       <div className="max-w-screen">
@@ -13,6 +14,11 @@ const FavoritesPage = () => {
               alt="404-error-image"
               className="h-5/5"
             />
+          </div>
+        )}
+        {fav && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <RecipeCard />
           </div>
         )}
       </div>
