@@ -8,7 +8,7 @@ const APP_KEY = "946fae770d1ce37836ca681af06db6c5	";
 
 const Home = () => {
   const [recipes, setRecipes] = useState([]);
-  const [loading, setLoading] = useState("");
+  const [loading, setLoading] = useState(true);
 
   const fetchRecipes = async (searchQuery) => {
     setLoading(true);
@@ -23,7 +23,8 @@ const Home = () => {
         }
       );
       const data = await res.json();
-      console.log(data);
+      setRecipes(data.hits);
+      console.log(data.hits);
     } catch (error) {
       console.log(error.message);
     } finally {
@@ -55,8 +56,11 @@ const Home = () => {
           Popular choices
         </p>
         <div className="grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
-          <RecipeCard />
-          <RecipeCard />
+          {!loading &&
+            recipes.map(({ recipe }, index) => {
+              <RecipeCard key={index} recipe={recipe} />;
+            })}
+
           {loading &&
             [...Array(9)].map((_, index) => (
               <div key={index} className="flex flex-col gap-4 w-full">
