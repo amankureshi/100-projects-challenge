@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { IoSearchSharp } from "react-icons/io5";
 import "./Home.css";
 import RecipeCard from "../Components/RecipeCard";
+import { getRandomColor } from "../lib/utils";
 
 const APP_ID = "8ee0c0b8";
 const APP_KEY = "946fae770d1ce37836ca681af06db6c5	";
@@ -58,7 +59,7 @@ const Home = () => {
         <div className="grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
           {!loading &&
             recipes.map(({ recipe }, index) => (
-              <RecipeCard key={index} recipe={recipe} />
+              <RecipeCard key={index} recipe={recipe} {...getRandomColor()} />
             ))}
 
           {loading &&

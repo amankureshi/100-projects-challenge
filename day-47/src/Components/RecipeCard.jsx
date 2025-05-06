@@ -1,7 +1,7 @@
 import React from "react";
 import { FaRegHeart } from "react-icons/fa";
 import { LuSoup } from "react-icons/lu";
-import { PiHeartbeatFill } from "react-icons/pi";
+import { PiHeartbeatLight } from "react-icons/pi";
 
 const getTwoValuesFromArray = (arr) => {
   return [arr[0], arr[1]];
@@ -42,7 +42,7 @@ const RecipeCard = ({ recipe }) => {
             key={idx}
             className="flex gap-1 bg-[#d6f497] items-center p-1 rounded-md"
           >
-            <PiHeartbeatFill size={16} />
+            <PiHeartbeatLight size={16} />
             <span className="text-sm tracking-tighter font-semibold">
               {label}
             </span>
