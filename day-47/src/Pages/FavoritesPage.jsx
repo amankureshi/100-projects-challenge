@@ -2,25 +2,30 @@ import React from "react";
 import RecipeCard from "../Components/RecipeCard";
 
 const FavoritesPage = () => {
-  const fav = true;
+  const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
   return (
     <div className="bg-[#faf9fb] flex-1 p-10 min-h-screen">
       <div className="max-w-screen">
         <p className="font-bold text-3xl md:text-5xl my-4">Favorites</p>
-        {!fav && (
-          <div className="h-[80vh] flex flex-col items-center justify-c gap-4 ">
-            <img
-              src="https://static.vecteezy.com/system/resources/thumbnails/026/573/373/original/rain-umbrella-404-error-animation-protection-weather-rainy-error-message-gif-motion-graphic-autumn-umbrella-raindrops-falling-animated-cartoon-line-object-4k-isolated-on-white-background-video.jpg"
-              alt="404-error-image"
-              className="h-5/5"
+
+        <div className="h-[80vh] flex flex-col items-center justify-c gap-4 ">
+          <img
+            src="https://static.vecteezy.com/system/resources/thumbnails/026/573/373/original/rain-umbrella-404-error-animation-protection-weather-rainy-error-message-gif-motion-graphic-autumn-umbrella-raindrops-falling-animated-cartoon-line-object-4k-isolated-on-white-background-video.jpg"
+            alt="404-error-image"
+            className="h-5/5"
+          />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {favorites.map((recipe) => (
+            <RecipeCard
+              key={recipe.label}
+              recipe={recipe}
+              {...getRandomColor()}
             />
-          </div>
-        )}
-        {fav && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <RecipeCard />
-          </div>
-        )}
+          ))}
+        </div>
       </div>
     </div>
   );
