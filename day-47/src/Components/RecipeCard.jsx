@@ -7,6 +7,10 @@ const getTwoValuesFromArray = (arr) => {
   return [arr[0], arr[1]];
 };
 
+const addRecipeToFavorites = () => {
+  let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+};
+
 const RecipeCard = ({ recipe, bg, badge }) => {
   const healthLabels = getTwoValuesFromArray(recipe.healthLabels);
   return (
@@ -27,7 +31,13 @@ const RecipeCard = ({ recipe, bg, badge }) => {
           <LuSoup size={18} className="text-red-500 " />
           {recipe.yield} Searving
         </div>
-        <div className="absolute top-1 right-2 bg-white rounded-full p-1 cursor-pointer">
+        <div
+          className="absolute top-1 right-2 bg-white rounded-full p-1 cursor-pointer"
+          onClick={(e) => {
+            e.preventDefault();
+            addRecipeToFacorites();
+          }}
+        >
           <FaRegHeart
             size={"20"}
             className="hover:fill-red-500 hover:text-red-500"
