@@ -37,10 +37,15 @@ const RecipeCard = ({ recipe, bg, badge }) => {
         className="relative h-33 "
         target="_blank"
       >
+        <div className="skeleton absolute inset-0" />
         <img
           src={recipe.image}
           alt="recipe-image"
-          className="rounded-md w-full h-full object-cover cursor-pointer"
+          className="rounded-md w-full h-full object-cover cursor-pointer opacity-0 transition-opacity duration-500"
+          onLoad={(e) => {
+            e.currentTarget.style.opacity = 1;
+            e.currentTarget.previousElementSibling.style.display = "none";
+          }}
         />
         <div className="absolute bottom-2 left-2 bg-white rounded-full p-4 cursor-pointer flex items-center gap-1 text-sm">
           <LuSoup size={18} className="text-red-500 " />
