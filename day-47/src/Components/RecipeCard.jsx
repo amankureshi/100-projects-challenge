@@ -13,7 +13,11 @@ const RecipeCard = ({ recipe, bg, badge }) => {
     <div
       className={`flex flex-col rounded-md ${bg} overflow-hidden p-3 relative card-2`}
     >
-      <a href="" className="relative h-33 ">
+      <a
+        href={`https://www.youtube.com/results?search_query=${recipe.label} recipe`}
+        className="relative h-33 "
+        target="_blank"
+      >
         <img
           src={recipe.image}
           alt="recipe-image"
