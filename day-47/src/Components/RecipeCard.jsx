@@ -3,8 +3,12 @@ import { FaRegHeart } from "react-icons/fa";
 import { LuSoup } from "react-icons/lu";
 import { PiHeartbeatFill } from "react-icons/pi";
 
+const getTwoValuesFromArray = (arr) => {
+  return [arr[0], arr[1]];
+};
+
 const RecipeCard = ({ recipe }) => {
-  const healthLabels = recipe.healthLabels;
+  const healthLabels = getTwoValuesFromArray(recipe.healthLabels);
   return (
     <div className="flex flex-col rounded-md bg-[#ecf7d4] overflow-hidden p-3 relative card-2">
       <a href="" className="relative h-33 ">
