@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaRegHeart } from "react-icons/fa";
 import { LuSoup } from "react-icons/lu";
 import { PiHeartbeatLight } from "react-icons/pi";
@@ -7,12 +7,28 @@ const getTwoValuesFromArray = (arr) => {
   return [arr[0], arr[1]];
 };
 
-const addRecipeToFavorites = () => {
-  let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-};
-
 const RecipeCard = ({ recipe, bg, badge }) => {
   const healthLabels = getTwoValuesFromArray(recipe.healthLabels);
+
+  const [isFavorite, setIsFavorite] = useState(
+    localStorage.getItem("favorites")?.includes(recipe.label)
+  );
+
+  const addRecipeToFavorites = () => {
+    let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    const isRecipeAlreadyInFavorites = favorites.some(
+      (fav) => fav.label === recipe.label
+    );
+    if (isRecipeAlreadyInFavorites) {
+      favorites = favorites.filter((fav) => fav.label !== recipe.label);
+      setIsFavorite(false);
+    } else {
+      favorites.push(recipe);
+      setIsFavorite(true);
+    }
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+  };
+
   return (
     <div
       className={`flex flex-col rounded-md ${bg} overflow-hidden p-3 relative card-2`}
@@ -35,7 +51,7 @@ const RecipeCard = ({ recipe, bg, badge }) => {
           className="absolute top-1 right-2 bg-white rounded-full p-1 cursor-pointer"
           onClick={(e) => {
             e.preventDefault();
-            addRecipeToFacorites();
+            addRecipeToFavorites();
           }}
         >
           <FaRegHeart

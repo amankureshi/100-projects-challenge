@@ -19,7 +19,7 @@ const Home = () => {
         `https://api.edamam.com/api/recipes/v2/?app_id=${APP_ID}&app_key=${APP_KEY}&q=${searchQuery}&type=public`,
         {
           headers: {
-            "Edamam-Account-User": "your-edamam-username", // 👈 yaha apna Edamam user ID daalo
+            "Edamam-Account-User": "your-edamam-username",
           },
         }
       );
