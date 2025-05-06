@@ -6,7 +6,7 @@ import { PiHeartbeat } from "react-icons/pi";
 const RecipeCard = ({ recipe }) => {
   return (
     <div className="flex flex-col rounded-md bg-[#ecf7d4] overflow-hidden p-3 relative card-2">
-      <a href="" className="relative h-33">
+      <a href="" className="relative h-33 ">
         <img
           src={recipe.image}
           alt="recipe-image"
@@ -28,13 +28,13 @@ const RecipeCard = ({ recipe }) => {
       </div>
       <p className="my-2">{recipe.cuisineType} Kitchen</p>
       <div className="flex gap-2 mx-auto">
-        <div className="flex gap-1 bg-[#d6f497] items-center p-1 rotate-1">
+        <div className="flex gap-1 bg-[#d6f497] items-center p-1">
           <PiHeartbeat />
           <span className="text-sm tracking-tighter font-semibold">
             Gluten-free
           </span>
         </div>
-        <div className="flex gap-1 bg-[#d6f497] items-center p-1 rotate-1">
+        <div className="flex gap-1 bg-[#d6f497] items-center p-1">
           <PiHeartbeat />
           <span className="text-sm tracking-tighter font-semibold">
             Gluten-free
