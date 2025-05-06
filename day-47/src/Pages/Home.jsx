@@ -37,10 +37,15 @@ const Home = () => {
     fetchRecipes("burger");
   }, []);
 
+  const handleSearchRecipe = (e) => {
+    e.preventDefault();
+    fetchRecipes(e.target[0].value);
+  };
+
   return (
     <div className="bg-[#faf9fb] w-full flex justify-center p-10 Home">
       <div className="max-w-screen-lg mx-auto">
-        <form>
+        <form onSubmit={handleSearchRecipe}>
           <label className="input shadow-md flex gap-2 w-full p-1">
             <IoSearchSharp size={24} />
             <input
