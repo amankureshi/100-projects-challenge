@@ -9,7 +9,6 @@ const getTwoValuesFromArray = (arr) => {
 
 const RecipeCard = ({ recipe, bg, badge }) => {
   const healthLabels = getTwoValuesFromArray(recipe.healthLabels);
-
   const [isFavorite, setIsFavorite] = useState(
     localStorage.getItem("favorites")?.includes(recipe.label)
   );
@@ -55,11 +54,16 @@ const RecipeCard = ({ recipe, bg, badge }) => {
           }}
         >
           <FaRegHeart
-            size={"20"}
-            className="hover:fill-red-500 hover:text-red-500"
+            size={20}
+            className={`cursor-pointer transition-all ${
+              isFavorite
+                ? "fill-red-500 text-red-500"
+                : "hover:fill-red-500 hover:text-red-500"
+            }`}
           />
         </div>
       </a>
+
       <div className="flex mt-1">
         <p className="font-bold tracking-wide">{recipe.label}</p>
       </div>
