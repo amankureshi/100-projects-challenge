@@ -4,8 +4,8 @@ import "./Home.css";
 import RecipeCard from "../Components/RecipeCard";
 import { getRandomColor } from "../lib/utils";
 
-const APP_ID = "8ee0c0b8";
-const APP_KEY = "946fae770d1ce37836ca681af06db6c5	";
+const APP_ID = import.meta.env.VITE_APP_ID;
+const APP_KEY = import.meta.env.VITE_APP_KEY;
 
 const Home = () => {
   const [recipes, setRecipes] = useState([]);
@@ -55,7 +55,7 @@ const Home = () => {
             />
           </label>
         </form>
-        <h1 className="font-bold text-3cl md:text-5xl mt-4">
+        <h1 className="font-bold text-3xl md:text-5xl mt-4">
           Recommended Recipes
         </h1>
         <p className="text-slate-500 font-semibold ml-1 my-2 text-sm tracking-tight">
