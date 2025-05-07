@@ -1,12 +1,31 @@
-# React + Vite
+🍽️ Project 47: Recipe Finder App using React.js, Tailwind CSS & Edamam API
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔗 Live Demo:[Coming Soon...]
 
-Currently, two official plugins are available:
+📄 Description:  
+A **Recipe Finder App** that helps users search for recipes based on ingredients using the **Edamam API**, styled with **Tailwind CSS**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔧 Technologies Used:
 
-## Expanding the ESLint configuration
+- React.js
+- Tailwind CSS
+- Edamam Recipe Search API
+- useState & useEffect Hooks
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🌟 Features:
+
+- Search recipes by entering ingredients
+- Displays recipe name, image, calories, and link to full recipe
+- Responsive design with Tailwind CSS
+- Loading state during data fetch
+
+🚀 Challenges Faced:
+
+- Handling API authentication and query limits
+- Displaying large data in a clean layout
+
+🎯 Key Learnings:
+
+- Fetching and displaying API data in React
+- Using **Tailwind CSS** for rapid UI development
+- Managing loading states and conditional rendering

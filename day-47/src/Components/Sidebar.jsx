@@ -28,11 +28,11 @@ const DesktopSidebar = () => {
         </div>
         <div className="flex flex-col md:items-center ">
           <div className=" flex flex-col text-justify gap-7">
-            <Link to={"/"} className="flex gap-1">
+            <Link to={"/"} className="flex gap-1 items-center">
               <RiHome4Line size={"24"} />
               <span className="font-bold hidden md:block">Home</span>
             </Link>
-            <Link to={"/favorites"} className="flex gap-1">
+            <Link to={"/favorites"} className="flex gap-1 items-center">
               <FaRegHeart size={"20"} />
               <span className="font-bold hidden md:block">Favorites</span>
             </Link>
