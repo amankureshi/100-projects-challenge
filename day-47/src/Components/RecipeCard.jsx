@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { FaRegHeart } from "react-icons/fa";
 import { LuSoup } from "react-icons/lu";
 import { PiHeartbeatLight } from "react-icons/pi";
+import { Heart } from "lucide-react";
 
 const getTwoValuesFromArray = (arr) => {
   return [arr[0], arr[1]];
@@ -58,12 +58,12 @@ const RecipeCard = ({ recipe, bg, badge }) => {
             addRecipeToFavorites();
           }}
         >
-          <FaRegHeart
+          <Heart
             size={20}
-            className={`cursor-pointer transition-all ${
+            className={`cursor-pointer transition-all duration-300 ease-in-out ${
               isFavorite
                 ? "fill-red-500 text-red-500"
-                : "hover:fill-red-500 hover:text-red-500"
+                : "fill-transparent text-black-500 hover:fill-red-500 hover:text-red-500"
             }`}
           />
         </div>
@@ -77,7 +77,7 @@ const RecipeCard = ({ recipe, bg, badge }) => {
       <p className="my-2">
         {recipe.cuisineType[0].charAt(0).toUpperCase() +
           recipe.cuisineType[0].slice(1)}
-        Kitchen
+        &nbsp;Kitchen
       </p>
       <div className="flex gap-2 mt-auto">
         {healthLabels.map((label, idx) => (
