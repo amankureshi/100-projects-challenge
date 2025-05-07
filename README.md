@@ -50,3 +50,4 @@
 | 44  | [calculator](https://github.com/amankureshi/100-projects-challenge/tree/main/day-44)                     | [Live Demo](https://calculator-react-2025.onrender.com/)                                   |
 | 45  | [Paint app](https://github.com/amankureshi/100-projects-challenge/tree/main/day-45)                      | [Live Demo](https://paint-app-react.onrender.com/)                                         |
 | 46  | [country app](https://github.com/amankureshi/100-projects-challenge/tree/main/day-46)                    | [Live Demo](https://country-explorer-m2lf.onrender.com/)                                   |
+| 47  | [Recipe Finder App](https://github.com/amankureshi/100-projects-challenge/tree/main/day-47)              | [Live Demo](https://recipe-finder-app-react.onrender.com/)                                 |
