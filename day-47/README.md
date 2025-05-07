@@ -1,6 +1,6 @@
 🍽️ Project 47: Recipe Finder App using React.js, Tailwind CSS & Edamam API
 
-🔗 Live Demo:[Coming Soon...]
+🔗 Live Demo:[https://recipe-finder-app-react.onrender.com/]
 
 📄 Description:  
 A **Recipe Finder App** that helps users search for recipes based on ingredients using the **Edamam API**, styled with **Tailwind CSS**.

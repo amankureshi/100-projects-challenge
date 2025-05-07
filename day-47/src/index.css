@@ -19,6 +19,10 @@
   margin-top: 4px;
 }
 
+.p-10 {
+  padding: 40px;
+}
+
 .my-2 {
   margin-block: calc(var(--spacing) * 2)
 }
