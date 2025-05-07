@@ -48,7 +48,7 @@ const RecipeCard = ({ recipe, bg, badge }) => {
           }}
         />
         <div className="absolute bottom-2 left-2 bg-white rounded-full p-4 cursor-pointer flex items-center gap-1 text-sm">
-          <LuSoup size={18} className="text-red-500 " />
+          <LuSoup size={18} className="text-red-500" />
           {recipe.yield} Searving
         </div>
         <div
@@ -70,7 +70,9 @@ const RecipeCard = ({ recipe, bg, badge }) => {
       </a>
 
       <div className="flex mt-1">
-        <p className="font-bold tracking-wide">{recipe.label}</p>
+        <p className="font-bold tracking-wide text-ellipsis overflow-hidden whitespace-nowrap ">
+          {recipe.label}
+        </p>
       </div>
       <p className="my-2">
         {recipe.cuisineType[0].charAt(0).toUpperCase() +

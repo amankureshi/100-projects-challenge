@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { RiHome4Line } from "react-icons/ri";
-import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { FaRegHeart } from "react-icons/fa";
 const Sidebar = () => {
   return (
     <>
@@ -17,7 +17,7 @@ const DesktopSidebar = () => {
   return (
     <div className="p-3 md:p-10 border-r min-h-screen w-24 md:w-50 hidden sm:block">
       <div className="flex flex-col gap-20 sticky top-10 left-0">
-        <div className="w-full">
+        <div className="w-full flex justify-center">
           <img
             src="rest-logo.png"
             alt="logo"

@@ -10,3 +10,15 @@
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
+
+.p-4 {
+  padding: 5px;
+}
+
+.mt-1 {
+  margin-top: 4px;
+}
+
+.my-2 {
+  margin-block: calc(var(--spacing) * 2)
+}
