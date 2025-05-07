@@ -19,16 +19,12 @@ const DesktopSidebar = () => {
       <div className="flex flex-col gap-20 sticky top-10 left-0">
         <div className="w-full">
           <img
-            src="./public/rest-logo.png"
+            src="rest-logo.png"
             alt="logo"
             className="hidden md:block"
             width={130}
           />
-          <img
-            src="./public/spoon.png"
-            alt="logo"
-            className="block md:hidden"
-          />
+          <img src="spoon.png" alt="logo" className="block md:hidden" />
         </div>
         <div className="flex flex-col items-center md:items-center gap-8">
           <Link to={"/"} className="flex gap-1">
