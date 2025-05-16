@@ -30,8 +30,7 @@ function App() {
 
   return (
     <>
-      <h1>Aman Kureshi</h1>
-      <div className="cotainer">
+      <div className="container">
         <h2>BMI Calculator</h2>
         <form onSubmit={calcBmi}>
           <div>
@@ -44,7 +43,7 @@ function App() {
             />
           </div>
           <div>
-            <label>Height(ibs)</label>
+            <label>Height(in)</label>
             <input
               type="text"
               placeholder="Enter Height value"

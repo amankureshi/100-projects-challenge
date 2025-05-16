@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    /* background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%); */
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 30px;
+    width: 100%;
+    max-width: 420px;
+    border: 2px solid #2d4a69;
+    background: transparent !important;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 1.6rem;
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-top: 15px;
+}
+
+p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 10px;
+    color: #333;
+}
+
+input[type="text"] {
+    margin-top: 5px;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    font-size: 1.1rem;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+button {
+    width: 48%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin: 10px 1%;
+}
+
+button.btn {
+    background-color: #6200EE;
+    color: white;
+}
+
+button.btn:hover {
+    background-color: #0056b3;
+}
+
+button[type="submit"]:nth-child(2) {
+    background-color: #FF5000;
+}
+
+button[type="submit"]:nth-child(2):hover {
+    background-color: #d32f2f;
+}
+
+.center {
+    text-align: center;
+    margin-top: 25px;
+    padding: 10px;
+}
+
+.container {
+    padding: 40px;
+    max-width: 460px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+button:focus {
+    outline: none;
+}
+
+button {
+    transition: all 0.3s ease;
+}
