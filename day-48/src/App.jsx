@@ -6,18 +6,30 @@ function App() {
   const [height, setHeight] = useState(0);
   const [bmi, setBmi] = useState("");
   const [message, setMessage] = useState("");
+
+  let calcBmi = (e) => {
+    event.preventDefault();
+    if (weight === 0 || height === 0) {
+      alert("please enter a valid weight and height");
+    } else {
+      let bmi = (weight / (height * height)) * 703;
+      setBmi(bmi.toFixed(1));
+    }
+  };
+
   return (
     <>
       <h1>Aman Kureshi</h1>
       <div className="cotainer">
         <h2>BMI Calculator</h2>
-        <form>
+        <form onSubmit={calcBmi}>
           <div>
             <label>Wight(ibs)</label>
             <input
               type="text"
               placeholder="Enter weight value"
               value={weight}
+              onChange={(e) => setWeight(e.target.value)}
             />
           </div>
           <div>
@@ -26,6 +38,7 @@ function App() {
               type="text"
               placeholder="Enter Height value"
               value={height}
+              onChange={(e) => setHeight(e.target.value)}
             />
           </div>
           <div>
