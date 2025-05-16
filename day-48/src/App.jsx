@@ -14,7 +14,18 @@ function App() {
     } else {
       let bmi = (weight / (height * height)) * 703;
       setBmi(bmi.toFixed(1));
+      if (bmi < 25) {
+        setMessage("you are underWeight");
+      } else if (bmi >= 25 && bmi < 30) {
+        setMessage("you are a healthy weight");
+      } else {
+        setMessage("you are overweight");
+      }
     }
+  };
+
+  let reload = () => {
+    window.location.reload();
   };
 
   return (
