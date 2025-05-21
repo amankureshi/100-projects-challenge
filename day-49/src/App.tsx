@@ -1,4 +1,5 @@
 import { faker } from "@faker-js/faker";
+import RestartBtn from "./Components/RestartBtn.tsx"
 import './App.css'
 
 const words = faker.word.words(10)
@@ -6,7 +7,7 @@ const App = () => {
   return <>
     <CountdownTimer timeLeft={30} />
     <GenerateWords words={words} />
-
+    <RestartBtn className={"mx-auto mt-10 text-slate-500"} onRestart={() => null} />
   </>
 }
 const GenerateWords = ({ words }: { words: string }) => {
