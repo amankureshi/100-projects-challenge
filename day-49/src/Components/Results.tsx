@@ -15,12 +15,11 @@ const Results = ({
     const animate = { opacity: 1 };
     const duration = { duration: 0.3 };
     return (
-        <motion.ul className={`flex flex-col items-center text-primary-400 space-y-3 ${className}`}>
-            <motion.li className="text-xl font-semibold">Results</motion.li>
-            <motion.li>Accuracy:{accuracyPercentage}</motion.li>
-            <motion.li className="text-red-500">Errors: {errors} </motion.li>
-            <motion.li>Typed:{total}</motion.li>
-            <motion.li></motion.li>
+        <motion.ul className={`flex flex-col items-center text-amber-300 space-y-3 ${className}`}>
+            <motion.li initial={initial} animate={animate} transition={{ ...duration, delay: 0 }} className="text-xl font-semibold">Results</motion.li>
+            <motion.li initial={initial} animate={animate} transition={{ ...duration, delay: 0.5 }}>Accuracy:{accuracyPercentage}</motion.li>
+            <motion.li initial={initial} animate={animate} transition={{ ...duration, delay: 1 }} className="text-red-500">Errors: {errors} </motion.li>
+            <motion.li initial={initial} animate={animate} transition={{ ...duration, delay: 1.4 }}>Typed:{total}</motion.li>
         </motion.ul>
     )
 }
