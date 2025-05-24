@@ -7,8 +7,10 @@ const UserTyping = () => ({
 }) => {
     const typedCharacters = userInput.split("")
     return (
-        <div>
-
+        <div className={className}>
+            {typedCharacters.map((char, index) => {
+                return <span key={`${char}_${index}`}>{char}</span>
+            })}
         </div>
     )
 }
