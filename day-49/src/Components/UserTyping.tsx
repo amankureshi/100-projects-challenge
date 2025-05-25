@@ -1,4 +1,4 @@
-const UserTyping = () => ({
+const UserTyping = ({
     userInput,
     className,
 }: {
@@ -19,4 +19,4 @@ const Character = ({ char }: { char: string }) => {
     return <span className="text-amber-300">{char}</span>
 }
 
-export default UserTyping
+export default UserTyping;

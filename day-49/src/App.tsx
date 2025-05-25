@@ -2,12 +2,16 @@ import { faker } from "@faker-js/faker";
 import RestartBtn from "./Components/RestartBtn.tsx"
 import './App.css'
 import Results from "./Components/Results.tsx";
+import UserTyping from "./Components/UserTyping.tsx";
 
 const words = faker.word.words(10)
 const App = () => {
   return <>
     <CountdownTimer timeLeft={30} />
-    <GenerateWords words={words} />
+    <div className="relative max-w-xl mt-3">
+      <GenerateWords words={words} />
+      <UserTyping className="absolute inset-0" userInput={words} />
+    </div>
     <RestartBtn className={"mx-auto mt-10 text-slate-500"} onRestart={() => null} />
     <Results className="mt-10" errors={10} accuracyPercentage={100} total={200} />
   </>
