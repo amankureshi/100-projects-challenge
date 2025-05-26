@@ -1,5 +1,13 @@
 import { useCallback, useEffect, useRef, useState } from "react"
 
+const isKeyboardCodeAllowed = (code: string) => {
+    return (
+        code.startsWith("Key") ||
+        code.startsWith("Digit") ||
+        code === "Backspace" ||
+        code === "Space" 
+    )
+}
 
 const useTypings = (enabled: boolean) => {
     const [curson, setCursor] = useState(0)
