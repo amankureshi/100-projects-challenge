@@ -5,12 +5,13 @@ import Results from "./Components/Results.tsx";
 import UserTyping from "./Components/UserTyping.tsx";
 import useEngine from "./Hooks/useEngine.tsx";
 
-const words = faker.word.words(10);
+// const words = faker.word.words(10);
+
 const App = () => {
-  const { state, words } = useEngine();
+  const { state, words, timeLeft } = useEngine();
   return (
     <>
-      <CountdownTimer timeLeft={30} />
+      <CountdownTimer timeLeft={timeLeft} />
       <WordsContainer>
         <GenerateWords words={words} />
         <UserTyping className="absolute inset-0" userInput={"test"} />
