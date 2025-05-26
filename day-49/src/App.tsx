@@ -3,7 +3,6 @@ import RestartBtn from "./Components/RestartBtn.tsx";
 import "./App.css";
 import Results from "./Components/Results.tsx";
 import UserTyping from "./Components/UserTyping.tsx";
-import { Children } from "react";
 
 const words = faker.word.words(10);
 const App = () => {
