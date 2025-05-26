@@ -1,3 +1,4 @@
+import { time } from "motion";
 import { useCallback, useEffect, useRef, useState } from "react"
 
 const useCountdownTimer = (seconds:number) => {
@@ -22,6 +23,12 @@ const useCountdownTimer = (seconds:number) => {
     setTimeLeft(seconds);
   }, [seconds]);
 
+  useEffect(() => {
+    if (!timeLeft && intervalRef.current) {
+      console.log("clearing timer...");
+      clearInterval(intervalRef.current);
+    }
+  },[time,intervalRef])
 
   return { timeLeft, startCountdown, resetCountdown };
 }
