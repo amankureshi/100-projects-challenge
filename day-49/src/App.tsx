@@ -3,9 +3,11 @@ import RestartBtn from "./Components/RestartBtn.tsx";
 import "./App.css";
 import Results from "./Components/Results.tsx";
 import UserTyping from "./Components/UserTyping.tsx";
+import useEngine from "./Hooks/useEngine.tsx";
 
 const words = faker.word.words(10);
 const App = () => {
+  const { state, words } = useEngine();
   return (
     <>
       <CountdownTimer timeLeft={30} />
