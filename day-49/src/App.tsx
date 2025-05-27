@@ -8,13 +8,13 @@ import useEngine from "./Hooks/useEngine.tsx";
 // const words = faker.word.words(10);
 
 const App = () => {
-  const { state, words, timeLeft } = useEngine();
+  const { state, words, timeLeft, typed } = useEngine();
   return (
     <>
       <CountdownTimer timeLeft={timeLeft} />
       <WordsContainer>
         <GenerateWords words={words} />
-        <UserTyping className="absolute inset-0" userInput={"test"} />
+        <UserTyping className="absolute inset-0" userInput={typed} />
       </WordsContainer>
       <RestartBtn
         className={"mx-auto mt-10 text-slate-500"}
