@@ -14,7 +14,11 @@ const App = () => {
       <CountdownTimer timeLeft={timeLeft} />
       <WordsContainer>
         <GenerateWords words={words} />
-        <UserTyping className="absolute inset-0" userInput={typed} />
+        <UserTyping
+          className="absolute inset-0"
+          userInput={typed}
+          words={words}
+        />
       </WordsContainer>
       <RestartBtn
         className={"mx-auto mt-10 text-slate-500"}
@@ -32,11 +36,9 @@ const App = () => {
 
 const WordsContainer = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="relative text-3xl max-w-xl leading-relaxed">
-      {children}
-    </div>
-  )
-}
+    <div className="relative text-3xl max-w-xl leading-relaxed">{children}</div>
+  );
+};
 
 const GenerateWords = ({ words }: { words: string }) => {
   return <div className="text-center text-slate-500">{words}</div>;
