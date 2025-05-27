@@ -1,6 +1,7 @@
 import { useState } from "react"
 import useWords from "./useWords"
 import useCountdownTimer from "./useCountdownTimer";
+import useTypings from "./useTypings";
 
 export type State = "start" | "run" | "finish"
 
@@ -11,6 +12,8 @@ const useEngine = () => {
     const [state, setState] = useState<State>("start")
     const { words, updateWords } = useWords(NUMBER_OF_WORDS)
     const { timeLeft, startCountdown, resetCountdown } = useCountdownTimer(COUNTDOWN_SECONDS)
-    return { state, words, timeLeft }
+    const { typed, cursor, clearTyped, resetTotalTyped, totayTyped } =
+        useTypings(state !== 'finish')
+    return { state, words, timeLeft, typed }
 }
 export default useEngine;
