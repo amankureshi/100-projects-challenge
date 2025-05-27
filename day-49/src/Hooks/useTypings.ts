@@ -31,8 +31,18 @@ const useTypings = (enabled: boolean) => {
                     setCursor(curson + 1);
                     totalTyped.current += 1;
             }
-         }, [curson,enabled])
+        }, [curson, enabled]
+    );
 
+    const clearTyped = useCallback(() => {
+        setTyped("");
+        setCursor(0);
+    }, []);
+
+    const resetTotalTyped = useCallback(() => {
+        totalTyped.current = 0;
+    }, []);
+        
     useEffect(() => {
         window.addEventListener("keydown", keydownHandler);
 
