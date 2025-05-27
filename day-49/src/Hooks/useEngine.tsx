@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import useWords from "./useWords"
 import useCountdownTimer from "./useCountdownTimer";
 import useTypings from "./useTypings";
@@ -17,11 +17,33 @@ const useEngine = () => {
     const { typed, cursor, clearTyped, resetTotalTyped, totayTyped } =
         useTypings(state !== 'finish')
 
+
+
     const [errors, setError] = useState(0);
+
+    const isStarting = state === "start" && cursor > 0;
+
     const sumErrors = useCallback(() => {
         const wordsReached = words.substring(0, cursor);
         setError((prevError) => prevError + countErrors(typed, wordsReached))
-    }, [typed, words, cursor])
+    }, [typed, words, cursor]);
+
+
+    //As soon the user start typing the first letter, we start
+    useEffect(() => {
+        if (isStarting) {
+            setState("run");
+            startCountdown();
+        }
+    }, [isStarting, startCountdown, cursor]);
+
+
+    //When the time is up, we've finished
+    useEffect(() => {
+        console.log("time is up....");
+        setState("finish");
+        sumErrors();
+    }, [timeLeft, sumErrors])
 
     return { state, words, timeLeft, typed }
 }
