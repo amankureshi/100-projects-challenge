@@ -4,11 +4,12 @@ import "./App.css";
 import Results from "./Components/Results.tsx";
 import UserTyping from "./Components/UserTyping.tsx";
 import useEngine from "./Hooks/useEngine.tsx";
+import { calclateAccuracyPercentage } from "./utils/Helper.ts";
 
 // const words = faker.word.words(10);
 
 const App = () => {
-  const { state, words, timeLeft, typed } = useEngine();
+  const { state, words, timeLeft, typed, errors, restart, totalTyped } = useEngine();
   return (
     <>
       <CountdownTimer timeLeft={timeLeft} />
@@ -22,13 +23,13 @@ const App = () => {
       </WordsContainer>
       <RestartBtn
         className={"mx-auto mt-10 text-slate-500"}
-        onRestart={() => null}
+        onRestart={restart}
       />
       <Results
         className="mt-10"
-        errors={10}
-        accuracyPercentage={100}
-        total={200}
+        errors={errors}
+        accuracyPercentage={calclateAccuracyPercentage(errors, totalTyped)}
+        total={totalTyped}
       />
     </>
   );
