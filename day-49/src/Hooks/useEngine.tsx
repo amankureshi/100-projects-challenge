@@ -38,9 +38,11 @@ const useEngine = () => {
 
     //When the time is up, we've finished
     useEffect(() => {
-        console.log("time is up....");
-        setState("finish");
-        sumErrors();
+        if (timeLeft === 0) {
+            console.log("time is up....");
+            setState("finish");
+            sumErrors();
+        }
     }, [timeLeft, sumErrors]);
 
     useEffect(() => {
@@ -64,8 +66,8 @@ const useEngine = () => {
         console.log("restarting...");
         resetCountdown();
         resetTotalTyped();
-        setState(0);
-        setErrors();
+        setState("start");
+        setError(0);
         updateWords();
         clearTyped();
 
