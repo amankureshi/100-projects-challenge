@@ -38,14 +38,14 @@ const App = () => {
 
 const WordsContainer = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="relative text-3xl max-w-xl leading-relaxed">{children}</div>
+    <div className="relative text-3xl max-w-xl leading-relaxed font-sans">{children}</div>
   );
 };
 
 const GenerateWords = ({ words }: { words: string }) => {
-  return <div className=" text-white">{words}</div>;
+  return <div className=" text-white font-sans">{words}</div>;
 };
 const CountdownTimer = ({ timeLeft }: { timeLeft: number }) => {
-  return <h2 className="font-medium text-amber-300">Time:{timeLeft}</h2>;
+  return <h2 className="font-medium text-2xl text-amber-300 font-time">Time:{timeLeft}</h2>;
 };
 export default App;

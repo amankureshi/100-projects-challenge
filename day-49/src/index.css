@@ -8,4 +8,13 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  .font-result {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .font-time {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
 }
