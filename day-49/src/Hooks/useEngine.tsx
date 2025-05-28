@@ -6,8 +6,8 @@ import { countErrors } from "../utils/Helper";
 
 export type State = "start" | "run" | "finish";
 
-const NUMBER_OF_WORDS = 12;
-const COUNTDOWN_SECONDS = 10;
+const NUMBER_OF_WORDS = 15;
+const COUNTDOWN_SECONDS = 30;
 
 const useEngine = () => {
     const [state, setState] = useState<State>("start");

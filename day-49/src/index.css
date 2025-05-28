@@ -2,6 +2,10 @@
 
 @layer base {
   body {
-    @apply min-h-screen bg-slate-800 grid place-items-center font-mono tracking-wider;
+    @apply min-h-screen grid place-items-center font-mono tracking-wider;
+    background-color: #1e293b;
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }

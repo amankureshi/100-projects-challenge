@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { formatPercentage } from "../utils/Helper";
+import type { State } from "../Hooks/useEngine";
 
 const Results = ({
     state,
