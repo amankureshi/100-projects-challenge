@@ -1,4 +1,3 @@
-import { faker } from "@faker-js/faker";
 import RestartBtn from "./Components/RestartBtn.tsx";
 import "./App.css";
 import Results from "./Components/Results.tsx";
