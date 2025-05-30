@@ -5,8 +5,6 @@ import UserTyping from "./Components/UserTyping.tsx";
 import useEngine from "./Hooks/useEngine.tsx";
 import { calclateAccuracyPercentage } from "./utils/Helper.ts";
 
-// const words = faker.word.words(10);
-
 const App = () => {
   const { state, words, timeLeft, typed, errors, restart, totalTyped } = useEngine();
   return (

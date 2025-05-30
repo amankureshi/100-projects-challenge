@@ -1,6 +1,6 @@
 ⌨️ Project 49: Typing Speed App using React, TypeScript, Tailwind CSS & Framer Motion
 
-🔗 Live Demo:[Coming Soon...]
+🔗 Live Demo:[https://typing-speed-app-react.onrender.com/]
 
 📄 Description:  
 A **Typing Speed App** built with **React + TypeScript** that measures how fast and accurately a user can type. Styled with **Tailwind CSS** and enhanced with **Framer Motion** for smooth animations.
