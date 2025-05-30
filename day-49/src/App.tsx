@@ -38,7 +38,7 @@ const App = () => {
 
 const WordsContainer = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="relative text-3xl max-w-xl leading-relaxed font-sans">{children}</div>
+    <div className="relative text-3xl max-w-3xl leading-relaxed font-sans">{children}</div>
   );
 };
 
