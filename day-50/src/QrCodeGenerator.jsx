@@ -2,10 +2,11 @@ import React, { useState } from "react";
 
 const QrCodeGenerator = () => {
   const [url, setUrl] = useState("");
+  const [show, setShow] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("ok");
+    setShow(true);
   };
 
   return (
@@ -21,7 +22,7 @@ const QrCodeGenerator = () => {
         />
         <input type="submit" value={"Generate QR Code"} />{" "}
       </form>
-      {url && (
+      {show && (
         <img
           src={`https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${url}`}
           alt="QR Code"
