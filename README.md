@@ -53,3 +53,4 @@
 | 47  | [Recipe Finder App](https://github.com/amankureshi/100-projects-challenge/tree/main/day-47)              | [Live Demo](https://recipe-finder-app-react.onrender.com/)                                 |
 | 48  | [BMI Calculator](https://github.com/amankureshi/100-projects-challenge/tree/main/day-48)                 | [Live Demo](https://bmi-calculator-react-7606.onrender.com/)                               |
 | 49  | [Typing Speed App](https://github.com/amankureshi/100-projects-challenge/tree/main/day-49)               | [Live Demo](https://typing-speed-app-react.onrender.com/)                                  |
+| 50  | [QR Code Generator](https://github.com/amankureshi/100-projects-challenge/tree/main/day-50)              | [Live Demo](https://qr-code-generator-wwld.onrender.com/)                                  |
