@@ -1,6 +1,6 @@
 📱 Project 50: QR Code Generator using React.js (API + Controlled Input)
 
-🔗 Live Demo:[Coming Soon...]
+🔗 Live Demo:[https://qr-code-generator-wwld.onrender.com/]
 
 📄 Description:  
 A **QR Code Generator App** built with **React.js**, where users can enter text or URLs and generate a QR code using an external API.
