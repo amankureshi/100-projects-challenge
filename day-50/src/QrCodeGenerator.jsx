@@ -10,20 +10,22 @@ const QrCodeGenerator = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <h1>QR Code Generator in React JS</h1>
+    <div className="qr-container">
+      <form onSubmit={handleSubmit} className="qr-form">
+        <h1 className="qr-title">QR Code Generator in React JS</h1>
         <input
           type="url"
           name="url"
           value={url}
           onChange={(e) => setUrl(e.target.value)}
           placeholder="Enter your URL to generate QR code"
+          className="qr-input"
         />
-        <input type="submit" value={"Generate QR Code"} />{" "}
+        <input type="submit" value={"Generate QR Code"} className="qr-submit" />
       </form>
       {show && (
         <img
+          className="qr-image"
           src={`https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${url}`}
           alt="QR Code"
         />

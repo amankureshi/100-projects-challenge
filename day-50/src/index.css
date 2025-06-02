@@ -1,3 +1,122 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.qr-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  margin: 10px;
+}
+
+.qr-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.qr-title {
+  font-size: 28px;
+  text-align: center;
+  width: 100%;
+
+}
+
+.qr-input,
+.qr-submit {
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  flex: 1 1 45%;
+}
+
+.qr-input {
+  border: 1px solid #ccc;
+}
+
+.qr-input:focus {
+  border-color: #4caf50;
+}
+
+.qr-submit {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.qr-submit:hover {
+  background-color: #45a049;
+}
+
+.qr-code-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.qr-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .qr-container {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .qr-title {
+    font-size: 24px;
+  }
+
+  .qr-input,
+  .qr-submit {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .qr-image {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .qr-container {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .qr-title {
+    font-size: 22px;
+  }
+
+  .qr-input,
+  .qr-submit {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .qr-image {
+    width: 140px;
+    height: 140px;
+  }
 }
