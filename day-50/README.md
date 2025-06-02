@@ -1,12 +1,30 @@
-# React + Vite
+📱 Project 50: QR Code Generator using React.js (API + Controlled Input)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔗 Live Demo:[Coming Soon...]
 
-Currently, two official plugins are available:
+📄 Description:  
+A **QR Code Generator App** built with **React.js**, where users can enter text or URLs and generate a QR code using an external API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔧 Technologies Used:
 
-## Expanding the ESLint configuration
+- React.js
+- QR Code Generator API
+- useState Hook
+- CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🌟 Features:
+
+- Controlled input to capture user text or links
+- Generates QR code using API on button click
+- Responsive UI for desktop and mobile
+
+🚀 Challenges Faced:
+
+- Integrating external QR code generation API
+- Handling controlled form inputs
+
+🎯 Key Learnings:
+
+- Using controlled components in React
+- Fetching and displaying generated image from an API
+- Building utility-based tools with React

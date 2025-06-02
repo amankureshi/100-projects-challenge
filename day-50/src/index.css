@@ -54,14 +54,14 @@ body {
 }
 
 .qr-submit {
-  background-color: #4caf50;
+  background-color: #007C89;
   color: white;
   border: none;
   cursor: pointer;
 }
 
 .qr-submit:hover {
-  background-color: #45a049;
+  background-color: #007b89b6;
 }
 
 .qr-code-container {
