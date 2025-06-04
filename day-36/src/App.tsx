@@ -3,191 +3,175 @@ import loader from "./assets/spiner.gif";
 import "./App.css";
 
 function App() {
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [pageLoader, setPageLoader] = useState(true);
-  const [userInfo, setUserInfo] = useState(null);
+  const [userInfo, setUserInfo] = useState<any>(null);
   const [loggedIn, setLoggedIn] = useState(false);
   const [password, setPassword] = useState('');
-  const [error, setError] = useState({ email: "", password: "" });
+  const [error, setError] = useState({ username: "", password: "" });
 
   const validateForm = () => {
-    let emailError = "";
+    let usernameError = "";
     let passwordError = "";
 
-    if (email === '') {
-      emailError = "Please Enter email";
-    } else if (!email.includes("@")) {
-      emailError = "Please include @ in the email";
+    if (username.trim() === '') {
+      usernameError = "Please enter your username";
     }
-    if (password.length < 6) {
+    if (password.trim().length < 6) {
       passwordError = "Password must be at least 6 characters long";
     }
-    setError({ email: emailError, password: passwordError });
 
-    return !emailError && !passwordError;
+    setError({ username: usernameError, password: passwordError });
+
+    return !usernameError && !passwordError;
   };
 
-  const getUserProfile = async (token) => {
+  const getProfession = (id: number) => {
+    const professions = [
+      "Software Engineer",
+      "Graphic Designer",
+      "Data Analyst",
+      "Product Manager",
+      "UX/UI Designer",
+      "DevOps Engineer",
+      "Marketing Specialist",
+      "Content Writer",
+      "Mobile Developer",
+      "Cybersecurity Expert",
+    ];
+    return professions[(id - 1) % professions.length];
+  };
+
+  const handleLogin = async () => {
     try {
-      const response = await fetch("https://dummyjson.com/auth/me", {
-        method: "GET",
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const response = await fetch("https://jsonplaceholder.typicode.com/users");
+      const users = await response.json();
 
-      if (!response.ok) throw new Error("Failed to fetch user profile");
+      const enhancedUsers = users.map((user: any) => ({
+        ...user,
+        image: `https://i.pravatar.cc/150?u=${user.id}`,
+        profession: getProfession(user.id),
+      }));
 
-      const profile = await response.json();
-      console.log("User Profile:", profile);
-      setUserInfo(profile);
-      setLoggedIn(true);
-      setPageLoader(false);
-      return profile;
-    } catch (error) {
-      console.error("Error fetching user profile:", error.message);
+      const foundUser = enhancedUsers.find(
+        (user: any) =>
+          user.username === username && user.email === password
+      );
+
+      if (foundUser) {
+        const fakeToken = "mockToken123";
+        localStorage.setItem("token", fakeToken);
+        localStorage.setItem("user", JSON.stringify(foundUser));
+        setUserInfo(foundUser);
+        setLoggedIn(true);
+        setPageLoader(false);
+      } else {
+        throw new Error("Invalid credentials");
+      }
+    } catch (error: any) {
+      alert("Login Error: " + error.message);
       setPageLoader(false);
     }
   };
 
   useEffect(() => {
-    const localToken = localStorage.getItem('token');
-    localToken ? getUserProfile(localToken) : setPageLoader(false);
+    const token = localStorage.getItem("token");
+    const user = localStorage.getItem("user");
+    if (token && user) {
+      setUserInfo(JSON.parse(user));
+      setLoggedIn(true);
+    }
+    setPageLoader(false);
   }, []);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (validateForm()) {
-      try {
-        const response = await fetch("https://dummyjson.com/auth/login", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            username: email,
-            password: password,
-          }),
-        });
-
-        if (!response.ok) throw new Error("Login failed");
-
-        const data = await response.json();
-        console.log(data);
-        localStorage.setItem("token", data.token);
-        await getUserProfile(data.token);
-        setEmail("");
-        setPassword("");
-        setError({ email: "", password: "" });
-      } catch (error) {
-        alert(error.message);
-      }
+      handleLogin();
     }
   };
 
   const handleLogout = () => {
     localStorage.removeItem("token");
+    localStorage.removeItem("user");
     setLoggedIn(false);
     setUserInfo(null);
   };
 
   return (
-    <section className="bg-gray-50 dark:bg-gray-900">
+    <section className="bg-gray-50 dark:bg-gray-900 min-h-screen flex justify-center items-center px-4">
       {pageLoader ? (
-        <div className="flex justify-center align-middle loader">
+        <div className="flex justify-center items-center">
           <img src={loader} alt="Loading..." />
         </div>
+      ) : !loggedIn ? (
+        <div className="flex flex-col items-center w-full max-w-md">
+          <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-4 rounded text-sm w-full">
+            <p><strong>Demo Instructions:</strong></p>
+            <ul className="list-disc pl-5 mt-1 space-y-1">
+              <li>This is a <strong>demo login</strong> using mock data from JSONPlaceholder.</li>
+              <li>Enter a valid username and their email as the password.</li>
+              <li><strong>Example:</strong></li>
+              <ul className="pl-4 mt-1">
+                <li>Username: <code className="bg-gray-200 px-1 rounded">Bret</code></li>
+                <li>Password: <code className="bg-gray-200 px-1 rounded">Sincere@april.biz</code></li>
+              </ul>
+              <li>Full list: <a href="https://jsonplaceholder.typicode.com/users" target="_blank" rel="noreferrer" className="text-blue-600 underline">Click here</a></li>
+            </ul>
+          </div>
+
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Login</h1>
+
+          <form className="w-full bg-white rounded-lg shadow dark:bg-gray-800 p-6 space-y-4" onSubmit={handleSubmit}>
+            <div>
+              <label className="block mb-1 text-gray-700 dark:text-white">Username</label>
+              <input
+                type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                className="w-full p-2 border border-gray-300 rounded dark:bg-gray-700 dark:text-white"
+                placeholder="Enter your username"
+              />
+              {error.username && <p className="text-red-500 text-sm">{error.username}</p>}
+            </div>
+
+            <div>
+              <label className="block mb-1 text-gray-700 dark:text-white">Password (Email)</label>
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="w-full p-2 border border-gray-300 rounded dark:bg-gray-700 dark:text-white"
+                placeholder="e.g., Sincere@april.biz"
+              />
+              {error.password && <p className="text-red-500 text-sm">{error.password}</p>}
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+            >
+              Sign In
+            </button>
+          </form>
+        </div>
       ) : (
-        <>
-          {!loggedIn ? (
-            <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 ">
-              <a
-                href="#"
-                className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
-              >
-                <img
-                  className="w-13 mr-2"
-                  src="https://img.icons8.com/?size=200&id=7819&format=png&color=EBEBEB"
-                  alt="logo"
-                />
-                Join Us
-              </a>
-              <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
-                <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-                  <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-                    Sign in to your account
-                  </h1>
-                  <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
-                    <div>
-                      <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                        Your email
-                      </label>
-                      <input
-                        type="text"
-                        value={email}
-                        name="email"
-                        id="email"
-                        className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Enter your email"
-                        onChange={(e) => setEmail(e.target.value)}
-                      />
-                      {error.email && (
-                        <p style={{ color: "red", fontSize: "14px" }}>{error.email}</p>
-                      )}
-                    </div>
-                    <div>
-                      <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                        Password
-                      </label>
-                      <input
-                        type="password"
-                        name="password"
-                        id="password"
-                        placeholder="••••••••"
-                        className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                      />
-                      {error.password && (
-                        <p style={{ color: "red", fontSize: "14px" }}>{error.password}</p>
-                      )}
-                    </div>
-                    <button
-                      type="submit"
-                      className="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-                    >
-                      Sign in
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          ) : userInfo ? (
-            <div className="last-card">
-              <div className="w-full flex justify-center">
-                <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 flex flex-col items-center mx-auto my-8 p-6 card-demo">
-                  <div className="flex flex-col items-center">
-                    <img
-                      className="w-24 h-24 mb-3 rounded-full shadow-lg"
-                      src={userInfo.image}
-                      alt="avatar"
-                    />
-                    <h2 className="mb-1 text-3xl font-medium text-gray-900 dark:text-white">
-                      {userInfo.firstName} {userInfo.lastName}
-                    </h2>
-                    <span className="text-sm text-gray-500 dark:text-gray-400 mb-4">
-                      {userInfo.email}
-                    </span>
-                    <button
-                      onClick={handleLogout}
-                      className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800"
-                    >
-                      Log Out
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ) : null}
-        </>
+        <div className="flex flex-col items-center bg-white dark:bg-gray-800 p-8 rounded shadow-lg max-w-sm w-full">
+          <img
+            className="w-24 h-24 mb-4 rounded-full shadow"
+            src={userInfo.image}
+            alt="User"
+          />
+          <h2 className="text-2xl font-semibold text-gray-800 dark:text-white">{userInfo.name}</h2>
+          <p className="text-gray-600 dark:text-gray-300">@{userInfo.username}</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{userInfo.profession}</p>
+          <button
+            onClick={handleLogout}
+            className="mt-4 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700"
+          >
+            Log Out
+          </button>
+        </div>
       )}
     </section>
   );
