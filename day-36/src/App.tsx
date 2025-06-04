@@ -142,7 +142,7 @@ function App() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full p-2 border border-gray-300 rounded dark:bg-gray-700 dark:text-white"
-                placeholder="e.g., Sincere@april.biz"
+                placeholder="Enter your password"
               />
               {error.password && <p className="text-red-500 text-sm">{error.password}</p>}
             </div>
