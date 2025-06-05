@@ -8,6 +8,10 @@ function App() {
         <div className="passwordBoxInput">
           <input type="text" /> <button>copy</button>
         </div>
+        <div className="passwordLenght">
+          <label>Password lenght</label>
+          <input type="number" />
+        </div>
       </div>
     </>
   );
