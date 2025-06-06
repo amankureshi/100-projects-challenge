@@ -10,7 +10,7 @@ function App() {
         </div>
         <div className="passwordLenght">
           <label>Password lenght</label>
-          <input type="number" />
+          <input type="number" max={20} />
         </div>
       </div>
     </>
