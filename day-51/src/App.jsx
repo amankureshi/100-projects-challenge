@@ -12,6 +12,15 @@ function App() {
           <label>Password lenght</label>
           <input type="number" max={20} />
         </div>
+        <div className="passwordLenght">
+          <label>Include numbers</label>
+          <input type="number" />
+        </div>
+        <div className="passwordLenght">
+          <label>Include symbols</label>
+          <input type="number" />
+        </div>
+        <button className="btn">Generate password</button>
       </div>
     </>
   );
