@@ -86,3 +86,11 @@ h2 {
   border: 1px solid #ccc;
   font-size: 16px;
 }
+
+.btn {
+  border: none;
+  padding: 10px 20px;
+  background-color: #45a049;
+  color: white;
+  border-radius: 5px;
+}
