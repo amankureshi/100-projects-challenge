@@ -1,6 +1,12 @@
+import { useState } from "react";
 import "./App.css";
 
 function App() {
+  let [uppercase, setUppercase] = useState(false);
+  let [lowercase, setLowercase] = useState(false);
+  let [number, setNumber] = useState(false);
+  let [symbols, setSymbols] = useState(false);
+
   return (
     <>
       <div className="passbox">
@@ -11,6 +17,14 @@ function App() {
         <div className="passwordLenght">
           <label>Password lenght</label>
           <input type="number" max={20} />
+        </div>
+        <div className="passwordLenght">
+          <label>Include uppercase letters</label>
+          <input
+            type="checkbox"
+            checked={uppercase}
+            onChange={() => setUppercase(!uppercase)}
+          />
         </div>
         <div className="passwordLenght">
           <label>Include numbers</label>
