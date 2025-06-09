@@ -27,12 +27,28 @@ function App() {
           />
         </div>
         <div className="passwordLenght">
+          <label>Include lowercase letters</label>
+          <input
+            type="checkbox"
+            checked={lowercase}
+            onChange={() => setLowercase(!lowercase)}
+          />
+        </div>
+        <div className="passwordLenght">
           <label>Include numbers</label>
-          <input type="number" />
+          <input
+            type="number"
+            checked={number}
+            onChange={() => setNumber(!number)}
+          />
         </div>
         <div className="passwordLenght">
           <label>Include symbols</label>
-          <input type="number" />
+          <input
+            type="cheakbox"
+            checked={symbols}
+            onChange={() => setSymbols(!symbols)}
+          />
         </div>
         <button className="btn">Generate password</button>
       </div>
