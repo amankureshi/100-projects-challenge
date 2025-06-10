@@ -1,11 +1,25 @@
 import { useState } from "react";
 import "./App.css";
+import { LC, NC, SC, UC } from "./Data/PassChar";
 
 function App() {
   let [uppercase, setUppercase] = useState(false);
   let [lowercase, setLowercase] = useState(false);
   let [number, setNumber] = useState(false);
   let [symbols, setSymbols] = useState(false);
+
+  let createPassword = () => {
+    let charSet = "";
+    if (uppercase || lowercase || number || symbols) {
+      if (uppercase) charSet += UC;
+      if (lowercase) charSet += LC;
+      if (number) charSet += NC;
+      if (symbols) charSet += SC;
+      console.log(charSet);
+    } else {
+      alert("Please one Checkbox");
+    }
+  };
 
   return (
     <>
@@ -50,7 +64,9 @@ function App() {
             onChange={() => setSymbols(!symbols)}
           />
         </div>
-        <button className="btn">Generate password</button>
+        <button className="btn" onClick={createPassword}>
+          Generate password
+        </button>
       </div>
     </>
   );
