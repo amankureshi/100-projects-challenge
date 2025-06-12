@@ -7,6 +7,7 @@ function App() {
   let [lowercase, setLowercase] = useState(false);
   let [number, setNumber] = useState(false);
   let [symbols, setSymbols] = useState(false);
+  let [passwordLen, setPasswordLen] = useState(10);
 
   let createPassword = () => {
     let charSet = "";
@@ -30,7 +31,12 @@ function App() {
         </div>
         <div className="passwordLenght">
           <label>Password lenght</label>
-          <input type="number" max={20} />
+          <input
+            type="number"
+            max={20}
+            value={passwordLen}
+            onChange={(event) => setPasswordLen(event.target.value)}
+          />
         </div>
         <div className="passwordLenght">
           <label>Include uppercase letters</label>
