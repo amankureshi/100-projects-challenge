@@ -66,7 +66,7 @@ function App() {
         <div className="passwordLenght">
           <label>Include numbers</label>
           <input
-            type="number"
+            type="checkbox"
             checked={number}
             onChange={() => setNumber(!number)}
           />
@@ -74,7 +74,7 @@ function App() {
         <div className="passwordLenght">
           <label>Include symbols</label>
           <input
-            type="cheakbox"
+            type="checkbox"
             checked={symbols}
             onChange={() => setSymbols(!symbols)}
           />
