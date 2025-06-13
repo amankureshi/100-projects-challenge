@@ -22,9 +22,9 @@ function App() {
       if (number) charSet += NC;
       if (symbols) charSet += SC;
       for (let i = 0; i < passwordLen; i++) {
-        finalPass = charAt();
+        finalPass += charSet.charAt(Math.floor(Math.random() * charSet.length));
       }
-      console.log(charSet);
+      console.log(finalPass);
     } else {
       alert("Please one Checkbox");
     }
