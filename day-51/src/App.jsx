@@ -3,6 +3,10 @@ import "./App.css";
 import { LC, NC, SC, UC } from "./Data/PassChar";
 
 function App() {
+  let p = "aman";
+  let n = p.charAt(Math.floor(Math.random() * p.length));
+  console.log(n);
+
   let [uppercase, setUppercase] = useState(false);
   let [lowercase, setLowercase] = useState(false);
   let [number, setNumber] = useState(false);
@@ -10,12 +14,16 @@ function App() {
   let [passwordLen, setPasswordLen] = useState(10);
 
   let createPassword = () => {
+    let finalPass = "";
     let charSet = "";
     if (uppercase || lowercase || number || symbols) {
       if (uppercase) charSet += UC;
       if (lowercase) charSet += LC;
       if (number) charSet += NC;
       if (symbols) charSet += SC;
+      for (let i = 0; i < passwordLen; i++) {
+        finalPass = charAt();
+      }
       console.log(charSet);
     } else {
       alert("Please one Checkbox");
@@ -33,6 +41,7 @@ function App() {
           <label>Password lenght</label>
           <input
             type="number"
+            min={10}
             max={20}
             value={passwordLen}
             onChange={(event) => setPasswordLen(event.target.value)}
