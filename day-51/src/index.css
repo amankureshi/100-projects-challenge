@@ -1,96 +1,97 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-}
-
-/* App.css */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Full screen background with linear gradient */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
+/* Main container box */
 .passbox {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  text-align: center;
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
 }
 
-h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
+/* Heading style */
+.passbox h2 {
+  text-align: center;
+  margin-bottom: 25px;
   color: #333;
 }
 
+/* Password display with joined input and button */
 .passwordBoxInput {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-bottom: 20px;
 }
 
 .passwordBoxInput input {
-  width: 70%;
-  padding: 10px;
-  border-radius: 5px;
+  flex: 1;
+  padding: 10px 12px;
+  font-size: 16px;
   border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 6px 0 0 6px;
+  background-color: #f8f8f8;
+  outline: none;
+}
+
+.passwordBoxInput input:read-only {
+  background-color: #eaeaea;
 }
 
 .passwordBoxInput button {
   padding: 10px 15px;
-  margin-left: 10px;
-  background-color: #4caf50;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-left: none;
+  background-color: #21E065;
   color: white;
-  border: none;
-  border-radius: 5px;
+  border-radius: 0 6px 6px 0;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .passwordBoxInput button:hover {
-  background-color: #45a049;
+  background-color: #43a047;
 }
 
+/* Reusable section for all options */
 .passwordLenght {
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0;
 }
 
 .passwordLenght label {
-  display: block;
-  font-size: 14px;
-  margin-bottom: 5px;
-  color: #555;
-}
-
-.passwordLenght input {
-  width: 100%;
-  padding: 8px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
   font-size: 16px;
+  color: #333;
 }
 
+/* Generate Password Button */
 .btn {
-  border: none;
-  padding: 10px 20px;
-  background-color: #0b80e0;
+  width: 100%;
+  margin-top: 25px;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #2FD7D7;
   color: white;
-  border-radius: 5px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #2bb0b0;
 }
