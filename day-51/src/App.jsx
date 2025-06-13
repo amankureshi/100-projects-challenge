@@ -12,6 +12,7 @@ function App() {
   let [number, setNumber] = useState(false);
   let [symbols, setSymbols] = useState(false);
   let [passwordLen, setPasswordLen] = useState(10);
+  let [fPass, setPass] = useState("");
 
   let createPassword = () => {
     let finalPass = "";
@@ -24,10 +25,14 @@ function App() {
       for (let i = 0; i < passwordLen; i++) {
         finalPass += charSet.charAt(Math.floor(Math.random() * charSet.length));
       }
-      console.log(finalPass);
+      setPass(finalPass);
     } else {
       alert("Please one Checkbox");
     }
+  };
+
+  let copyPass = () => {
+    navigator.clipboard.writeText(fPass);
   };
 
   return (
@@ -35,7 +40,8 @@ function App() {
       <div className="passbox">
         <h2>Password Generator</h2>
         <div className="passwordBoxInput">
-          <input type="text" /> <button>copy</button>
+          <input type="text" value={fPass} />{" "}
+          <button onClick={copyPass}>copy</button>
         </div>
         <div className="passwordLenght">
           <label>Password lenght</label>
