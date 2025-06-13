@@ -1,6 +1,6 @@
 🔐 Project 51: Password Generator using React.js
 
-🔗 Live Demo:[Coming Soon...]
+🔗 Live Demo:[https://password-generator-react-6ljn.onrender.com/]
 
 📄 Description:  
 A **Password Generator App** built with **React.js** that lets users create strong and random passwords based on selected criteria like length, uppercase, numbers, and symbols.
