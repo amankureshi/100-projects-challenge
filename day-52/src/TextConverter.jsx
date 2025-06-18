@@ -6,7 +6,12 @@ const TextConverter = () => {
   return (
     <div className="container">
       <h2>Enter the text to analyze below</h2>
-      <textarea rows={8} value={text}>
+      <textarea
+        rows={8}
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        placeholder="Type or paste you text here"
+      >
         <h3>Preview</h3>
         <p>Text here....</p>
       </textarea>
