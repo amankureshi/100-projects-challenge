@@ -11,10 +11,9 @@ const TextConverter = () => {
         value={text}
         onChange={(e) => setText(e.target.value)}
         placeholder="Type or paste you text here"
-      >
-        <h3>Preview</h3>
-        <p>Text here....</p>
-      </textarea>
+      />
+      <h3>Preview</h3>
+      <p>{text.length > 0 ? text : "Enter the word to Preview"}</p>
     </div>
   );
 };
