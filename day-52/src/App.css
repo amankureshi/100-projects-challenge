@@ -1,0 +1,25 @@
+.allBtn {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    background-image: linear-gradient(to right, #e052a0, #f15c41);
+    cursor: pointer;
+    border-radius: 2px;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background-image: linear-gradient(to right, #3ec7e0, #526bf4);
+}

@@ -14,6 +14,25 @@ const TextConverter = () => {
       />
       <h3>Preview</h3>
       <p>{text.length > 0 ? text : "Enter the word to Preview"}</p>
+      <div className="allBtn">
+        <button className="btn" onClick={() => setText(text.toUpperCase())}>
+          UPPER CASE
+        </button>
+        <button className="btn" onClick={() => setText(text.toLowerCase())}>
+          lower case
+        </button>
+        <button className="btn" onClick={() => setText("")}>
+          Clear All
+        </button>
+        <button
+          className="btn"
+          onClick={() => {
+            navigator.clipboard.writeText(text);
+          }}
+        >
+          Copy to clipboard
+        </button>
+      </div>
     </div>
   );
 };
