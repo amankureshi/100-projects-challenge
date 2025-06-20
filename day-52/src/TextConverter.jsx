@@ -7,6 +7,7 @@ const TextConverter = () => {
     <div className="container">
       <h2>Enter the text to analyze below</h2>
       <textarea
+        className="text-area"
         rows={8}
         value={text}
         onChange={(e) => setText(e.target.value)}
@@ -40,9 +41,9 @@ const TextConverter = () => {
         </button>
         <button
           className="btn"
-          onClick={() => setText(text.split("").reverse().join(""))}
+          onClick={() => setText(text.split(" ").reverse().join(" "))}
         >
-          Reverse Wod
+          Reverse Word
         </button>
         <button
           className="btn"

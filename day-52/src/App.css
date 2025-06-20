@@ -4,9 +4,19 @@
     box-sizing: border-box;
 }
 
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
 .allBtn {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .btn {
@@ -28,4 +38,108 @@
 
 .btn:hover {
     background-image: linear-gradient(to right, #3ec7e0, #526bf4);
+}
+
+.summary {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.summary h2 {
+    margin-bottom: 8px;
+    color: #526bf4;
+}
+
+.summary p {
+    margin: 4px 0;
+    line-height: 1.6;
+}
+
+.app {
+    background-color: #f4f4f4;
+    color: black;
+    min-height: 100vh;
+    transition: background 0.3s ease;
+}
+
+.dark-mode {
+    background-color: #1c1c1c;
+    color: white;
+}
+
+.navbar {
+    background-color: #222;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #2196f3;
+}
+
+input:checked+.slider:before {
+    transform: translateX(16px);
+}
+
+.mode-label {
+    font-size: 14px;
+    color: white;
+}
+
+.text-area {
+    width: 100%;
+    padding: 15px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+    color: black;
+    transition: background 0.3s;
+}
+
+.dark-mode .text-area {
+    background-color: #333;
+    color: white;
 }
