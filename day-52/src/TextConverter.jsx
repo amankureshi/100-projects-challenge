@@ -32,6 +32,24 @@ const TextConverter = () => {
         >
           Copy to clipboard
         </button>
+        <button
+          className="btn"
+          onClick={() => setText(text.replace(/\s+/g, "").trim())}
+        >
+          Clear space
+        </button>
+        <button
+          className="btn"
+          onClick={() => setText(text.split("").reverse().join(""))}
+        >
+          Reverse Wod
+        </button>
+        <button
+          className="btn"
+          onClick={() => setText(text.split("").reverse().join(""))}
+        >
+          Reverse Sentence
+        </button>
       </div>
     </div>
   );
