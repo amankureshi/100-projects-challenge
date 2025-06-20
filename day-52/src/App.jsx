@@ -7,7 +7,9 @@ function App() {
   return (
     <div className={darkMode ? "app dark-mode" : "app"}>
       <nav className="navbar">
-        <h2>TextConverter</h2>
+        <h2>
+          Text<span className="heading-h2">Converter</span>
+        </h2>
         <label className="switch">
           <input type="checkbox" onChange={() => setDarkMode(!darkMode)} />
           <span className="slider"></span>

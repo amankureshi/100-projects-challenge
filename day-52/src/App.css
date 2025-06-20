@@ -11,6 +11,14 @@
     padding: 20px;
 }
 
+.navbar h2 {
+    color: #eb48a2;
+}
+
+.heading-h2 {
+    color: #95cefceb
+}
+
 .allBtn {
     display: flex;
     flex-wrap: wrap;
