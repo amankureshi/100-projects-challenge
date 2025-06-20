@@ -51,6 +51,20 @@ const TextConverter = () => {
           Reverse Sentence
         </button>
       </div>
+      <div className="summary">
+        <h2>Word summary</h2>
+        <p>
+          {text.trim() === "" ? 0 : text.trim().split(/\s+/).length} Words and{" "}
+          {text.length} characters
+        </p>
+        <p>
+          {text.trim() === ""
+            ? 0
+            : text.trim().split(/\s+/).length * (0.008).toFixed(2)}{" "}
+          Minutes read {text.length} characters
+        </p>
+        <p>{text.length > 0 ? text : "Enter the word to Preview"}</p>
+      </div>
     </div>
   );
 };
