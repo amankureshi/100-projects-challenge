@@ -12,7 +12,7 @@ const PomodoroTimer = () => {
     <div className="timer-container">
       <h2>Pomodoro Timer</h2>
       <div className="timer-display">
-        <p>time</p>
+        <p>{formatTime()}</p>
       </div>
     </div>
   );
