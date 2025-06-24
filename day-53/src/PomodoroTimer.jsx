@@ -14,6 +14,9 @@ const PomodoroTimer = () => {
       <div className="timer-display">
         <p>{formatTime()}</p>
       </div>
+      <button onClick={() => setIsRunning(!isRunning)}>
+        {isRunning ? "pause" : "start"}
+      </button>
     </div>
   );
 };
