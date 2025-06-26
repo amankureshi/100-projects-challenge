@@ -8,27 +8,31 @@ body {
   display: grid;
   place-items: center;
   min-height: 100vh;
+  background-image: linear-gradient(rgba(56, 101, 155, 0.959), rgba(0, 0, 0, .6)), url(https://img.freepik.com/free-photo/illuminated-city_1112-868.jpg?t=st=1750916873~exp=1750920473~hmac=1e6284ab4ce79a09e6fe4dd1804146bf2dcc475ab0bac13d3f95d9b8de488fd6&w=1380);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+
 }
 
 .timer-container {
   min-width: 400px;
   padding: 30px;
-  background-color: #f7f7f7;
-  border-radius: 12px;
+  border-radius: 6px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .timer-container h2 {
   margin-bottom: 20px;
   font-size: 28px;
-  color: #333;
+  color: #fff;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .timer-display {
-  font-size: 64px;
+  font-size: 7rem;
   font-weight: bold;
-  color: #e74c3c;
+  color: #fff;
   margin: 20px 0;
 }
 
@@ -36,14 +40,15 @@ body {
   padding: 10px 30px;
   margin: 10px 8px;
   font-size: 14px;
-  background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
-  color: white;
+  font-weight: 600;
+  background-image: linear-gradient(180deg, #fff, #f5f5fa);
+  color: #101010;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
   transition: 0.3s ease;
   text-transform: uppercase;
-
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .timer-container button:hover {
