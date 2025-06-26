@@ -55,4 +55,5 @@
 | 49  | [Typing Speed App](https://github.com/amankureshi/100-projects-challenge/tree/main/day-49)               | [Live Demo](https://typing-speed-app-react.onrender.com/)                                  |
 | 50  | [QR Code Generator](https://github.com/amankureshi/100-projects-challenge/tree/main/day-50)              | [Live Demo](https://qr-code-generator-wwld.onrender.com/)                                  |
 | 51  | [Password Generator](https://github.com/amankureshi/100-projects-challenge/tree/main/day-51)             | [Live Demo](https://password-generator-react-6ljn.onrender.com/)                           |
-| 52  | [text converter](https://github.com/amankureshi/100-projects-challenge/tree/main/day-52)                 | [Live Demo](https://text-converter-react.onrender.com/)                                    |
+| 52  | [Text converter](https://github.com/amankureshi/100-projects-challenge/tree/main/day-52)                 | [Live Demo](https://text-converter-react.onrender.com/)                                    |
+| 53  | [Pomodoro timer](https://github.com/amankureshi/100-projects-challenge/tree/main/day-53)                 | [Live Demo](https://pomodoro-timer-by-amankureshi.onrender.com/)                           |
