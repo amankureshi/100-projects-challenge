@@ -114,3 +114,34 @@ span {
 .timer-display p {
   animation: fadeIn 0.5s ease-in;
 }
+
+/* -------- Responive----------- */
+
+@media (max-width: 500px) {
+  .timer-container {
+    min-width: 90%;
+    padding: 20px;
+  }
+
+  .timer-display {
+    font-size: 4rem;
+  }
+
+  .timer-container button {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    margin: 8px 5px;
+  }
+
+  .Heading h1 {
+    top: 1.5rem;
+    left: 1rem;
+    font-size: 1.5rem;
+  }
+
+  span {
+    top: 4rem;
+    left: 9rem;
+    font-size: 1rem;
+  }
+}
