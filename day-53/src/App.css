@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +10,7 @@ body {
   display: grid;
   place-items: center;
   min-height: 100vh;
-  background-image: linear-gradient(rgba(56, 101, 155, 0.959), rgba(0, 0, 0, .6)), url(https://img.freepik.com/free-photo/illuminated-city_1112-868.jpg?t=st=1750916873~exp=1750920473~hmac=1e6284ab4ce79a09e6fe4dd1804146bf2dcc475ab0bac13d3f95d9b8de488fd6&w=1380);
+  background-image: linear-gradient(rgba(56, 101, 155, 0.959), rgba(0, 0, 0, .6)), url(http://img.freepik.com/free-photo/illuminated-city_1112-868.jpg?t=st=1750916873~exp=1750920473~hmac=1e6284ab4ce79a09e6fe4dd1804146bf2dcc475ab0bac13d3f95d9b8de488fd6&w=1380);
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -29,6 +31,29 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.Heading {
+  color: #fff;
+  position: relative;
+}
+
+.Heading h1 {
+  position: fixed;
+  top: 3rem;
+  left: 3rem;
+  font-family: "Edu QLD Hand", cursive;
+  font-optical-sizing: auto;
+  font-size: 2rem;
+  text-transform: lowercase;
+}
+
+span {
+  position: fixed;
+  top: 6.7rem;
+  left: 14rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+}
+
 .timer-display {
   font-size: 7rem;
   font-weight: bold;
@@ -43,7 +68,8 @@ body {
   font-weight: 600;
   background-image: linear-gradient(180deg, #fff, #f5f5fa);
   color: #101010;
-  border: none;
+  border: 2px solid transparent;
+  /* ✅ FIXED */
   border-radius: 50px;
   cursor: pointer;
   transition: 0.3s ease;
@@ -52,7 +78,9 @@ body {
 }
 
 .timer-container button:hover {
-  background-color: #2980b9;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
 }
 
 /*-------- Animation --------*/

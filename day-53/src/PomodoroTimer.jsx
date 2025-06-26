@@ -17,7 +17,7 @@ const PomodoroTimer = () => {
     return () => clearInterval(timer);
   }, [isRunning, time]);
   useEffect(() => {
-    document.title = `${formatTime()} - Pomodoro Timer`;
+    document.title = `${formatTime()} | Pomodoro Timer`;
   }, [time]);
 
   const formatTime = () => {
@@ -26,23 +26,29 @@ const PomodoroTimer = () => {
     return `${minutes}:${seconds}`;
   };
   return (
-    <div className="timer-container">
-      <h2>Pomodoro Timer</h2>
-      <div className="timer-display">
-        <p>{formatTime()}</p>
+    <section>
+      <div className="Heading">
+        <h1>Pomodoro Timer by</h1>
+        <span>Aman Kureshi</span>
       </div>
-      <button onClick={() => setIsRunning(!isRunning)}>
-        {isRunning ? "pause" : "start"}
-      </button>
-      <button
-        onClick={() => {
-          setIsRunning(false);
-          setTime(25 * 60);
-        }}
-      >
-        Reset
-      </button>
-    </div>
+      <div className="timer-container">
+        <h2>Pomodoro Timer</h2>
+        <div className="timer-display">
+          <p>{formatTime()}</p>
+        </div>
+        <button onClick={() => setIsRunning(!isRunning)}>
+          {isRunning ? "pause" : "start"}
+        </button>
+        <button
+          onClick={() => {
+            setIsRunning(false);
+            setTime(25 * 60);
+          }}
+        >
+          Reset
+        </button>
+      </div>
+    </section>
   );
 };
 
