@@ -31,6 +31,14 @@ const PomodoroTimer = () => {
       <button onClick={() => setIsRunning(!isRunning)}>
         {isRunning ? "pause" : "start"}
       </button>
+      <button
+        onClick={() => {
+          setIsRunning(false);
+          setTime(25 * 60);
+        }}
+      >
+        Reset
+      </button>
     </div>
   );
 };
