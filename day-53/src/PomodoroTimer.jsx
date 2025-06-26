@@ -9,13 +9,16 @@ const PomodoroTimer = () => {
     if (isRunning && time > 0) {
       timer = setInterval(() => {
         setTime((prevTime) => prevTime - 1);
-      }, 100);
+      }, 1000);
     }
     if (time === 0) {
       setIsRunning(false);
     }
     return () => clearInterval(timer);
   }, [isRunning, time]);
+  useEffect(() => {
+    document.title = `${formatTime()} - Pomodoro Timer`;
+  }, [time]);
 
   const formatTime = () => {
     const minutes = String(Math.floor(time / 60)).padStart(2, "0");

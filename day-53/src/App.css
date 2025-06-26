@@ -10,10 +10,6 @@ body {
   min-height: 100vh;
 }
 
-:root {
-  background-color: #1C1C1C;
-}
-
 .timer-container {
   min-width: 400px;
   padding: 30px;
@@ -52,4 +48,36 @@ body {
 
 .timer-container button:hover {
   background-color: #2980b9;
+}
+
+/*-------- Animation --------*/
+
+.timer-display p {
+  animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.timer-display p {
+  animation: fadeIn 0.5s ease-in;
 }
