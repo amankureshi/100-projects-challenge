@@ -1,12 +1,31 @@
-# React + Vite
+⏱️ Project 53: Pomodoro Timer using React.js
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔗 Live Demo:[https://pomodoro-timer-by-amankureshi.onrender.com]
 
-Currently, two official plugins are available:
+📄 Description:  
+A **Pomodoro Timer App** built with **React.js** that helps users stay productive by breaking work into intervals (25 minutes work + 5 minutes break).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔧 Technologies Used:
 
-## Expanding the ESLint configuration
+- React.js
+- useState & useEffect Hooks
+- CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🌟 Features:
+
+- 25-minute work timer
+- 5-minute break timer
+- Start / Pause / Reset controls
+- Countdown updates in real time
+- Clean and responsive UI
+
+🚀 Challenges Faced:
+
+- Managing timer countdown with `setInterval`
+- Handling pause, resume, and reset logic cleanly
+
+🎯 Key Learnings:
+
+- Using **useEffect** to handle side effects and intervals
+- Controlling state for timers and user interaction
+- Building focus/productivity tools using React
