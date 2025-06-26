@@ -11,7 +11,7 @@ body {
   place-items: center;
   min-height: 100vh;
   background-image: linear-gradient(rgba(56, 101, 155, 0.959), rgba(0, 0, 0, .6)), url(http://img.freepik.com/free-photo/illuminated-city_1112-868.jpg?t=st=1750916873~exp=1750920473~hmac=1e6284ab4ce79a09e6fe4dd1804146bf2dcc475ab0bac13d3f95d9b8de488fd6&w=1380);
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
