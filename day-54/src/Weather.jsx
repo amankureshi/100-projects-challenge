@@ -7,6 +7,22 @@ const Weather = () => {
 
   const fetchWeather = async () => {
     if (!city) return;
+
+    try {
+      const res = await fetch(``);
+      const data = await res.json();
+
+      if (data.cod === 200) {
+        setWeather(data);
+        setError("");
+      } else {
+        setWeather(null);
+        setError("City is not found.");
+      }
+    } catch (err) {
+      setError("Something is wrong!");
+      setWeather(null);
+    }
   };
 
   const API_KEY = "this is my api";
