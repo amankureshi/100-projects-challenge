@@ -7,3 +7,86 @@
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
+
+.weather-app {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: #f0f4f8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: background 0.3s ease;
+  font-family: Arial, sans-serif;
+}
+
+.weather-app input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.weather-app button {
+  padding: 10px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.weather-app button:hover {
+  background-color: #0056b3;
+}
+
+.weather-info {
+  margin-top: 20px;
+}
+
+.weather-info h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.weather-info p {
+  font-size: 18px;
+  margin: 4px 0;
+}
+
+.weather-info img {
+  margin-top: 10px;
+  width: 80px;
+  height: 80px;
+}
+
+/* Error message */
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.weather-app.clear {
+  background: #f9d976;
+}
+
+.weather-app.clouds {
+  background: #d7d2cc;
+}
+
+.weather-app.rain {
+  background: #a1c4fd;
+}
+
+.weather-app.snow {
+  background: #e0f7fa;
+}
+
+.weather-app.thunderstorm {
+  background: #616161;
+  color: white;
+}
