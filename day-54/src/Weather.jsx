@@ -29,7 +29,11 @@ const Weather = () => {
 
   return (
     <div>
-      <div className="weather-app">
+      <div
+        className={`weather-app ${
+          weather ? weather.weather[0].main.toLowerCase() : ""
+        }`}
+      >
         <input
           type="text"
           placeholder="Enter city name"
