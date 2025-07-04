@@ -9,7 +9,11 @@ const Weather = () => {
     if (!city) return;
 
     try {
-      const res = await fetch(``);
+      const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
+      console.log(API_KEY);
+      const res = await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
+      );
       const data = await res.json();
 
       if (data.cod === 200) {
@@ -24,8 +28,6 @@ const Weather = () => {
       setWeather(null);
     }
   };
-
-  const API_KEY = "this is my api";
 
   return (
     <div>
@@ -47,7 +49,10 @@ const Weather = () => {
             <h3>{weather.name}</h3>
             <p>{weather.weather[0].main}</p>
             <p>{Math.round(weather.main.temp)}c</p>
-            <img src="" alt="image-icon" />
+            <img
+              src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+              alt="weather-icon"
+            />
           </div>
         )}
       </div>
