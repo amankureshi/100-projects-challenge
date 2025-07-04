@@ -1,10 +1,11 @@
 import "./App.css";
+import Weather from "./Weather";
 
 function App() {
   return (
     <>
-      <h1>Aman KUreshi</h1>
-    </>
+      <Weather />
+    </> 
   );
 }
 

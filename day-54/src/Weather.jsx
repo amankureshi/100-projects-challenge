@@ -37,6 +37,15 @@ const Weather = () => {
           onChange={(e) => setCity(e.target.value)}
         />
         <button onClick={fetchWeather}>Search</button>
+        {error && <p className="error">{error}</p>}
+        {weather && (
+          <div className="waether-info">
+            <h3>{weather.name}</h3>
+            <p>{weather.weather[0].main}</p>
+            <p>{Math.round(weather.main.temp)}c</p>
+            <img src="" alt="image-icon" />
+          </div>
+        )}
       </div>
     </div>
   );
