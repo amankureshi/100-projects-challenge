@@ -1,6 +1,6 @@
 ☁️ Project 54: Weather App using React.js & OpenWeather API
 
-🔗 Live Demo:[Coming Soon...]
+🔗 Live Demo:[https://weather-app-using-openweather-api.onrender.com/]
 
 📄 Description:  
 A **Weather App** built with **React.js** that fetches real-time weather data using the **OpenWeather API** and updates the UI based on weather conditions.
