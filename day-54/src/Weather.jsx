@@ -1,61 +1,105 @@
 import React, { useState } from "react";
 
 const Weather = () => {
-  const [city, setCity] = useState();
+  const [city, setCity] = useState("");
   const [weather, setWeather] = useState(null);
-  const [error, setError] = useState();
+  const [forecast, setForecast] = useState(null);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
   const fetchWeather = async () => {
     if (!city) return;
 
+    setLoading(true);
+    setError("");
+
     try {
-      const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
-      console.log(API_KEY);
-      const res = await fetch(
+      // Current Weather API
+      const res1 = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
       );
-      const data = await res.json();
+      const data1 = await res1.json();
 
-      if (data.cod === 200) {
-        setWeather(data);
+      // Forecast API
+      const res2 = await fetch(
+        `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}&units=metric`
+      );
+      const data2 = await res2.json();
+
+      if (data1.cod === 200 && data2.cod === "200") {
+        setWeather(data1);
+        setForecast(data2.list);
         setError("");
       } else {
         setWeather(null);
-        setError("City is not found.");
+        setForecast(null);
+        setError("City not found.");
       }
     } catch (err) {
-      setError("Something is wrong!");
+      setError("Something went wrong!");
       setWeather(null);
+      setForecast(null);
     }
+
+    setLoading(false);
   };
 
   return (
-    <div>
-      <div
-        className={`weather-app ${
-          weather ? weather.weather[0].main.toLowerCase() : ""
-        }`}
-      >
+    <div
+      className={`weather-app ${
+        weather ? weather.weather[0].main.toLowerCase() : ""
+      }`}
+    >
+      <div className="input-group">
         <input
           type="text"
-          placeholder="Enter city name"
-          typeof="text"
+          placeholder="Enter city"
+          value={city}
           onChange={(e) => setCity(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") fetchWeather();
+          }}
         />
         <button onClick={fetchWeather}>Search</button>
-        {error && <p className="error">{error}</p>}
-        {weather && (
-          <div className="waether-info">
-            <h3>{weather.name}</h3>
-            <p>{weather.weather[0].main}</p>
-            <p>{Math.round(weather.main.temp)}c</p>
-            <img
-              src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
-              alt="weather-icon"
-            />
-          </div>
-        )}
       </div>
+      {loading && <p className="loading">Loading...</p>}
+
+      {error && <p className="error">{error}</p>}
+
+      {weather && (
+        <div className="weather-info">
+          <h3>{weather.name}</h3>
+          <p>{weather.weather[0].main}</p>
+          <p>{Math.round(weather.main.temp)}°C</p>
+          <img
+            src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+            alt="weather-icon"
+          />
+        </div>
+      )}
+
+      {forecast && (
+        <div className="forecast">
+          <h4>Next 5 Days</h4>
+          <div className="forecast-list">
+            {forecast
+              .filter((_, index) => index % 8 === 0)
+              .map((f, i) => (
+                <div key={i} className="forecast-item">
+                  <p>{new Date(f.dt_txt).toDateString()}</p>
+                  <p>{Math.round(f.main.temp)}°C</p>
+                  <img
+                    src={`https://openweathermap.org/img/wn/${f.weather[0].icon}.png`}
+                    alt="forecast-icon"
+                  />
+                  <p>{f.weather[0].main}</p>
+                </div>
+              ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

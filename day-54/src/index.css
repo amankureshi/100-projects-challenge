@@ -1,56 +1,82 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+body {
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  min-height: 100vh;
+
 }
 
 .weather-app {
-  max-width: 400px;
+  max-width: 500px;
   margin: 40px auto;
-  padding: 20px;
-  border-radius: 12px;
-  background: #f0f4f8;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: background 0.3s ease;
-  font-family: Arial, sans-serif;
+  padding: 2rem;
+  background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+/* Container for input and button */
+.weather-app .input-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  /* Gap between input and button */
+  margin-bottom: 1rem;
 }
 
 .weather-app input {
-  width: 70%;
+  flex-grow: 1;
+  /* Makes input take all available space */
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  margin-bottom: 10px;
-  margin-right: 8px;
   font-size: 16px;
+  border: 2px solid #03a9f4;
+  border-radius: 6px;
+  outline: none;
 }
 
 .weather-app button {
   padding: 10px 16px;
-  background-color: #007bff;
+  background-color: #03a9f4;
   color: #fff;
   border: none;
   border-radius: 6px;
   font-size: 16px;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
 .weather-app button:hover {
-  background-color: #0056b3;
+  background-color: #0288d1;
+}
+
+/* Other styles for loading, error, weather, and forecast */
+.loading,
+.error {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.error {
+  color: #e53935;
 }
 
 .weather-info {
-  margin-top: 20px;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 .weather-info h3 {
   font-size: 24px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .weather-info p {
@@ -59,34 +85,71 @@
 }
 
 .weather-info img {
-  margin-top: 10px;
   width: 80px;
   height: 80px;
 }
 
-/* Error message */
-.error {
-  color: red;
-  margin-top: 10px;
+/* Forecast layout */
+.forecast {
+  margin-top: 1rem;
 }
 
-.weather-app.clear {
-  background: #f9d976;
+.forecast h4 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 1rem;
 }
 
-.weather-app.clouds {
-  background: #d7d2cc;
+.forecast-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  justify-items: center;
+  overflow-y: hidden;
 }
 
-.weather-app.rain {
-  background: #a1c4fd;
+.forecast-item {
+  background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+  padding: 0.75rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-size: 14px;
+  transition: transform 0.2s ease;
 }
 
-.weather-app.snow {
-  background: #e0f7fa;
+.forecast-item:hover {
+  transform: scale(1.05);
 }
 
-.weather-app.thunderstorm {
-  background: #616161;
-  color: white;
+.forecast-item img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Grid layout fix for 5 items */
+.forecast-list> :nth-child(4) {
+  grid-column: 1 / 2;
+}
+
+.forecast-list> :nth-child(5) {
+  grid-column: 2 / 3;
+}
+
+/* Responsive layout */
+@media (max-width: 500px) {
+  .forecast-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .weather-app input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .weather-app button {
+    width: 100%;
+    margin-left: 0;
+  }
 }
