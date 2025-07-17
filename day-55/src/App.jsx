@@ -11,7 +11,6 @@ function App() {
         <AddExpenseForm />
         <ExpenseList />
       </div>
-      ExpenseContext
     </ExpenseProvider>
   );
 }

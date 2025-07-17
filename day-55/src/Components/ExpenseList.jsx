@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ExpenseContext } from "../context/ExpenseContext";
 
 const ExpenseList = () => {
-  return <div></div>;
+  const { state, dispatch } = useContext(ExpenseContext);
+  return (
+    <ul>
+      {state.map((item) => (
+        <li key={item.id}>
+          {item.title} - ₹{item.amount}
+          <button
+            onClick={() => dispatch({ type: "DELETE", payload: item.id })}
+          >
+            ❌
+          </button>
+        </li>
+      ))}
+    </ul>
+  );
 };
 
 export default ExpenseList;
