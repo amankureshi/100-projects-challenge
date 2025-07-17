@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useReducer } from "react";
 
-const ExpenseContext = createContext();
+export const ExpenseContext = createContext();
 
 const initialState = JSON.parse(localStorage.getItem("expenses")) || [];
 
@@ -15,18 +15,16 @@ const reducer = (state, action) => {
   }
 };
 
-const ExpneseProvider = ({ children }) => {
-  const [state, dispath] = useReducer(reducer, initialState);
+export const ExpenseProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
     localStorage.setItem("expenses", JSON.stringify(state));
   }, [state]);
 
   return (
-    <ExpenseContext.Provider value={{ state, dispath }}>
+    <ExpenseContext.Provider value={{ state, dispatch }}>
       {children}
     </ExpenseContext.Provider>
   );
 };
-
-export default { ExpenseContext, ExpneseProvider };

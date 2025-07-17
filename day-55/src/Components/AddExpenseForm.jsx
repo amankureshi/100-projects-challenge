@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
-import ExpneseContext from "../context/ExpneseContext";
-
-const AddExpeseForm = () => {
+// import ExpneseContext from "../context/ExpneseContext";
+import { ExpenseContext } from "../context/ExpenseContext";
+const AddExpenseForm = () => {
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState("");
-  const { dispatch } = useContext(ExpneseContext);
+  const { dispatch } = useContext(ExpenseContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,7 +19,7 @@ const AddExpeseForm = () => {
   };
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="Expense Title"
@@ -39,4 +39,4 @@ const AddExpeseForm = () => {
   );
 };
 
-export default AddExpeseForm;
+export default AddExpenseForm;
