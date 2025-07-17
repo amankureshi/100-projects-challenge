@@ -6,6 +6,18 @@ const AddExpeseForm = () => {
   const [amount, setAmount] = useState("");
   const { dispatch } = useContext(ExpneseContext);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newExpense = {
+      id: Date.now(),
+      title,
+      amount: parseFloat(amount),
+    };
+    dispatch({ type: "ADD", payload: newExpense });
+    setTitle("");
+    setAmount("");
+  };
+
   return (
     <form>
       <input
