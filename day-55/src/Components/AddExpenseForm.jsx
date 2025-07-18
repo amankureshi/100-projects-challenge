@@ -25,13 +25,14 @@ const AddExpenseForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="space-y-3">
       <input
         type="text"
         placeholder="Expense Title"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         required
+        className="w-full p-2 border rounded"
       />
       <input
         type="number"
@@ -39,8 +40,13 @@ const AddExpenseForm = () => {
         value={amount}
         onChange={(e) => setAmount(e.target.value)}
         required
+        className="w-full p-2 border rounded"
       />
-      <select value={category} onChange={(e) => setCategory(e.target.value)}>
+      <select
+        className="w-full p-2 border rounded"
+        value={category}
+        onChange={(e) => setCategory(e.target.value)}
+      >
         <option value=""></option>
         <option value="Food">Food</option>
         <option value="Entertainment">Entertainment</option>
@@ -48,7 +54,12 @@ const AddExpenseForm = () => {
         <option value="Bills">Bills</option>
         <option value="Shopping">Shopping</option>
       </select>
-      <button type="submit">Add</button>
+      <button
+        className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+        type="submit"
+      >
+        Add
+      </button>
     </form>
   );
 };
