@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { ExpenseContext } from "../context/ExpenseContext";
+import { ImCross } from "react-icons/im";
 
 const ExpenseList = () => {
   const { state, dispatch } = useContext(ExpenseContext);
@@ -14,8 +15,8 @@ const ExpenseList = () => {
           key={item.id}
           className="flex justify-between items-center bg-gray-50 p-3 rounded border"
         >
-          <div>
-            <p className="font-medium">{item.title}</p>
+          <div className="">
+            <p className="font-medium text-[#00023B]">{item.title}</p>
             <p className="text-sm text-gray-600">
               ₹{item.amount} • {item.category} •{" "}
               {new Date(item.date).toLocaleString()}
@@ -25,7 +26,7 @@ const ExpenseList = () => {
             onClick={() => dispatch({ type: "DELETE", payload: item.id })}
             className="text-red-500 hover:text-red-700 text-lg"
           >
-            ❌
+            <ImCross />
           </button>
         </li>
       ))}
