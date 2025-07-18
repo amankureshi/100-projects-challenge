@@ -18,13 +18,13 @@ const ExpenseList = () => {
           <div className="">
             <p className="font-medium text-[#00023B]">{item.title}</p>
             <p className="text-sm text-gray-600">
-              ₹{item.amount} • {item.category} •{" "}
+              ₹{item.amount} {""} Date {item.category}:-{" "}
               {new Date(item.date).toLocaleString()}
             </p>
           </div>
           <button
             onClick={() => dispatch({ type: "DELETE", payload: item.id })}
-            className="text-red-500 hover:text-red-700 text-lg"
+            className="text-red-500 hover:text-red-700 text-lg cursor-pointer"
           >
             <ImCross />
           </button>
