@@ -58,12 +58,14 @@ const AddExpenseForm = () => {
         <option value="Bills">Bills</option>
         <option value="Shopping">Shopping</option>
       </select>
-      <button
-        className="btn bg-[#56DFB1] text-[#00023B] py-2 rounded hover:bg-[#3aa986] flex items-center justify-center gap-1"
-        type="submit"
-      >
-        Add <FaCirclePlus />
-      </button>
+      <div className="flex justify-end">
+        <button
+          className="btn bg-[#56DFB1] text-[#00023B] py-2 rounded hover:bg-[#3aa986] flex items-center justify-center gap-1"
+          type="submit"
+        >
+          Add <FaCirclePlus />
+        </button>
+      </div>
     </form>
   );
 };
