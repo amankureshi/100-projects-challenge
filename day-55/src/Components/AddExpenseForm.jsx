@@ -16,6 +16,7 @@ const AddExpenseForm = () => {
       title,
       amount: parseFloat(amount),
       category,
+      data: new Date(),
     };
     dispatch({ type: "ADD", payload: newExpense });
     setTitle("");
