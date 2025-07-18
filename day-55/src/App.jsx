@@ -6,11 +6,11 @@ import "./App.css";
 function App() {
   return (
     <ExpenseProvider>
-      <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
-        <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-md">
-          <h2 className="text-2xl font-bold mb-4 text-center text-blue-600">
-            Expense Tracker
-          </h2>
+      <div className="min-h-screen flex items-center justify-center bg-[#D9D9D9]">
+        <div className="bg-[#00023B] p-6 rounded-xl shadow-md w-full max-w-md text-white">
+          <h1 className="text-2xl font-bold text-center text-white mb-4">
+            My Budget Tracker
+          </h1>
           <AddExpenseForm />
           <hr className="my-4" />
           <ExpenseList />

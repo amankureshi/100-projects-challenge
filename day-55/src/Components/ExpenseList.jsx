@@ -8,13 +8,22 @@ const ExpenseList = () => {
   );
 
   return (
-    <ul>
+    <ul className="space-y-3">
       {sortedExpensesByDate.map((item) => (
-        <li key={item.id}>
-          {item.title} - ₹{item.amount} - <strong> {item.category}</strong>-
-          {new Date(item.date).toLocaleString()}
+        <li
+          key={item.id}
+          className="flex justify-between items-center bg-gray-50 p-3 rounded border"
+        >
+          <div>
+            <p className="font-medium">{item.title}</p>
+            <p className="text-sm text-gray-600">
+              ₹{item.amount} • {item.category} •{" "}
+              {new Date(item.date).toLocaleString()}
+            </p>
+          </div>
           <button
             onClick={() => dispatch({ type: "DELETE", payload: item.id })}
+            className="text-red-500 hover:text-red-700 text-lg"
           >
             ❌
           </button>

@@ -55,7 +55,7 @@ const AddExpenseForm = () => {
         <option value="Shopping">Shopping</option>
       </select>
       <button
-        className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+        className="w-full bg-[#56DFB1] text-[#00023B] py-2 rounded hover:bg-[#3aa986]"
         type="submit"
       >
         Add
