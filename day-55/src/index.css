@@ -2,3 +2,53 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+form button {
+  min-width: 120px;
+}
+
+
+.btn {
+  min-width: 120px;
+  position: relative;
+  cursor: pointer;
+  padding: 12px 17px;
+  border: 0;
+  border-radius: 7px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  background: radial-gradient(ellipse at bottom,
+      rgba(252, 252, 252, 0.916) 0%,
+      rgb(33.73% 87.45% 69.41%) 45%);
+
+  color: #00023B;
+
+  transition: all 1s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+.btn::before {
+  content: "";
+  width: 70%;
+  height: 1px;
+
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+
+  background: rgb(255, 255, 255);
+  background: linear-gradient(90deg,
+      rgb(33.73% 87.45% 69.41%) 0%,
+      rgba(255, 255, 255, 1) 50%,
+      rgb(33.73% 87.45% 69.41%) 100%);
+  opacity: 0.2;
+
+  transition: all 1s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+.btn:hover {
+
+  transform: scale(1.1) translateY(-3px);
+}
+
+.btn:hover::before {
+  opacity: 1;
+}

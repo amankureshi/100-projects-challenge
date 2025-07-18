@@ -1,5 +1,7 @@
 import React, { useContext, useState } from "react";
 import { ExpenseContext } from "../context/ExpenseContext";
+import { FaCirclePlus } from "react-icons/fa6";
+
 const AddExpenseForm = () => {
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState("");
@@ -43,11 +45,13 @@ const AddExpenseForm = () => {
         className="w-full p-2 border rounded"
       />
       <select
-        className="w-full p-2 border rounded"
+        className="w-full p-2 border rounded bg-[#00023B]"
         value={category}
         onChange={(e) => setCategory(e.target.value)}
       >
-        <option value=""></option>
+        <option value="" disabled hidden>
+          Select Category
+        </option>
         <option value="Food">Food</option>
         <option value="Entertainment">Entertainment</option>
         <option value="Travel">Travel</option>
@@ -55,10 +59,10 @@ const AddExpenseForm = () => {
         <option value="Shopping">Shopping</option>
       </select>
       <button
-        className="w-full bg-[#56DFB1] text-[#00023B] py-2 rounded hover:bg-[#3aa986]"
+        className="btn bg-[#56DFB1] text-[#00023B] py-2 rounded hover:bg-[#3aa986] flex items-center justify-center gap-1"
         type="submit"
       >
-        Add
+        Add <FaCirclePlus />
       </button>
     </form>
   );
