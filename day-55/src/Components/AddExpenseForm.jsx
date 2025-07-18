@@ -8,6 +8,9 @@ const AddExpenseForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!title || !amount || amount <= 0) {
+      alert("Please enter valid title and amount.");
+    }
     const newExpense = {
       id: Date.now(),
       title,
