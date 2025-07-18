@@ -7,7 +7,7 @@ const ExpenseList = () => {
     <ul>
       {state.map((item) => (
         <li key={item.id}>
-          {item.title} - ₹{item.amount}
+          {item.title} - ₹{item.amount} - {item.category}
           <button
             onClick={() => dispatch({ type: "DELETE", payload: item.id })}
           >

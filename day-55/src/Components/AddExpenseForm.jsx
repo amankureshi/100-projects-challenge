@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
-// import ExpneseContext from "../context/ExpneseContext";
 import { ExpenseContext } from "../context/ExpenseContext";
 const AddExpenseForm = () => {
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState("");
   const { dispatch } = useContext(ExpenseContext);
+  const [category, setCategory] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,10 +15,12 @@ const AddExpenseForm = () => {
       id: Date.now(),
       title,
       amount: parseFloat(amount),
+      category,
     };
     dispatch({ type: "ADD", payload: newExpense });
     setTitle("");
     setAmount("");
+    setCategory("");
   };
 
   return (
@@ -37,6 +39,14 @@ const AddExpenseForm = () => {
         onChange={(e) => setAmount(e.target.value)}
         required
       />
+      <select value={category} onChange={(e) => setCategory(e.target.value)}>
+        <option value=""></option>
+        <option value="Food">Food</option>
+        <option value="Entertainment">Entertainment</option>
+        <option value="Travel">Travel</option>
+        <option value="Bills">Bills</option>
+        <option value="Shopping">Shopping</option>
+      </select>
       <button type="submit">Add</button>
     </form>
   );
