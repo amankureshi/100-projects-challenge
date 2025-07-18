@@ -3,13 +3,14 @@
 @tailwind components;
 @tailwind utilities;
 
-form button {
-  min-width: 120px;
+.hero-bg {
+  background-image: url("./assets/Expense_BG.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
 }
 
-
 .btn {
-  min-width: 120px;
   position: relative;
   cursor: pointer;
   padding: 12px 17px;
