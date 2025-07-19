@@ -58,3 +58,4 @@
 | 52  | [Text converter](https://github.com/amankureshi/100-projects-challenge/tree/main/day-52)                 | [Live Demo](https://text-converter-react.onrender.com/)                                    |
 | 53  | [Pomodoro timer](https://github.com/amankureshi/100-projects-challenge/tree/main/day-53)                 | [Live Demo](https://pomodoro-timer-by-amankureshi.onrender.com/)                           |
 | 54  | [Weather app](https://github.com/amankureshi/100-projects-challenge/tree/main/day-54)                    | [Live Demo](https://weather-app-using-openweather-api.onrender.com/)                       |
+| 55  | [Expense Tracker app](https://github.com/amankureshi/100-projects-challenge/tree/main/day-55)            | [Live Demo](https://expense-tracker-app-2025.onrender.com/)                                |
