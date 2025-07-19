@@ -1,7 +1,7 @@
 import ExpenseList from "./Components/ExpenseList";
 import { ExpenseProvider } from "./context/ExpenseContext";
 import AddExpenseForm from "./Components/AddExpenseForm";
-import walletImage from "./assets/wallet-img.png";
+import walletImage from "./assets/Wallet-img.png";
 import "./App.css";
 function App() {
   return (
