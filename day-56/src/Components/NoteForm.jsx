@@ -2,16 +2,25 @@ import React, { useState } from "react";
 
 const NoteForm = ({ addNote }) => {
   const [note, setNote] = useState("");
+
   console.log(note);
 
   const handleChange = (e) => {
     setNote(e.target.value);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (note.trim()) {
+      addNote(note);
+      setNote("");
+    }
+  };
+
   return (
     <div>
       <h2>NoteForm</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="write a new note"

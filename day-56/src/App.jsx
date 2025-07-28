@@ -4,6 +4,7 @@ import NoteForm from "./Components/NoteForm";
 
 function App() {
   const [notes, setNotes] = useState([]);
+  console.log(notes);
 
   const addNote = (newNote) => {
     const updateNotes = [...notes, newNote];
