@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const NoteForm = () => {
+const NoteForm = ({ addNote }) => {
   const [note, setNote] = useState("");
   console.log(note);
 
