@@ -1,9 +1,10 @@
 import "./App.css";
+import NoteForm from "./Components/NoteForm";
 
 function App() {
   return (
     <>
-      <h1></h1>
+      <NoteForm />
     </>
   );
 }
