@@ -28,7 +28,7 @@ const NoteForm = ({ addNote }) => {
           onChange={handleChange}
         />
       </form>
-      <button>Add Note</button>
+      <button onClick={handleSubmit}>Add Note</button>
     </div>
   );
 };
