@@ -1,13 +1,13 @@
 import React from "react";
 
-const NoteList = ({ notes }) => {
+const NoteList = ({ notes, deleteNote }) => {
   return (
     <div className="note-list">
       {notes.length > 0 ? (
         notes.map((note, index) => (
           <div key={index} className="note">
             <span>{note}</span>
-            <button>delete</button>
+            <button onClick={() => deleteNote(index)}>delete</button>
           </div>
         ))
       ) : (
