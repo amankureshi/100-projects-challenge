@@ -13,10 +13,16 @@ function App() {
     localStorage.setItem("note", JSON.stringify(updateNotes));
   };
 
+  const deleteNote = (index) => {
+    const updateNotes = notes.filter((_) => i !== index);
+    setNotes(updateNotes);
+    localStorage.setItem("note", JSON.stringify(updateNotes));
+  };
+
   return (
     <>
       <NoteForm addNote={addNote} />
-      <NoteList notes={notes} />
+      <NoteList notes={notes} deleteNote={deleteNote} />
     </>
   );
 }
