@@ -3,8 +3,6 @@ import React, { useState } from "react";
 const NoteForm = ({ addNote }) => {
   const [note, setNote] = useState("");
 
-  console.log(note);
-
   const handleChange = (e) => {
     setNote(e.target.value);
   };
@@ -18,19 +16,30 @@ const NoteForm = ({ addNote }) => {
   };
 
   return (
-    <div className="container">
-      <h2 className="mb-3">NoteForm</h2>
-      <form onSubmit={handleSubmit} className="d-flex gap-2">
-        <input
-          type="text"
-          placeholder="write a new note"
-          value={note}
-          onChange={handleChange}
-        />
-      </form>
-      <button className="btn btn-primary" onClick={handleSubmit}>
-        Add Note
-      </button>
+    <div className="container my-4">
+      <div className="card shadow-sm">
+        <div className="card-body">
+          <h5 className="card-title mb-3">Add a New Note</h5>
+          <form onSubmit={handleSubmit}>
+            <div className="row g-2">
+              <div className="col-md-10">
+                <input
+                  type="text"
+                  className="form-control form-control-md"
+                  placeholder="Write something..."
+                  value={note}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="col-md-2 d-grid">
+                <button type="submit" className="btn btn-primary">
+                  Add Note
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   );
 };
