@@ -19,7 +19,9 @@ const NoteForm = ({ addNote }) => {
     <div className="container my-4">
       <div className="card shadow-sm">
         <div className="card-body">
-          <h5 className="card-title mb-3">Add a New Note</h5>
+          <h5 className="card-title mb-3">
+            <i class="bi bi-pencil-square"></i> Add a New Note
+          </h5>
           <form onSubmit={handleSubmit}>
             <div className="row g-2">
               <div className="col-md-10">
