@@ -5,6 +5,8 @@ import NoteList from "./Components/NoteList";
 
 function App() {
   const [notes, setNotes] = useState([]);
+  const colors = ["#DABBFA", "#D7F3F5", "#F8A7AE", "#BD8BFE"];
+
   console.log(notes);
 
   useEffect(() => {
@@ -12,7 +14,9 @@ function App() {
     setNotes(savedNotes);
   }, []);
 
-  const addNote = (newNote) => {
+  const addNote = (newText) => {
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    const newNote = { text: newText, color: randomColor }; // 👈 Make it an object
     const updateNotes = [...notes, newNote];
     setNotes(updateNotes);
     localStorage.setItem("note", JSON.stringify(updateNotes));

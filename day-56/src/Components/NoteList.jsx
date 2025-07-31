@@ -3,19 +3,24 @@ import React from "react";
 const NoteList = ({ notes, deleteNote }) => {
   return (
     <div className="container my-4">
-      <h4 className="mb-3"> Your Notes</h4>
+      <h4 className="mb-3 text-white">
+        <i className="bi bi-journal-bookmark"></i> Your Notes
+      </h4>
       {notes.length > 0 ? (
         <div className="row">
           {notes.map((note, index) => (
             <div key={index} className="col-md-4 mb-4">
-              <div className="card h-100 shadow-sm border-0 bg-light">
-                <div className="card-body d-flex flex-column">
-                  <p className="card-text flex-grow-1">{note}</p>
+              <div
+                className="card h-100 shadow-sm border-0"
+                style={{ backgroundColor: note.color }}
+              >
+                <div className="note-list card-body d-flex flex-column">
+                  <p className="card-text flex-grow-1">{note.text}</p>
                   <button
-                    className="btn btn-outline-danger mt-2"
+                    className="btn btn-outline-danger btn-sm mt-2 "
                     onClick={() => deleteNote(index)}
                   >
-                    Delete
+                    <i className="bi bi-trash3-fill"></i> Delete
                   </button>
                 </div>
               </div>
