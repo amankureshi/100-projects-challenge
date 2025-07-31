@@ -1,3 +1,7 @@
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
+
+.card {
+  background-image: var(--bs-gradient);
+}
