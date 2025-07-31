@@ -18,9 +18,9 @@ const NoteForm = ({ addNote }) => {
   };
 
   return (
-    <div>
-      <h2>NoteForm</h2>
-      <form onSubmit={handleSubmit}>
+    <div className="container">
+      <h2 className="mb-3">NoteForm</h2>
+      <form onSubmit={handleSubmit} className="d-flex gap-2">
         <input
           type="text"
           placeholder="write a new note"
@@ -28,7 +28,9 @@ const NoteForm = ({ addNote }) => {
           onChange={handleChange}
         />
       </form>
-      <button onClick={handleSubmit}>Add Note</button>
+      <button className="btn btn-primary" onClick={handleSubmit}>
+        Add Note
+      </button>
     </div>
   );
 };
