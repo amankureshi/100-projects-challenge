@@ -1,6 +1,11 @@
+import { useState } from "react";
 import "./App.css";
 
 function App() {
+  const [tranction, setTraction] = useState([]);
+  const [desc, setDesc] = useState("");
+  const [amount, setAmount] = useState("");
+
   return (
     <>
       <form>
