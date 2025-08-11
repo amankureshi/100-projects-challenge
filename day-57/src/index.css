@@ -3,3 +3,7 @@
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
+
+body {
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+}

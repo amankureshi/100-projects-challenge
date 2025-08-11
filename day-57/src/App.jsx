@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { MdCancel } from "react-icons/md";
+
 import "./App.css";
 
 function App() {
@@ -73,10 +75,10 @@ function App() {
             }`}
           >
             <span>{t.desc}</span>
-            <span>
+            <span className="flex">
               ₹{t.amount.toFixed(2)}
-              <button className="ml-3 text-sm text-gray-500 hover:text-black">
-                ❌
+              <button className="ml-3 text-xl text-red-500 hover:text-red-600">
+                <MdCancel className="" />
               </button>
             </span>
           </li>
