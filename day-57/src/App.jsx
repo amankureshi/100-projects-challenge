@@ -62,7 +62,7 @@ function App() {
         />
         <button
           type="submit"
-          className="bg-blue-500 text-white w-full py-2 rounded hover:bg-blue-600"
+          className="bg-[#100720] text-white w-full py-2 rounded hover:bg-[#27242d]"
         >
           Add Transaction
         </button>
