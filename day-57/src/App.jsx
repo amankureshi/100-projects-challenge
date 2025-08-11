@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { MdCancel } from "react-icons/md";
+import { GiMoneyStack } from "react-icons/gi";
 
 import "./App.css";
 
@@ -20,7 +21,8 @@ function App() {
     setDesc("");
     setAmount("");
   };
-  const deleteTranction = (id) => {
+
+  const deleteTransaction = (id) => {
     setTransactions(transactions.filter((t) => t.id !== id));
   };
 
@@ -32,8 +34,10 @@ function App() {
     .reduce((acc, t) => acc + t.amount, 0);
   return (
     <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded shadow">
-      <h1 className="text-2xl font-bold text-center mb-4">💰 Budget Tracker</h1>
-
+      <h1 className="text-2xl font-bold text-center mb-4 flex items-center justify-center gap-2">
+        <GiMoneyStack className="text-green-900" />
+        Budget Tracker
+      </h1>
       <div className="mb-4">
         <h2 className="text-xl font-semibold">
           Balance: ₹{(income + expense).toFixed(2)}
@@ -41,8 +45,7 @@ function App() {
         <p className="text-green-600">Income: ₹{income.toFixed(2)}</p>
         <p className="text-red-600">Expense: ₹{Math.abs(expense).toFixed(2)}</p>
       </div>
-
-      <form onSubmit={addTransaction} className="mb-4">
+      <form onSubmit={addTransaction} className="mb-4 flex flex-col gap-2">
         <input
           type="text"
           placeholder="Description"
@@ -64,7 +67,6 @@ function App() {
           Add Transaction
         </button>
       </form>
-
       <h2 className="text-lg font-semibold mb-2">Transactions</h2>
       <ul>
         {transactions.map((t) => (
@@ -77,8 +79,11 @@ function App() {
             <span>{t.desc}</span>
             <span className="flex">
               ₹{t.amount.toFixed(2)}
-              <button className="ml-3 text-xl text-red-500 hover:text-red-600">
-                <MdCancel className="" />
+              <button
+                onClick={() => deleteTransaction(t.id)}
+                className="ml-3 text-xl text-red-500 hover:text-red-600"
+              >
+                <MdCancel />
               </button>
             </span>
           </li>
