@@ -60,3 +60,4 @@
 | 54  | [Weather app](https://github.com/amankureshi/100-projects-challenge/tree/main/day-54)                    | [Live Demo](https://weather-app-using-openweather-api.onrender.com/)                       |
 | 55  | [Expense Tracker app](https://github.com/amankureshi/100-projects-challenge/tree/main/day-55)            | [Live Demo](https://expense-tracker-app-2025.onrender.com/)                                |
 | 56  | [Note app](https://github.com/amankureshi/100-projects-challenge/tree/main/day-56)                       | [Live Demo](https://note-app-react-8u4l.onrender.com/)                                     |
+| 57  | [Budget Tracker App](https://github.com/amankureshi/100-projects-challenge/tree/main/day-57)             | [Live Demo](https://budget-tracker-reactjs.onrender.com/)                                  |
