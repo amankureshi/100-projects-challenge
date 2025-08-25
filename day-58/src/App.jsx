@@ -1,6 +1,9 @@
 import "./App.css";
 
 function App() {
+  const [selectedImg, setSelectedImg] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   return (
     <>
       <div className="container">
