@@ -71,6 +71,7 @@ function App() {
               <img
                 src={selectedImg}
                 alt="selected-image"
+                className="imd-fluid rounded selected-image"
                 onClick={(e) => e.stopPropagation()}
               />
               <button
