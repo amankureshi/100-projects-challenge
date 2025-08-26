@@ -26,26 +26,35 @@ function App() {
     setSelectedImg(images[newIndex]);
   };
 
+  const prevImage = () => {
+    const newIndex = (currentIndex - 1 + images.length) % images.length;
+    setCurrentIndex(newIndex);
+    setSelectedImg(images[newIndex]);
+  };
+
   return (
     <>
-      <div className="container">
-        <h2 className="text-center">Image Gallery</h2>
+      <div className="container py-5">
+        <h2 className="text-center mb-4">Image Gallery</h2>
         <div className="row g-3">
           {images.map((img, i) => (
             <div className="col-md-4">
               <img
                 src={img}
                 alt={`Gallery ${i}`}
-                className="img-fluid"
+                className="img-fluid rounded shadow-sm"
                 onClick={() => openLightBox(i)}
               />
-              <button className="btn-primary">About me</button>
             </div>
           ))}
         </div>
         {selectedImg && (
-          <div className="modal fade" tabIndex="-1" onClick={closeLightbox}>
-            <div className="d-flex btn-light">
+          <div
+            className="modal fade show d-block"
+            tabIndex="-1"
+            onClick={closeLightbox}
+          >
+            <div className="d-flex btn-light justify-content-center align-items-center vh-100">
               <button
                 className="btn"
                 onClick={(e) => {
@@ -61,7 +70,7 @@ function App() {
                 onClick={(e) => e.stopPropagation()}
               />
               <button
-                className="btn"
+                className="btn btn-dark ms-2"
                 onClick={(e) => {
                   e.stopPropagation();
                   nextImage();
@@ -70,7 +79,10 @@ function App() {
                 Next
               </button>
             </div>
-            <button className="btn" onClick={closeLightbox}>
+            <button
+              className="btn btn-danger position-absolute top-0 end-0 m-3"
+              onClick={closeLightbox}
+            >
               X
             </button>
           </div>
