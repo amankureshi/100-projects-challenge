@@ -31,7 +31,7 @@ function App() {
       <div className="container">
         <h2 className="text-center">Image Gallery</h2>
         <div className="row g-3">
-          {images.map((img, i) => {
+          {images.map((img, i) => (
             <div className="col-md-4">
               <img
                 src={img}
@@ -40,8 +40,8 @@ function App() {
                 onClick={() => openLightBox(i)}
               />
               <button className="btn-primary">About me</button>
-            </div>;
-          })}
+            </div>
+          ))}
         </div>
         {selectedImg && (
           <div className="modal fade" tabIndex="-1" onClick={closeLightbox}>
@@ -50,6 +50,7 @@ function App() {
                 className="btn"
                 onClick={(e) => {
                   e.stopPropagation();
+                  prevImage();
                 }}
               >
                 Prev
@@ -63,6 +64,7 @@ function App() {
                 className="btn"
                 onClick={(e) => {
                   e.stopPropagation();
+                  nextImage();
                 }}
               >
                 Next
