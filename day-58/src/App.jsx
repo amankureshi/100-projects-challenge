@@ -59,7 +59,7 @@ function App() {
           >
             <div className="d-flex btn-light justify-content-center align-items-center vh-100">
               <button
-                className="btn btn btn-dark me-2"
+                className="btn btn btn-dark me-2 d-flex align-items-center gap-1"
                 onClick={(e) => {
                   e.stopPropagation();
                   prevImage();
@@ -74,7 +74,7 @@ function App() {
                 onClick={(e) => e.stopPropagation()}
               />
               <button
-                className="btn btn-dark ms-2"
+                className="btn btn-dark ms-2 d-flex align-items-center gap-1"
                 onClick={(e) => {
                   e.stopPropagation();
                   nextImage();
