@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { MdNavigateNext } from "react-icons/md";
+import { GrFormPrevious } from "react-icons/gr";
+
 import "./App.css";
 
 const images = [
@@ -34,7 +37,7 @@ function App() {
 
   return (
     <>
-      <div className="container py-5">
+      <div className="container py-2">
         <h2 className="text-center mb-4">Image Gallery</h2>
         <div className="row g-3">
           {images.map((img, i) => (
@@ -56,12 +59,13 @@ function App() {
           >
             <div className="d-flex btn-light justify-content-center align-items-center vh-100">
               <button
-                className="btn"
+                className="btn btn btn-dark me-2"
                 onClick={(e) => {
                   e.stopPropagation();
                   prevImage();
                 }}
               >
+                <GrFormPrevious />
                 Prev
               </button>
               <img
@@ -76,7 +80,7 @@ function App() {
                   nextImage();
                 }}
               >
-                Next
+                Next <MdNavigateNext />
               </button>
             </div>
             <button
