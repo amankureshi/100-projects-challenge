@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 
 function App() {
@@ -14,6 +15,14 @@ function App() {
             <button className="btn-primary">About me</button>
           </div>
         </div>
+      </div>
+      <div className="modal fade">
+        <div className="d-flex btn-light">
+          <button className="btn">Prev</button>
+          <img src="" alt="selected-image" />
+          <button className="btn">Next</button>
+        </div>
+        <button className="btn">X</button>
       </div>
     </>
   );
