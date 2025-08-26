@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { MdNavigateNext } from "react-icons/md";
 import { GrFormPrevious } from "react-icons/gr";
-
 import "./App.css";
 
 const images = [
@@ -36,64 +35,37 @@ function App() {
   };
 
   return (
-    <>
-      <div className="container py-2">
-        <h2 className="text-center mb-4">Image Gallery</h2>
-        <div className="row g-3">
-          {images.map((img, i) => (
-            <div className="col-md-4">
-              <img
-                src={img}
-                alt={`Gallery ${i}`}
-                className="img-fluid rounded shadow-sm"
-                onClick={() => openLightBox(i)}
-              />
-            </div>
-          ))}
-        </div>
-        {selectedImg && (
-          <div
-            className="modal fade show d-block"
-            tabIndex="-1"
-            onClick={closeLightbox}
-          >
-            <div className="d-flex btn-light justify-content-center align-items-center vh-100">
-              <button
-                className="btn btn btn-dark me-2 d-flex align-items-center gap-1"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  prevImage();
-                }}
-              >
-                <GrFormPrevious />
-                Prev
-              </button>
-              <img
-                src={selectedImg}
-                alt="selected-image"
-                className="imd-fluid rounded selected-image"
-                onClick={(e) => e.stopPropagation()}
-              />
-              <button
-                className="btn btn-dark ms-2 d-flex align-items-center gap-1"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  nextImage();
-                }}
-              >
-                Next <MdNavigateNext />
-              </button>
-            </div>
-            <button
-              className="btn btn-danger position-absolute top-0 end-0 m-3"
-              onClick={closeLightbox}
-            >
-              X
+    <div className="gallery-container">
+      <h2 className="title">Image Gallery</h2>
+      <div className="image-grid">
+        {images.map((img, i) => (
+          <div className="image-card" key={i}>
+            <img
+              src={img}
+              alt={`Gallery ${i}`}
+              onClick={() => openLightBox(i)}
+            />
+          </div>
+        ))}
+      </div>
+
+      {selectedImg && (
+        <div className="custom-modal" onClick={closeLightbox}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="nav-button" onClick={prevImage}>
+              <GrFormPrevious size={24} />
+            </button>
+            <img src={selectedImg} alt="selected" className="modal-image" />
+            <button className="nav-button" onClick={nextImage}>
+              <MdNavigateNext size={24} />
             </button>
           </div>
-        )}
-      </div>
-    </>
+          <button className="close-button" onClick={closeLightbox}>
+            ×
+          </button>
+        </div>
+      )}
+    </div>
   );
 }
 
