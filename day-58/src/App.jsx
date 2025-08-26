@@ -44,13 +44,33 @@ function App() {
           })}
         </div>
         {selectedImg && (
-          <div className="modal fade">
+          <div className="modal fade" tabIndex="-1" onClick={closeLightbox}>
             <div className="d-flex btn-light">
-              <button className="btn">Prev</button>
-              <img src="pending-image" alt="selected-image" />
-              <button className="btn">Next</button>
+              <button
+                className="btn"
+                onClick={(e) => {
+                  e.stopPropagation();
+                }}
+              >
+                Prev
+              </button>
+              <img
+                src={selectedImg}
+                alt="selected-image"
+                onClick={(e) => e.stopPropagation()}
+              />
+              <button
+                className="btn"
+                onClick={(e) => {
+                  e.stopPropagation();
+                }}
+              >
+                Next
+              </button>
             </div>
-            <button className="btn">X</button>
+            <button className="btn" onClick={closeLightbox}>
+              X
+            </button>
           </div>
         )}
       </div>
