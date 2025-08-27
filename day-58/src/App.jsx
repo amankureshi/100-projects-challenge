@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { MdNavigateNext } from "react-icons/md";
 import { GrFormPrevious } from "react-icons/gr";
+import { ImCross } from "react-icons/im";
+
 import "./App.css";
 
 const images = [
@@ -61,7 +63,7 @@ function App() {
             </button>
           </div>
           <button className="close-button" onClick={closeLightbox}>
-            ×
+            <ImCross />
           </button>
         </div>
       )}
