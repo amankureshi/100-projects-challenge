@@ -58,6 +58,7 @@ body {
     height: 100vh;
     background: rgba(0, 0, 0, 0.9);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -68,13 +69,12 @@ body {
     display: flex;
     align-items: center;
     gap: 1rem;
-    position: relative;
     max-width: 90vw;
     max-height: 90vh;
 }
 
 .modal-image {
-    max-height: 80vh;
+    max-height: 50vh;
     max-width: 80vw;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
@@ -102,4 +102,59 @@ body {
     background: none;
     border: none;
     cursor: pointer;
+}
+
+/* ✅ Image caption */
+.image-caption {
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* ✅ Thumbnail strip */
+.thumbnail-row {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.thumbnail {
+    width: 60px;
+    height: 40px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.thumbnail:hover {
+    border-color: #aaa;
+}
+
+.active-thumb {
+    border-color: #fff;
+}
+
+/* ✅ Responsive tweaks */
+@media (max-width: 480px) {
+    .modal-content {
+        flex-direction: column;
+    }
+
+    .modal-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-button {
+        padding: 0.3rem;
+    }
+
+    .close-button {
+        top: 10px;
+        right: 15px;
+    }
 }

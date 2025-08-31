@@ -1,8 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MdNavigateNext } from "react-icons/md";
 import { GrFormPrevious } from "react-icons/gr";
 import { ImCross } from "react-icons/im";
-
 import "./App.css";
 
 const images = [
@@ -36,6 +35,20 @@ function App() {
     setSelectedImg(images[newIndex]);
   };
 
+  // <-------- Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (!selectedImg) return;
+
+      if (e.key === "ArrowRight") nextImage();
+      else if (e.key === "ArrowLeft") prevImage();
+      else if (e.key === "Escape") closeLightbox();
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedImg, currentIndex]);
+
   return (
     <div className="gallery-container">
       <h2 className="title">Image Gallery</h2>
@@ -62,6 +75,27 @@ function App() {
               <MdNavigateNext size={24} />
             </button>
           </div>
+
+          {/* <-------- Caption */}
+          <p className="image-caption">
+            Image {currentIndex + 1} of {images.length}
+          </p>
+
+          {/* <--------  Thumbnails */}
+          <div className="thumbnail-row">
+            {images.map((img, index) => (
+              <img
+                key={index}
+                src={img}
+                alt={`thumb-${index}`}
+                className={`thumbnail ${
+                  currentIndex === index ? "active-thumb" : ""
+                }`}
+                onClick={() => openLightBox(index)}
+              />
+            ))}
+          </div>
+
           <button className="close-button" onClick={closeLightbox}>
             <ImCross />
           </button>
