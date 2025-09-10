@@ -27,4 +27,11 @@ sentences.forEach((s) => {
       message: `Sentence starts with lowercase: "${t.slice(0, 30)}..."`,
     });
   }
+  if (t.split(/\s+/).length > 25)
+    suggestions.push({
+      type: "Lomg sentence",
+      message: `Long sentence(${
+        t.split(/\s+/).length
+      }words). Consider splitting`,
+    });
 });
