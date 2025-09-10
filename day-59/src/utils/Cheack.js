@@ -10,3 +10,10 @@ while ((m = repeated.exec(text))) {
     message: `Remove duplicate"{m[1]} }"`,
   });
 }
+
+const ds = / {2,}/g;
+while ((m = ds.exec(text)))
+  suggestions.push({
+    type: "Extra spaces",
+    message: "Multiple spaces found. Use single space.",
+  });
