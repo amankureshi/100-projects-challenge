@@ -17,3 +17,14 @@ while ((m = ds.exec(text)))
     type: "Extra spaces",
     message: "Multiple spaces found. Use single space.",
   });
+
+const sentences = text.split(/[.?!]\s*/).filter(Boolean);
+sentences.forEach((s) => {
+  const t = s.trim();
+  if (t && t[0] === [0].toLowerCase()) {
+    suggestions.push({
+      type: "Capitalization",
+      message: `Sentence starts with lowercase: "${t.slice(0, 30)}..."`,
+    });
+  }
+});
