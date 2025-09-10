@@ -35,3 +35,9 @@ sentences.forEach((s) => {
       }words). Consider splitting`,
     });
 });
+
+if (/\b(their there|there their)\b/i.test(text))
+  suggestions.push({
+    type: "Confusion",
+    message: "Check 'their' vs 'there' vs'they're'.",
+  });
