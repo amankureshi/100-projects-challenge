@@ -48,3 +48,10 @@ if (/\b(was|were|is|are|been|being)\b\s+\w(ed|en)?/i.test(text)) {
     message: "Possible passive constuctions found.",
   });
 }
+
+const seen = new Set();
+return suggestions.filter((s) => {
+  if (seen.has(s.message)) return false;
+  seen.add(s.message);
+  return true;
+});
