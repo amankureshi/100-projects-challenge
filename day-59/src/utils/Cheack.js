@@ -41,3 +41,10 @@ if (/\b(their there|there their)\b/i.test(text))
     type: "Confusion",
     message: "Check 'their' vs 'there' vs'they're'.",
   });
+
+if (/\b(was|were|is|are|been|being)\b\s+\w(ed|en)?/i.test(text)) {
+  suggestions.push({
+    type: "Passive voice",
+    message: "Possible passive constuctions found.",
+  });
+}
