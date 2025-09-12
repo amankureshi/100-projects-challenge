@@ -8,6 +8,11 @@ const GrammarChecker = () => {
     setSuggestions(runChecks(text));
   }
 
+  function handleClear() {
+    setText("");
+    setSuggestions([]);
+  }
+
   return (
     <div className="max-w-3xl mx-auto p-6">
       <h2 h2 className="text-2xl font-bold mb-4">
