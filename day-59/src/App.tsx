@@ -1,10 +1,11 @@
-import './App.css'
+import './App.css';
+import GrammarChecker from './components/GrammarChecker';
 
 function App() {
 
   return (
     <>
-      <h2>Aman</h2>
+      <GrammarChecker />
     </>
   )
 }
