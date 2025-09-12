@@ -21,7 +21,7 @@ export function runChecks(text = "") {
   const sentences = text.split(/[.?!]\s*/).filter(Boolean);
   sentences.forEach((s) => {
     const t = s.trim();
-    if (t && t[0] === [0].toLowerCase()) {
+    if (t && t[0] === t[0].toLowerCase()) {
       suggestions.push({
         type: "Capitalization",
         message: `Sentence starts with lowercase: "${t.slice(0, 30)}..."`,
@@ -29,7 +29,7 @@ export function runChecks(text = "") {
     }
     if (t.split(/\s+/).length > 25)
       suggestions.push({
-        type: "Lomg sentence",
+        type: "Long sentence",
         message: `Long sentence(${
           t.split(/\s+/).length
         }words). Consider splitting`,
