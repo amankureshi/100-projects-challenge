@@ -19,6 +19,12 @@ const GrammarChecker = () => {
         GrammarChecker Checker
       </h2>
       <textarea className="w-full h-40 p-3 border rounded mb-3 bg-white" />
+      <div className="flex gap-3 mb-4">
+        <button className="px-4 py-2 rounded bg-blue-600 text-white">
+          Check
+        </button>
+        <button className="px-4 py-2 rounded border ">Clear</button>
+      </div>
     </div>
   );
 };
