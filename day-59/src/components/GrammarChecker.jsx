@@ -26,11 +26,14 @@ const GrammarChecker = () => {
       <div className="flex gap-3 mb-4">
         <button
           onClick={handleCheck}
-          className="px-4 py-2 rounded bg-blue-600 text-white"
+          className="px-4 py-2 rounded bg-blue-600 text-white cursor-pointer"
         >
           Check
         </button>
-        <button onClick={handleClear} className="px-4 py-2 rounded border ">
+        <button
+          onClick={handleClear}
+          className="px-4 py-2 rounded border cursor-pointer"
+        >
           Clear
         </button>
       </div>
