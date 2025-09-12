@@ -17,9 +17,7 @@ const GrammarChecker = () => {
 
   return (
     <div className="max-w-3xl mx-auto p-6">
-      <h2 h2 className="text-2xl font-bold mb-4">
-        GrammarChecker Checker
-      </h2>
+      <h2 className="text-2xl font-bold mb-4">GrammarChecker Checker</h2>
       <textarea
         onChange={(e) => setText(e.target.value)}
         placeholder="Type or paste  your paragraph"
@@ -32,7 +30,7 @@ const GrammarChecker = () => {
         >
           Check
         </button>
-        <button onClick={handleCheck} className="px-4 py-2 rounded border ">
+        <button onClick={handleClear} className="px-4 py-2 rounded border ">
           Clear
         </button>
       </div>
