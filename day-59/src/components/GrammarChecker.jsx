@@ -36,6 +36,14 @@ const GrammarChecker = () => {
           Clear
         </button>
       </div>
+      <h3 className="font-semibold mb-2">Seggestions({suggestions.length})</h3>
+      {suggestions.length === 0 ? (
+        <div className="text-sm text-gray-500">
+          No suggestions. Try checking some text.
+        </div>
+      ) : (
+        suggestions.map((s, i) => <SuggestionCard key={i} sug={s} />)
+      )}
     </div>
   );
 };
