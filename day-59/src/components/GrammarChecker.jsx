@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
 const GrammarChecker = () => {
+  const [text, setText] = useState("");
+  const [suggestions, setSuggestions] = useState([]);
+
+  function handleCheck() {
+    setSuggestions(runChecks(text));
+  }
+
   return (
     <div className="max-w-3xl mx-auto p-6">
       <h2 h2 className="text-2xl font-bold mb-4">
