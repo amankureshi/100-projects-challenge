@@ -31,6 +31,7 @@ export function runChecks(text = "") {
         exampleFix: t[0].toUpperCase() + t.slice(1),
       });
     }
+    const wordCount = t.split(/\s+/).length;
     if (t.split(/\s+/).length > 25)
       suggestions.push({
         type: "Long sentence",
