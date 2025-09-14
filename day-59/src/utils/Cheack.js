@@ -49,10 +49,11 @@ export function runChecks(text = "") {
     });
   }
 
-  if (/\b(was|were|is|are|been|being)\b\s+\w(ed|en)?/i.test(text)) {
+  if (/\b(was|were|is|are|been|being)\b\s+\w+(ed|en)?/i.test(text)) {
     suggestions.push({
-      type: "Passive voice",
-      message: "Possible passive constuctions found.",
+      type: "Passive voice(hint)",
+      message:
+        "Possible passive constuctions found.Prefer active voice if appropriate",
     });
   }
 
