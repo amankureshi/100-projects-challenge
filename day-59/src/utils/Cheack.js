@@ -27,7 +27,8 @@ export function runChecks(text = "") {
     if (t && t[0] === t[0].toLowerCase()) {
       suggestions.push({
         type: "Capitalization",
-        message: `Sentence starts with lowercase: "${t.slice(0, 30)}..."`,
+        message: `Sentence starts with lowercase: "${t.slice(0, 30)}...".`,
+        exampleFix: t[0].toUpperCase() + t.slice(1),
       });
     }
     if (t.split(/\s+/).length > 25)
