@@ -40,11 +40,14 @@ export function runChecks(text = "") {
     }
   });
 
-  if (/\b(their there|there their)\b/i.test(text))
+  if (
+    /\b(their there|there their | they're their| their they're)\b/i.test(text)
+  ) {
     suggestions.push({
       type: "Confusion",
-      message: "Check 'their' vs 'there' vs'they're'.",
+      message: "Check 'their' / 'there'/ 'they're' usage.",
     });
+  }
 
   if (/\b(was|were|is|are|been|being)\b\s+\w(ed|en)?/i.test(text)) {
     suggestions.push({
