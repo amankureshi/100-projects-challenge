@@ -32,13 +32,12 @@ export function runChecks(text = "") {
       });
     }
     const wordCount = t.split(/\s+/).length;
-    if (t.split(/\s+/).length > 25)
+    if (wordCount > 25) {
       suggestions.push({
         type: "Long sentence",
-        message: `Long sentence(${
-          t.split(/\s+/).length
-        }words). Consider splitting`,
+        message: `Long sentence (${wordCount} words). Consider splitting for clarity.`,
       });
+    }
   });
 
   if (/\b(their there|there their)\b/i.test(text))
