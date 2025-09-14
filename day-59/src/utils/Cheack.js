@@ -1,5 +1,5 @@
 export function runChecks(text = "") {
-  if (!text || trim()) return [];
+  if (!text || !text.trim()) return [];
 
   const suggestions = [];
   let m;
@@ -17,11 +17,13 @@ export function runChecks(text = "") {
     suggestions.push({
       type: "Extra spaces",
       message: "Multiple spaces found. Use single space.",
+      exampleFix: "Replace with single space",
     });
 
   const sentences = text.split(/[.?!]\s*/).filter(Boolean);
   sentences.forEach((s) => {
     const t = s.trim();
+    if (!t) return;
     if (t && t[0] === t[0].toLowerCase()) {
       suggestions.push({
         type: "Capitalization",
