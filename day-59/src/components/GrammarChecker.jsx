@@ -1,6 +1,7 @@
 // src/components/GrammarChecker.jsx
 import React, { useState } from "react";
 import SuggestionCard from "./SuggestionCard";
+import { TbTextGrammar } from "react-icons/tb";
 
 export default function GrammarChecker() {
   const [text, setText] = useState("");
@@ -78,8 +79,9 @@ export default function GrammarChecker() {
 
   return (
     <div className="max-w-4xl mx-auto p-6 text-gray-800">
-      <h2 className="text-3xl font-bold mb-6 text-center text-blue-700">
-        📝 Grammar Checker
+      <h2 className="flex items-center justify-center text-3xl font-bold mb-6 text-blue-700">
+        <TbTextGrammar className="mr-2" />
+        Grammar Checker
       </h2>
 
       <textarea
