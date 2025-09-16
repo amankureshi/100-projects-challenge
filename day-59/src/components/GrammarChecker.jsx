@@ -77,49 +77,86 @@ export default function GrammarChecker() {
   }
 
   return (
-    <div className="max-w-3xl mx-auto p-6">
-      <h2 className="text-2xl font-bold mb-4">GrammarChecker Checker</h2>
+    <div className="max-w-4xl mx-auto p-6 text-gray-800">
+      <h2 className="text-3xl font-bold mb-6 text-center text-blue-700">
+        📝 Grammar Checker
+      </h2>
 
       <textarea
         value={text}
         onChange={(e) => setText(e.target.value)}
-        placeholder="Type or paste your paragraph"
-        className="w-full h-40 p-3 border rounded mb-3 bg-white"
+        placeholder="Type or paste your paragraph here..."
+        className="w-full h-40 p-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none mb-4 bg-white text-base"
       />
 
-      <div className="flex gap-3 mb-4">
+      <div className="flex flex-wrap items-center gap-3 mb-6">
         <button
           onClick={handleCheck}
-          className="px-4 py-2 rounded bg-blue-600 text-white cursor-pointer"
+          className={`px-6 py-2 text-white font-semibold rounded-lg transition-colors ${
+            loading
+              ? "bg-blue-400 cursor-not-allowed"
+              : "bg-blue-600 hover:bg-blue-700"
+          }`}
           disabled={loading || !text.trim()}
         >
-          {loading ? "Checking..." : "Check"}
+          {loading ? (
+            <span className="flex items-center gap-2">
+              <svg
+                className="animate-spin h-5 w-5 text-white"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                  fill="none"
+                />
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8v8z"
+                />
+              </svg>
+              Checking...
+            </span>
+          ) : (
+            "Check"
+          )}
         </button>
 
         <button
           onClick={handleClear}
-          className="px-4 py-2 rounded border cursor-pointer"
+          className="px-6 py-2 border border-gray-400 rounded-lg hover:bg-gray-100 transition-colors"
         >
           Clear
         </button>
       </div>
 
-      {error && <div className="text-red-600 mb-3">{error}</div>}
+      {error && <div className="text-red-600 font-medium mb-4">{error}</div>}
 
-      <h3 className="font-semibold mb-2">Suggestions ({suggestions.length})</h3>
+      <div className="mb-3 flex items-center justify-between">
+        <h3 className="text-lg font-semibold text-gray-700">
+          Suggestions ({suggestions.length})
+        </h3>
+      </div>
 
       {suggestions.length === 0 ? (
         <div className="text-sm text-gray-500">
           No suggestions. Try checking some text.
         </div>
       ) : (
-        suggestions.map((s) => (
-          <SuggestionCard
-            key={s.id}
-            sug={s}
-            onApply={(replacement) => applyFix(s, replacement)}
-          />
-        ))
+        <div className="space-y-4">
+          {suggestions.map((s) => (
+            <SuggestionCard
+              key={s.id}
+              sug={s}
+              onApply={(replacement) => applyFix(s, replacement)}
+            />
+          ))}
+        </div>
       )}
     </div>
   );
