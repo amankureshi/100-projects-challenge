@@ -79,7 +79,7 @@ export default function GrammarChecker() {
 
   return (
     <div className="max-w-4xl mx-auto p-6 text-gray-800">
-      <h2 className="flex items-center justify-center text-3xl font-bold mb-6 text-blue-700">
+      <h2 className="flex items-center justify-center text-3xl font-bold mb-6 text-pink-700">
         <TbTextGrammar className="mr-2" />
         Grammar Checker
       </h2>
@@ -96,8 +96,8 @@ export default function GrammarChecker() {
           onClick={handleCheck}
           className={`px-6 py-2 text-white font-semibold rounded-lg transition-colors ${
             loading
-              ? "bg-blue-400 cursor-not-allowed"
-              : "bg-blue-600 hover:bg-blue-700"
+              ? "bg-pink-600 cursor-not-allowed"
+              : "bg-pink-600 hover:bg-pink-500"
           }`}
           disabled={loading || !text.trim()}
         >
