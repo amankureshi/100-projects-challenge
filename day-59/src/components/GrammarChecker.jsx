@@ -79,22 +79,17 @@ export default function GrammarChecker() {
 
   return (
     <div className="max-w-4xl mx-auto p-6 text-gray-800">
-      <h2 className="flex items-center justify-center text-3xl font-bold mb-6 text-pink-700">
-        <TbTextGrammar className="mr-2" />
-        Grammar Checker
-      </h2>
-
       <textarea
         value={text}
         onChange={(e) => setText(e.target.value)}
         placeholder="Type or paste your paragraph here..."
-        className="w-full h-40 p-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none mb-4 bg-white text-base"
+        className="w-full h-40 p-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-700 resize-none mb-4 bg-white text-base"
       />
 
       <div className="flex flex-wrap items-center gap-3 mb-6">
         <button
           onClick={handleCheck}
-          className={`px-6 py-2 text-white font-semibold rounded-lg transition-colors ${
+          className={`px-6 py-2 text-white font-semibold rounded-3xl transition-colors ${
             loading
               ? "bg-pink-600 cursor-not-allowed"
               : "bg-pink-600 hover:bg-pink-500"
@@ -131,7 +126,7 @@ export default function GrammarChecker() {
 
         <button
           onClick={handleClear}
-          className="px-6 py-2 border border-gray-400 rounded-lg hover:bg-gray-100 transition-colors"
+          className="px-6 py-2 border border-gray-400 rounded-3xl hover:bg-gray-100 transition-colors"
         >
           Clear
         </button>
