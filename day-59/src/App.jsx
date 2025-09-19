@@ -6,7 +6,7 @@ import { TbTextGrammar } from "react-icons/tb";
 function App() {
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center px-4">
-      <h1 className="flex items-center justify-center mb-6 font-bold text-gray-800 sm:text-1xl md:text-3xl lg:text-4xl">
+      <h1 className="flex items-center justify-center mb-6 font-bold text-gray-800 text-2xl sm:text-1xl md:text-4xl">
         <TbTextGrammar className="mr-2" />
         Grammar
         <span className="text-pink-700 ml-2">Checker</span>
@@ -18,7 +18,7 @@ function App() {
         id="bottom-image"
         src={grammarImage}
         alt="Grammar Illustration"
-        className="pointer-events-none select-none"
+        className="pointer-events-none select-none max-md:hidden"
       />
     </div>
   );
