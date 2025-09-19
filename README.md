@@ -62,3 +62,4 @@
 | 56  | [Note app](https://github.com/amankureshi/100-projects-challenge/tree/main/day-56)                       | [Live Demo](https://note-app-react-8u4l.onrender.com/)                                     |
 | 57  | [Budget Tracker App](https://github.com/amankureshi/100-projects-challenge/tree/main/day-57)             | [Live Demo](https://budget-tracker-reactjs.onrender.com/)                                  |
 | 58  | [Image Gallery React](https://github.com/amankureshi/100-projects-challenge/tree/main/day-58)            | [Live Demo](https://image-gallery-b5.onrender.com/)                                        |
+| 59  | [Grammar Checker](https://github.com/amankureshi/100-projects-challenge/tree/main/day-59)                | [Live Demo](https://grammer-checker-2025.onrender.com/)                                    |
