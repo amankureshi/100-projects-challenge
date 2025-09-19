@@ -166,3 +166,22 @@ h1 {
 .social-icon .fa-linkedin {
     color: #04339a;
 }
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .projects {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .projects>a {
+        font-size: 1rem;
+    }
+
+    .social-icon {
+        bottom: 10px;
+        right: 10px;
+    }
+}
