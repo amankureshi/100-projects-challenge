@@ -22,7 +22,7 @@ h1 {
 }
 
 .hundred {
-    color: #ff512f;
+    color: #D81B60;
     font-size: 2.5rem;
     font-weight: bold;
     animation: bounce 1s infinite;
@@ -78,7 +78,8 @@ h1 {
 }
 
 .projects>a:hover {
-    background-color: #ff512f;
+    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+    /* background-image: linear-gradient(to right, #3ab5b0 0%, #3d99be 31%, #56317a 100%); */
     color: #fff;
     transform: translateY(-5px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
