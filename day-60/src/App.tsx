@@ -4,7 +4,7 @@ function App() {
 
   return (
     <>
-      <h1 className="text-2xl font-bold mb-4">🔀 Word Scramble Game</h1>
+      <h1 className="text-2xl font-bold">🔀 Word Scramble Game</h1>
     </>
   )
 }
