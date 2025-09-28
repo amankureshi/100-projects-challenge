@@ -8,6 +8,14 @@ const Game = () => {
             <p className="text-lg">score:</p>
             <h2>scrambled</h2>
             <input type="text" className="mt-4 p-2 text-black rounded-md" />
+            <div className="mt-4 space-x-4">
+                <button className="bg-green-500 px-4 py-2 rounded-lg hover:bg-green-600 ">
+                    Submit
+                </button>
+                <button className="by-yellow-500 px-4 rounded-lg hover:bg-yellow-600">
+                    Next Word
+                </button>
+            </div>
         </div>
     )
 }
