@@ -1,5 +1,9 @@
 
 
+const words = ["react", "typescript", "frontend", "developer", "challange"]
+const shuffleWord = (word: string) => {
+    return word.split("").sort(() => Math.random() - 0.5).join("")
+}
 const Game = () => {
     return (
         <div>
