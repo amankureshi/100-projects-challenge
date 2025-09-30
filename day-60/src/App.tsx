@@ -1,10 +1,11 @@
 import './App.css'
+import Game from './components/Game'
 
 function App() {
 
   return (
     <>
-      <h1 className="text-2xl font-bold">🔀 Word Scramble Game</h1>
+      <Game />
     </>
   )
 }
