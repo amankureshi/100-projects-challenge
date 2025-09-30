@@ -1,5 +1,5 @@
 import type React from "react"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 
 const words = ["react", "typescript", "frontend", "developer", "challange"]
@@ -12,6 +12,10 @@ const Game: React.FC = () => {
     const [input, setInput] = useState("");
     const [score, setScore] = useState(0);
     const [time, setTime] = useState(30);
+
+    useEffect(() => {
+        generateWord();
+    }, []);
 
     return (
         <div>
