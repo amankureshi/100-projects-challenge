@@ -1,5 +1,5 @@
 import type React from "react"
-import { useEffect, useState } from "react"
+import { use, useEffect, useState } from "react"
 
 
 const words = ["react", "typescript", "frontend", "developer", "challange"]
@@ -16,6 +16,13 @@ const Game: React.FC = () => {
     useEffect(() => {
         generateWord();
     }, []);
+
+    useEffect(() => {
+        if (time > 0) {
+            const timer = setInterval(() => setTime((prev) => - 1), 1000);
+            return () => clearInterval(timer);
+        }
+    }, [time]);
 
     return (
         <div>
