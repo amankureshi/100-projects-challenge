@@ -38,7 +38,7 @@ const Game: React.FC = () => {
             <p className="text-lg">time here</p>
             <p className="text-lg">score:</p>
             <h2>scrambled</h2>
-            <input type="text" className="mt-4 p-2 text-black rounded-md" />
+            <input type="text" className="mt-4 p-2 text-black rounded-md" onChange={(e) => setInput(e.target.value)} value={input} />
             <div className="mt-4 space-x-4">
                 <button className="bg-green-500 px-4 py-2 rounded-lg hover:bg-green-600 ">
                     Submit
@@ -47,8 +47,21 @@ const Game: React.FC = () => {
                     Next Word
                 </button>
             </div>
+
+            {time === 0 && (
+                <div className="mt-6 text-center">
+                    <h2>Game over</h2>
+                    <p className="text-lg">
+                        Your Final Score:
+                    </p>
+                    <button onClick={generateWord}
+                        className="mt-4 bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-600">
+                        Restart
+                    </button>
+                </div>
+            )}
         </div>
-    )
-}
+    );
+};
 
 export default Game
