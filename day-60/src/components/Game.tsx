@@ -24,6 +24,14 @@ const Game: React.FC = () => {
         }
     }, [time]);
 
+    const generateWord = () => {
+        const random = words[Math.floor(Math.random() * words.length)];
+        setWord(random);
+        setScrambled(shuffleWord(random));
+        setInput("");
+        setTime(30);
+    }
+
     return (
         <div>
             <h1 className="text-3xl font-bold mb-6">Word Scramble Game</h1>
