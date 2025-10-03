@@ -9,7 +9,11 @@ const Timer: React.FC<TimerProps> = ({ time, setTime }) => {
       return () => clearInterval(interval);
     }
   }, [time, setTime]);
-  return <div>Time left:</div>;
+  return (
+    <div className="text-lg font-semibold">
+      Time left: <span className="text-yellow-300">{time}s</span>
+    </div>
+  );
 };
 
 export default Timer;
