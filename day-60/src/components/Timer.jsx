@@ -1,5 +1,10 @@
 import React, { useEffect } from "react";
 
+interface TimerProps {
+  time: number;
+  setTime: React.Dispatch<React.SetStateAction<number>>;
+}
+
 const Timer: React.FC<TimerProps> = ({ time, setTime }) => {
   useEffect(() => {
     if (time > 0) {
