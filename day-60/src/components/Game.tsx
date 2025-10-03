@@ -1,5 +1,5 @@
 import type React from "react"
-import { use, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 
 
 const words = ["react", "typescript", "frontend", "developer", "challange"]
@@ -19,7 +19,7 @@ const Game: React.FC = () => {
 
     useEffect(() => {
         if (time > 0) {
-            const timer = setInterval(() => setTime((prev) => - 1), 1000);
+            const timer = setInterval(() => setTime((prev) => prev - 1), 1000);
             return () => clearInterval(timer);
         }
     }, [time]);
@@ -32,18 +32,27 @@ const Game: React.FC = () => {
         setTime(30);
     }
 
+    const checkAnswer = () => {
+        if (input.toLowerCase() === word.toLowerCase()) {
+            setScore((prev) => prev + 1)
+            generateWord();
+        } else {
+            alert("Wrong Anser!")
+        }
+    }
+
     return (
         <div>
             <h1 className="text-3xl font-bold mb-6">Word Scramble Game</h1>
-            <p className="text-lg">time here</p>
-            <p className="text-lg">score:</p>
-            <h2>scrambled</h2>
+            <p className="text-lg">time Left: {time}s </p>
+            <p className="text-lg">score: {score}</p>
+            <h2 className="text-2xl mt-4 tracking-widest font-mono">{scrambled}</h2>
             <input type="text" className="mt-4 p-2 text-black rounded-md" onChange={(e) => setInput(e.target.value)} value={input} />
             <div className="mt-4 space-x-4">
-                <button className="bg-green-500 px-4 py-2 rounded-lg hover:bg-green-600 ">
+                <button className="bg-green-500 px-4 py-2 rounded-lg hover:bg-green-600" onClick={checkAnswer}>
                     Submit
                 </button>
-                <button className="by-yellow-500 px-4 rounded-lg hover:bg-yellow-600">
+                <button className="by-yellow-500 px-4 rounded-lg hover:bg-yellow-600" onCanPlay={generateWord}>
                     Next Word
                 </button>
             </div>
@@ -52,7 +61,7 @@ const Game: React.FC = () => {
                 <div className="mt-6 text-center">
                     <h2>Game over</h2>
                     <p className="text-lg">
-                        Your Final Score:
+                        Your Final Score:{score}
                     </p>
                     <button onClick={generateWord}
                         className="mt-4 bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-600">
