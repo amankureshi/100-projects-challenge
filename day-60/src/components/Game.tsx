@@ -12,6 +12,8 @@ const Game: React.FC = () => {
     const [input, setInput] = useState("");
     const [score, setScore] = useState(0);
     const [time, setTime] = useState(30);
+    const [gameOver, setGameOver] = useState(false)
+
 
     useEffect(() => {
         generateWord();
@@ -29,7 +31,16 @@ const Game: React.FC = () => {
         setWord(random);
         setScrambled(shuffleWord(random));
         setInput("");
-        setTime(30);
+    }
+
+    const handleCheck = () => {
+        if (userInput.toLowerCase() === word.toLocaleLowerCase()) {
+            setScore(score + 1);
+            generateWord();
+        }
+        else {
+            alert("Wrong! Try Again.");
+        }
     }
 
     const checkAnswer = () => {
@@ -47,7 +58,7 @@ const Game: React.FC = () => {
             <Timer time={time} setTime={setTime} />
             <p className="text-lg">score: {score}</p>
             <h2 className="text-2xl mt-4 tracking-widest font-mono">{scrambled}</h2>
-            <input type="text" className="mt-4 p-2 text-black rounded-md" onChange={(e) => setInput(e.target.value)} value={input} />
+            <input type="text" className="mt-4 p-2 text-white border rounded-md" onChange={(e) => setInput(e.target.value)} value={input} />
             <div className="mt-4 space-x-4">
                 <button className="bg-green-500 px-4 py-2 rounded-lg hover:bg-green-600" onClick={checkAnswer}>
                     Submit
