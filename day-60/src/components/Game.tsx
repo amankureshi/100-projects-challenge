@@ -1,6 +1,6 @@
 import type React from "react"
 import { useEffect, useState } from "react"
-
+import Timer from "./Timer";
 
 const words = ["react", "typescript", "frontend", "developer", "challange"]
 const shuffleWord = (word: string) => {
@@ -44,7 +44,7 @@ const Game: React.FC = () => {
     return (
         <div>
             <h1 className="text-3xl font-bold mb-6">Word Scramble Game</h1>
-            <p className="text-lg">time Left: {time}s </p>
+            <Timer time={time} setTime={setTime} />
             <p className="text-lg">score: {score}</p>
             <h2 className="text-2xl mt-4 tracking-widest font-mono">{scrambled}</h2>
             <input type="text" className="mt-4 p-2 text-black rounded-md" onChange={(e) => setInput(e.target.value)} value={input} />
@@ -52,7 +52,7 @@ const Game: React.FC = () => {
                 <button className="bg-green-500 px-4 py-2 rounded-lg hover:bg-green-600" onClick={checkAnswer}>
                     Submit
                 </button>
-                <button className="by-yellow-500 px-4 rounded-lg hover:bg-yellow-600" onCanPlay={generateWord}>
+                <button className="bg-yellow-500 px-4 py-2 rounded-lg hover:bg-yellow-600" onCanPlay={generateWord}>
                     Next Word
                 </button>
             </div>
