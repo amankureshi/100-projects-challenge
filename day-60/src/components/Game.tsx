@@ -62,11 +62,15 @@ const Game: React.FC = () => {
         );
     }
     return (
-        <div>
-            <h1 className="text-3xl font-bold mb-6">Word Scramble Game</h1>
-            <Timer time={time} setTime={setTime} />
-            <p className="text-lg">score: {score}</p>
-            <h2 className="text-2xl mt-4 tracking-widest font-mono">{scrambled}</h2>
+        <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-indigo-700 to-purple-800 text-white px-4">
+            <div className="flex justify-between items-center w-full max-w-md mb-6">
+                <h1 className="text-3xl font-bold mb-6">Word Scramble Game</h1>
+                <Timer time={time} setTime={setTime} />
+            </div>
+            <div className="bg-white text-gray-800 rounded-2xl shadow-lg p-6 w-full max-w-md text-center">
+                <h2 className="text-2xl mt-4 tracking-widest font-mono">{scrambled}</h2>
+                <p className="text-3xl font-bold text-indigo-700 tracking-widest mb-6">{scrambledWord}</p>
+            </div>
             <input type="text" className="mt-4 p-2 text-white border rounded-md" onChange={(e) => setInput(e.target.value)} value={input} />
             <div className="mt-4 space-x-4">
                 <button className="bg-green-500 px-4 py-2 rounded-lg hover:bg-green-600" onClick={checkAnswer}>
