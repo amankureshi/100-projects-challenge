@@ -70,17 +70,24 @@ const Game: React.FC = () => {
             <div className="bg-white text-gray-800 rounded-2xl shadow-lg p-6 w-full max-w-md text-center">
                 <h2 className="text-2xl mt-4 tracking-widest font-mono">{scrambled}</h2>
                 <p className="text-3xl font-bold text-indigo-700 tracking-widest mb-6">{scrambledWord}</p>
-            </div>
-            <input type="text" className="mt-4 p-2 text-white border rounded-md" onChange={(e) => setInput(e.target.value)} value={input} />
-            <div className="mt-4 space-x-4">
-                <button className="bg-green-500 px-4 py-2 rounded-lg hover:bg-green-600" onClick={checkAnswer}>
-                    Submit
-                </button>
-                <button className="bg-yellow-500 px-4 py-2 rounded-lg hover:bg-yellow-600" onCanPlay={generateWord}>
-                    Next Word
-                </button>
-            </div>
 
+                <input type="text" className="w-full border rounded-lg px-4 py-2 text-center text-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-4" onChange={(e) => setInput(e.target.value)} value={input} />
+                <div className="flex justify-center gap-4">
+
+                    <button className="px-5 py-2 bg-indigo-600 text-white
+                ">
+                        Check
+                    </button>
+                    <button className="px-5 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition"
+                        onClick={generateWord}
+                    >
+                        Skip
+                    </button>
+                </div>
+            </div>
+            <p className="mt-6 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition">
+
+            </p>
             )
         }
 
