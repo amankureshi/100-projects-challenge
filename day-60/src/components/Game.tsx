@@ -74,36 +74,33 @@ const Game: React.FC = () => {
                 <input type="text" className="w-full border rounded-lg px-4 py-2 text-center text-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-4" onChange={(e) => setInput(e.target.value)} value={input} />
                 <div className="flex justify-center gap-4">
 
-                    <button className="px-5 py-2 bg-indigo-600 text-white
-                ">
+                    <button className="px-5 py-2 bg-indigo-600 text-white">
                         Check
                     </button>
-                    <button className="px-5 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition"
-                        onClick={generateWord}
-                    >
+                    <button className="px-5 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition" onClick={generateWord}>
                         Skip
                     </button>
                 </div>
+                <p className="mt-6 text-lg font-medium">Score:{score}</p>
             </div>
-            <p className="mt-6 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition">
-
-            </p>
-            )
-        }
-
-            {time === 0 && (
-                <div className="mt-6 text-center">
-                    <h2>Game over</h2>
-                    <p className="text-lg">
-                        Your Final Score:{score}
-                    </p>
-                    <button onClick={generateWord}
-                        className="mt-4 bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-600">
-                        Restart
-                    </button>
-                </div>
-            )}
         </div>
+    );
+};
+{
+    time === 0 && (
+        <div className="mt-6 text-center">
+            <h2>Game over</h2>
+            <p className="text-lg">
+                Your Final Score:{score}
+            </p>
+            <button onClick={generateWord}
+                className="mt-4 bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-600">
+                Restart
+            </button>
+        </div>
+    )
+}
+        </div >
     );
 };
 
