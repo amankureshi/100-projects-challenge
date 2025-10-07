@@ -32,16 +32,6 @@ const Game: React.FC = () => {
         setInput("");
     }
 
-    const handleCheck = () => {
-        if (input.toLowerCase() === word.toLocaleLowerCase()) {
-            setScore(score + 1);
-            generateWord();
-        }
-        else {
-            alert("Wrong! Try Again.");
-        }
-    }
-
     const checkAnswer = () => {
         if (input.toLowerCase() === word.toLowerCase()) {
             setScore((prev) => prev + 1)
