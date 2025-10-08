@@ -14,7 +14,6 @@ const Game: React.FC = () => {
     const [time, setTime] = useState(30);
     const [gameOver, setGameOver] = useState(false)
 
-
     useEffect(() => {
         generateWord();
     }, []);
@@ -41,12 +40,19 @@ const Game: React.FC = () => {
         }
     }
 
+    const playAgain = () => {
+        setScore(0)
+        setTime(30)
+        setGameOver(false)
+        generateWord();
+    }
+
     if (gameOver) {
         return (
             <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-indigo-950 to-purple-700 text-white">
                 <h1 className="text-3xl font-bold mb-6">Time's Up!</h1>
-                <p className="text-xl mb-4">Your Finla Score: {score}</p>
-                <button className="px-6 py-2 bg-green-600 hover:bg-green-700 rounded-lg text-white font-semibold transition">Play Again</button>
+                <p className="text-xl mb-4">Your Final Score: {score}</p>
+                <button className="px-6 py-2 bg-green-600 hover:bg-green-700 rounded-lg text-white font-semibold transition" onClick={playAgain}>Play Again</button>
             </div>
         );
     }
