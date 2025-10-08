@@ -1,6 +1,8 @@
 import type React from "react"
 import { useEffect, useState } from "react"
 import Timer from "./Timer";
+import { FaCheckCircle, FaExchangeAlt } from "react-icons/fa";
+import { IoPlaySkipForwardCircleOutline, IoPlaySkipForwardOutline } from "react-icons/io5";
 
 const words = ["react", "typescript", "frontend", "developer", "challange"]
 const shuffleWord = (word: string) => {
@@ -72,6 +74,7 @@ const Game: React.FC = () => {
                         onClick={checkAnswer}
                         className="inline-flex items-center gap-2 px-6 py-2 bg-indigo-600 text-white rounded-full font-semibold text-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all duration-200"
                     >
+                        <FaCheckCircle />
                         Check
                     </button>
 
@@ -79,6 +82,7 @@ const Game: React.FC = () => {
                         onClick={generateWord}
                         className="inline-flex items-center gap-2 px-6 py-2 bg-gray-100 text-gray-800 rounded-full font-semibold text-lg shadow-md hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 transition-all duration-200"
                     >
+                        <FaExchangeAlt />
                         Skip
                     </button>
                 </div>
