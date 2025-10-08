@@ -67,12 +67,18 @@ const Game: React.FC = () => {
                 <p className="text-3xl font-bold text-indigo-700 tracking-widest mb-6">{scrambled}</p>
 
                 <input type="text" className="w-full border rounded-lg px-4 py-2 text-center text-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-4" onChange={(e) => setInput(e.target.value)} value={input} />
-                <div className="flex justify-center gap-4">
-
-                    <button className="px-5 py-2 bg-indigo-600 text-white" onClick={checkAnswer}>
+                <div className="flex justify-center gap-4 mt-4">
+                    <button
+                        onClick={checkAnswer}
+                        className="inline-flex items-center gap-2 px-6 py-2 bg-indigo-600 text-white rounded-full font-semibold text-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all duration-200"
+                    >
                         Check
                     </button>
-                    <button className="px-5 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition" onClick={generateWord}>
+
+                    <button
+                        onClick={generateWord}
+                        className="inline-flex items-center gap-2 px-6 py-2 bg-gray-100 text-gray-800 rounded-full font-semibold text-lg shadow-md hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 transition-all duration-200"
+                    >
                         Skip
                     </button>
                 </div>
