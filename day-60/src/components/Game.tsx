@@ -2,7 +2,6 @@ import type React from "react"
 import { useEffect, useState } from "react"
 import Timer from "./Timer";
 import { FaCheckCircle, FaExchangeAlt } from "react-icons/fa";
-import { IoPlaySkipForwardCircleOutline, IoPlaySkipForwardOutline } from "react-icons/io5";
 
 const words = ["react", "typescript", "frontend", "developer", "challange"]
 const shuffleWord = (word: string) => {
