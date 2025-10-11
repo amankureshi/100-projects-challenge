@@ -59,8 +59,9 @@ const Game: React.FC = () => {
     }
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-indigo-700 to-purple-800 text-white px-4">
-            <div className="flex justify-between items-center w-full max-w-md mb-6">
-                <h1 className="text-3xl font-bold mb-6">Word Scramble Game</h1>
+            <div className="flex justify-center items-center w-full max-w-md mb-6">
+                <img src="https://cdn-icons-png.freepik.com/512/11067/11067626.png?ga=GA1.1.948228430.1745149889" alt="" className="w-15 h-15 mr-5" />
+                <h1 className="text-3xl font-bold">Word Scramble Game</h1>
             </div>
             <div className="bg-white text-gray-800 rounded-2xl shadow-lg p-6 w-full max-w-md text-center">
                 <section className="flex justify-between">
