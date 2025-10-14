@@ -4,7 +4,10 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [text, setText] = useState("");
+  const wordCount = text.trim() === "" ? 0 : text.trim().split(/\s+/).length;
+  const charCount = text.length;
+  const spaceCount = (text.match(/ /g) || []).length;
 
   return (
     <>
