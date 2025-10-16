@@ -22,6 +22,11 @@ function App() {
               <p className="text-lg font-bold">wordCount</p>
               <p className="text-sm text-indigo-700 font-medium">Words</p>
             </div>
+
+            <div className="bg-indigo-100 p-3 rounded-lg">
+              <p className="text-lg font-bold">charCount</p>
+              <p className="text-sm text-indigo-700 font-medium">Characters</p>
+            </div>
           </div>
         </section>
       </main>
