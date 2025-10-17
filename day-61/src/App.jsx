@@ -31,6 +31,11 @@ function App() {
               <p className="text-lg font-bold">spaceCount</p>
               <p className="text-sm text-indigo-700 font-medium">Spaces</p>
             </div>
+
+            <div className="bg-indigo-100 p-3 rounded-lg">
+              <p className="text-lg font-bold">sentenceCount</p>
+              <p className="text-sm text-indigo-700 font-medium">Sentences</p>
+            </div>
           </div>
         </section>
       </main>
