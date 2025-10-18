@@ -9,6 +9,8 @@ function App() {
   const charCount = text.length;
   const spaceCount = (text.match(/ /g) || []).length;
 
+  const handleClear = () => setText("");
+
   return (
     <>
       <main>
@@ -37,6 +39,7 @@ function App() {
               <p className="text-sm text-indigo-700 font-medium">Sentences</p>
             </div>
           </div>
+          <p>Made with React + Tailwind CSS</p>
         </section>
       </main>
     </>
