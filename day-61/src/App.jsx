@@ -21,7 +21,12 @@ function App() {
     <>
       <main>
         <h1>Word & Letter Counter</h1>
-        <textarea className="border-2 rounded"></textarea>
+        <textarea
+          className="border-2 rounded"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+          placeholder="Start typing your text here//"
+        ></textarea>
         <section>
           <button onClick={handleClear}>Clear</button>
           <button onClick={handleCopy}>Copy Text</button>
