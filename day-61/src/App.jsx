@@ -8,6 +8,7 @@ function App() {
   const wordCount = text.trim() === "" ? 0 : text.trim().split(/\s+/).length;
   const charCount = text.length;
   const spaceCount = (text.match(/ /g) || []).length;
+  const sentenceCount = (text.match(/[.!?]+/g) || []).length;
 
   const handleClear = () => setText("");
 
