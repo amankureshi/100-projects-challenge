@@ -20,27 +20,27 @@ function App() {
     <>
       <main>
         <h1>Word & Letter Counter</h1>
-        <textarea className="border-2 rounded" name="" id=""></textarea>
+        <textarea className="border-2 rounded"></textarea>
         <section>
-          <button>Clear</button>
-          <button>Copy Text</button>
+          <button onClick={handleClear}>Clear</button>
+          <button onClick={handleCopy}>Copy Text</button>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center mt-6">
             <div className="bg-indigo-100 p-3 rounded-lg">
-              <p className="text-lg font-bold">wordCount</p>
+              <p className="text-lg font-bold">{wordCount}</p>
               <p className="text-sm text-indigo-700 font-medium">Words</p>
             </div>
 
             <div className="bg-indigo-100 p-3 rounded-lg">
-              <p className="text-lg font-bold">charCount</p>
+              <p className="text-lg font-bold">{charCount}</p>
               <p className="text-sm text-indigo-700 font-medium">Characters</p>
             </div>
             <div className="bg-indigo-100 p-3 rounded-lg">
-              <p className="text-lg font-bold">spaceCount</p>
+              <p className="text-lg font-bold">{spaceCount}</p>
               <p className="text-sm text-indigo-700 font-medium">Spaces</p>
             </div>
 
             <div className="bg-indigo-100 p-3 rounded-lg">
-              <p className="text-lg font-bold">sentenceCount</p>
+              <p className="text-lg font-bold">{sentenceCount}</p>
               <p className="text-sm text-indigo-700 font-medium">Sentences</p>
             </div>
           </div>
