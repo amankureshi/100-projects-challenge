@@ -11,6 +11,11 @@ function App() {
 
   const handleClear = () => setText("");
 
+  const handleCopy = () => {
+    navigator.clipboard.writeText(text);
+    alert("Copied to clipboard");
+  };
+
   return (
     <>
       <main>
