@@ -19,7 +19,7 @@ function App() {
   return (
     <header>
       <Navbar />
-      <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-700 to-slate-800 text-gray-800 px-4">
+      <main className="min-h-screen flex items-center justify-center bg-gradient-to-br text-gray-800 px-4">
         <div className="bg-white shadow-2xl rounded-2xl p-6 w-full max-w-lg">
           <h1 className="text-3xl font-bold text-center text-slate-700 mb-6">
             Word & Letter Counter
@@ -30,16 +30,16 @@ function App() {
             onChange={(e) => setText(e.target.value)}
             placeholder="Start typing your text here..."
           />
-          <section className="flex justify-between mt-4">
+          <section className="flex justify-between mt-5">
             <button
               onClick={handleClear}
-              className="px-4 bg-gray-200 rounded-md hover:bg-gray-300 transition"
+              class="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:outline-none font-medium rounded-lg text-sm px-4 py-2.5 text-center me-2 mb-2"
             >
               Clear
             </button>
             <button
               onClick={handleCopy}
-              className="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition"
+              class="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
             >
               Copy Text
             </button>
