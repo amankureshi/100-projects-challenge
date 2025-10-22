@@ -18,10 +18,10 @@ const Navbar = () => {
             alt="letter-image"
             className="w-10"
           />
-          <span>Word & Letter Counter</span>
+          <span className="text-teal-500">WordMeter</span>
         </a>
         <div className={`hidden lg:block ${isMenuOpen ? "block" : "lg:flex"}`}>
-          <ul className="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+          <ul className="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 uppercase font-medium">
             <li className="flex items-center p-1 text-sm gap-x-2 text-gray-200">
               <a href="#about" className="flex items-center">
                 About
