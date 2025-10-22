@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 import Navbar from "./Components/Navbar";
+import { MdOutlineClear } from "react-icons/md";
+import { IoCopy } from "react-icons/io5";
 
 function App() {
   const [text, setText] = useState("");
@@ -33,15 +35,18 @@ function App() {
           <section className="flex justify-between mt-5">
             <button
               onClick={handleClear}
-              class="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:outline-none font-medium rounded-lg text-sm px-4 py-2.5 text-center me-2 mb-2"
+              className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:outline-none font-medium rounded-lg text-sm px-4 py-2.5 text-center me-2 mb-2 flex items-center gap-2"
             >
-              Clear
+              <MdOutlineClear className="text-lg" />
+              <span>Clear</span>
             </button>
+
             <button
               onClick={handleCopy}
-              class="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+              className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:outline-none font-medium rounded-lg text-sm px-4 py-2.5 text-center me-2 mb-2 flex items-center gap-2"
             >
-              Copy Text
+              <IoCopy />
+              <span>Copy Text</span>
             </button>
           </section>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center mt-6">
