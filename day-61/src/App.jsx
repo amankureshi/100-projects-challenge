@@ -27,11 +27,13 @@ function App() {
             Word & Letter Counter
           </h1>
           <textarea
-            className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-indigo-500 outline-none resize-none"
+            className="w-full h-25 border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-indigo-500 outline-none resize-none"
+            style={{ overflowY: "auto" }}
             value={text}
             onChange={(e) => setText(e.target.value)}
             placeholder="Start typing your text here..."
           />
+
           <section className="flex justify-between mt-5">
             <button
               onClick={handleClear}
@@ -72,7 +74,7 @@ function App() {
           </div>
 
           <p className="text-xs text-center text-gray-400 mt-5">
-            Made with React + Tailwind CSS
+            Made with React ❤️ + Tailwind CSS
           </p>
         </div>
       </main>
