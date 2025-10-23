@@ -1,0 +1,7 @@
+* {
+    overflow: hidden;
+}
+
+header {
+    background-image: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);
+}
