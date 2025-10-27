@@ -15,6 +15,9 @@ function App() {
           ✨ Rephrased Sentence:
         </h3>
         <p className="text-gray-800 text-sm">rephrased here</p>
+        <button className="mt-3 text-xs px-3 py-1 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition">
+          Copy
+        </button>
       </div>
     </div>
   );
