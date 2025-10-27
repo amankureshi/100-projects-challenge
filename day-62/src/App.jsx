@@ -10,6 +10,12 @@ function App() {
       <div className="flex justify-between mt-4">
         <button className="px-4 py-2 rounded-md border">Clear</button>
       </div>
+      <div className="mt-6 bg-indigo-50 p-4 rounded-lg border border-indigo-100">
+        <h3 className="font-semibold text-indigo-700 mb-2">
+          ✨ Rephrased Sentence:
+        </h3>
+        <p className="text-gray-800 text-sm">rephrased here</p>
+      </div>
     </div>
   );
 }
