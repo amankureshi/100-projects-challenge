@@ -6,10 +6,30 @@ function App() {
   const [rephrased, setRephrased] = useState("");
   const [loading, setLoading] = useState(false);
 
-  async function handleReph()() {
-    if(!text.trim()) return alert("Please enter a sentence")
-  }
+  async function handleReph() {
+    if (!text.trim()) return alert("Please enter a sentence");
 
+    setLoading(true);
+    setRephrased("");
+
+    try {
+      const response = await fetch(
+        "https://api.mymemory.translated.net/get?q=" +
+          encodeURIComponent(text) +
+          "&langpair=en|en"
+      );
+      const data = await response.json();
+
+      const suggestion =
+        data?.responseData?.translatedText || "Could't rephrase right now.";
+      setRephrased(suggestion);
+    } catch (err) {
+      console.log(err);
+      setRephrased("Error occurred while rephrasing.");
+    } finally {
+      setLoading(false);
+    }
+  }
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-4">
       <div className="bg-white shadow-2xl rounded-2xl p-6 w-full max-w-lg">
