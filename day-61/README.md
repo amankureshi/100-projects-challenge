@@ -1,6 +1,6 @@
 # ⏱️ Project 60: Word & Letter Counter using React.js & Tailwind CSS
 
-🔗 **Live Demo:** [ https://word-and-letter-counter.onrender.com/]
+🔗 **Live Demo:** [https://word-and-letter-counter.onrender.com/]
 
 ## 📄 Description
 
