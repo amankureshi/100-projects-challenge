@@ -36,6 +36,11 @@ function App() {
     setRephrased("");
   }
 
+  function handleCopy() {
+    navigator.clipboard.writeText(rephrased);
+    alert("Copy to clipboard");
+  }
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-4">
       <div className="bg-white shadow-2xl rounded-2xl p-6 w-full max-w-lg">
