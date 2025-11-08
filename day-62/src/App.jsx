@@ -5,10 +5,10 @@ function App() {
   const [text, setText] = useState();
   const [rephrased, setRephrased] = useState("");
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   async function handleRephrase() {
     if (!text.trim()) return alert("Please enter a sentence");
-
     setLoading(true);
     setRephrased("");
 
@@ -52,6 +52,7 @@ function App() {
           onChange={(e) => setText(e.target.value)}
           placeholder="Type a sentence to rephrase..."
           rows={5}
+          className="w-full border border-gray-300 rounded-lg p-3 mb-4 focus:ring-2 focus:ring-indigo-500 outline-none"
         />
         <div className="flex justify-between mt-4">
           <button onClick={handleClear} className="px-4 py-2 rounded-md border">
