@@ -6,7 +6,7 @@ function App() {
   const [rephrased, setRephrased] = useState("");
   const [loading, setLoading] = useState(false);
 
-  async function handleReph() {
+  async function handleRephrase() {
     if (!text.trim()) return alert("Please enter a sentence");
 
     setLoading(true);
