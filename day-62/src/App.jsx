@@ -16,7 +16,7 @@ function App() {
       const response = await fetch(
         "https://api.mymemory.translated.net/get?q=" +
           encodeURIComponent(text) +
-          "&langpair=en|en"
+          "&langpair=hi|En"
       );
       const data = await response.json();
 
@@ -71,7 +71,7 @@ function App() {
             <h3 className="font-semibold text-indigo-700 mb-2">
               ✨ Rephrased Sentence:
             </h3>
-            <p className="text-gray-800 text-sm">rephrased here</p>
+            <p className="text-gray-800 text-sm">{rephrased} here</p>
             <button
               onClick={handleCopy}
               className="mt-3 text-xs px-3 py-1 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition"
