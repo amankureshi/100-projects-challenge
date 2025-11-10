@@ -1,6 +1,6 @@
 # ⏱️ Project 61: Sentence Rephraser App using React.js & Tailwind CSS
 
-🔗 **Live Demo:** [ ]
+🔗 **Live Demo:** [https://rephrase-sentence-2025.onrender.com/]
 
 ## 📄 Description
 
