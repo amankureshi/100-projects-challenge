@@ -2,10 +2,9 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [text, setText] = useState();
+  const [text, setText] = useState("");
   const [rephrased, setRephrased] = useState("");
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
 
   async function handleRephrase() {
     if (!text.trim()) return alert("Please enter a sentence");
@@ -13,18 +12,28 @@ function App() {
     setRephrased("");
 
     try {
-      const response = await fetch(
+      //--------> Step 1: English -> French translation <--------
+      const res1 = await fetch(
         "https://api.mymemory.translated.net/get?q=" +
           encodeURIComponent(text) +
-          "&langpair=hi|En"
+          "&langpair=en|fr"
       );
-      const data = await response.json();
+      const data1 = await res1.json();
+      const french = data1?.responseData?.translatedText;
+
+      //--------> Step 2: French -> English translation (back to English)   <--------
+      const res2 = await fetch(
+        "https://api.mymemory.translated.net/get?q=" +
+          encodeURIComponent(french) +
+          "&langpair=fr|en"
+      );
+      const data2 = await res2.json();
 
       const suggestion =
-        data?.responseData?.translatedText || "Could't rephrase right now.";
+        data2?.responseData?.translatedText || "Could not rephrase right now.";
       setRephrased(suggestion);
     } catch (err) {
-      console.log(err);
+      console.error(err);
       setRephrased("Error occurred while rephrasing.");
     } finally {
       setLoading(false);
@@ -38,15 +47,16 @@ function App() {
 
   function handleCopy() {
     navigator.clipboard.writeText(rephrased);
-    alert("Copy to clipboard");
+    alert("Copied to clipboard!");
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-4">
+    <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-gray-50">
       <div className="bg-white shadow-2xl rounded-2xl p-6 w-full max-w-lg">
         <h1 className="text-3xl font-bold text-center text-indigo-700 mb-6">
           📝 Sentence Rephraser
         </h1>
+
         <textarea
           value={text}
           onChange={(e) => setText(e.target.value)}
@@ -54,8 +64,12 @@ function App() {
           rows={5}
           className="w-full border border-gray-300 rounded-lg p-3 mb-4 focus:ring-2 focus:ring-indigo-500 outline-none"
         />
+
         <div className="flex justify-between mt-4">
-          <button onClick={handleClear} className="px-4 py-2 rounded-md border">
+          <button
+            onClick={handleClear}
+            className="px-4 py-2 rounded-md border hover:bg-gray-100 transition"
+          >
             Clear
           </button>
           <button
@@ -66,12 +80,13 @@ function App() {
             {loading ? "Rephrasing..." : "Rephrase"}
           </button>
         </div>
+
         {rephrased && (
           <div className="mt-6 bg-indigo-50 p-4 rounded-lg border border-indigo-100">
             <h3 className="font-semibold text-indigo-700 mb-2">
               ✨ Rephrased Sentence:
             </h3>
-            <p className="text-gray-800 text-sm">{rephrased} here</p>
+            <p className="text-gray-800 text-sm">{rephrased}</p>
             <button
               onClick={handleCopy}
               className="mt-3 text-xs px-3 py-1 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition"
