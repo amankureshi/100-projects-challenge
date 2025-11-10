@@ -51,9 +51,9 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-6">
       <div className="w-full max-w-md bg-white/10 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/20 p-8 text-center">
-        <h1 className="text-4xl font-extrabold text-white drop-shadow mb-4">
-          <GiMoebiusStar />
-          Rephrase It
+        <h1 className="flex items-center justify-center gap-2 text-4xl font-extrabold text-white drop-shadow mb-4">
+          <GiMoebiusStar className="text-teal-300 drop-shadow-md" />
+          <span className="">Rephrase It</span>
         </h1>
         <p className="text-white/80 mb-6 text-sm">
           Instantly rephrase your sentence with bilingual magic 🪄
