@@ -53,7 +53,7 @@ function App() {
       <div className="w-full max-w-md bg-white/10 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/20 p-8 text-center">
         <h1 className="flex items-center justify-center gap-2 text-4xl font-extrabold text-white drop-shadow mb-4">
           <GiMoebiusStar className="text-teal-300 drop-shadow-md" />
-          <span className="">Rephrase It</span>
+          <span>Rephrase It</span>
         </h1>
         <p className="text-white/80 mb-6 text-sm">
           Instantly rephrase your sentence with bilingual magic 🪄
