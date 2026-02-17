@@ -3,8 +3,9 @@ const Navabar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          Navbar
+          <span className="badge bg-light text-dark fs-4">Navbar</span>
         </a>
+
         <button
           className="navbar-toggler"
           type="button"
@@ -30,7 +31,7 @@ const Navabar = () => {
             <a
               className="nav-link disabled"
               href="#"
-              tabindex="-1"
+              tabIndex="-1"
               aria-disabled="true"
             >
               Disabled
