@@ -14,9 +14,10 @@ const NewsBoard = ({ category }) => {
 
   return (
     <div className="container py-5">
-      <h2 className="text-center mb-5 text-capitalize fw-bold">
-        {category} News
-      </h2>
+      <h5 className="text-start mb-5 text-capitalize fw-bold ">
+        <span className="border px-2 bg-danger text-white">{category}</span>{" "}
+        News
+      </h5>
 
       <div className="row g-4">
         {articles.map((news, index) => (
