@@ -1,29 +1,47 @@
 import { IoLogoInstagram } from "react-icons/io5";
 import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import Skeleton from "react-loading-skeleton";
+import { FaBluesky } from "react-icons/fa6";
+
 import "react-loading-skeleton/dist/skeleton.css";
 
 const Navabar = ({ setCategory }) => {
   return (
     <header>
       <nav className="navbar navbar-expand-lg container-fluid p-4">
-        <div className="container-fluid d-flex justify-content-between align-items-center">
+        <div className="container-fluid d-flex align-items-center">
           <div className="d-flex gap-4">
-            <a href="#" className="text-dark fs-5">
+            <a
+              href="https://www.instagram.com/kureshi_aman_/"
+              className="text-dark fs-5"
+              target="_blank"
+            >
               <IoLogoInstagram />
             </a>
-            <a href="#" className="text-dark fs-5">
+            <a
+              href="https://www.linkedin.com/in/aman-kureshi/"
+              className="text-dark fs-5"
+              target="_blank"
+            >
               <FaLinkedinIn />
             </a>
-            <a href="#" className="text-dark fs-5">
-              <FaFacebookF />
+            <a
+              href="https://bsky.app/profile/amankureshi.bsky.social"
+              className="text-dark fs-5"
+              target="_blank"
+            >
+              <FaBluesky className="fly-icon" />
             </a>
-            <a href="#" className="text-dark fs-5">
+            <a
+              href="https://github.com/amankureshi"
+              className="text-dark fs-5"
+              target="_blank"
+            >
               <FaGithub />
             </a>
           </div>
 
-          <h1 className="navbar-brand mx-auto text-uppercase fs-2" href="#">
+          <h1 className="navbar-brand mx-auto text-uppercase fs-2 m-0" href="#">
             Sirat<span className="text-danger"> News</span>
           </h1>
 
@@ -81,6 +99,9 @@ const Navabar = ({ setCategory }) => {
                 onClick={() => setCategory("entertainment")}
               >
                 Entertainment
+              </div>
+              <div href="#contactUs" className="nav-link text-black">
+                Contact Us
               </div>
             </div>
           </div>
