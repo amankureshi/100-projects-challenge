@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&family=Overpass:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%); */
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.navbar h1 {
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navbar .nav-link {
+    font-family: "Overpass", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.news-card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.news-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.text-black {
+    color: black;
+    cursor: pointer;
+}
+
+header .navbar .text-dark:hover {
+    color: #dc3545;
+}
+
+.nav-link:hover {
+    color: #dc3545;
+}
+
+.subscribeBtn {
+    border: none;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.subscribeBtn:hover {
+    transition: 0.3s ease-in-out;
+    background-color: #dc3545;
+}
