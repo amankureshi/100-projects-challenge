@@ -45,7 +45,7 @@ const Navabar = ({ setCategory }) => {
             Sirat<span className="text-danger"> News</span>
           </h1>
 
-          <button className="btn btn-dark rounded-0 px-4 py-3.5 fs-6 subscribeBtn">
+          <button className="btn btn-dark rounded-0 px-4 py-2 subscribeBtn">
             Subscribe
           </button>
         </div>
