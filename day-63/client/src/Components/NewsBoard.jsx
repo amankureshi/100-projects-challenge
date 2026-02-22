@@ -6,8 +6,7 @@ const NewsBoard = ({ category }) => {
 
   useEffect(() => {
     // let url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${import.meta.env.VITE_API_KEY}`;
-    let url = `http://localhost:5000/news?category=${category}`;
-
+    let url = `https://p1-server-z76q.onrender.com/news?category=${category}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
