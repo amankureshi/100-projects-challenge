@@ -20,7 +20,7 @@ const NewsBoard = ({ category }) => {
       </h5>
 
       <div className="row g-4">
-        {articles.map((news, index) => (
+        {articles?.map((news, index) => (
           <div className="col-lg-4 col-md-6 col-sm-12" key={index}>
             <NewsItem
               title={news.title}
@@ -30,6 +30,7 @@ const NewsBoard = ({ category }) => {
             />
           </div>
         ))}
+        {!articles && <p>Loading news...</p>}
       </div>
     </div>
   );
