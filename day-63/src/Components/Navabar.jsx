@@ -36,7 +36,7 @@ const Navabar = ({ setCategory }) => {
           </h1>
 
           {/* Subscribe - Desktop Only */}
-          <button className="btn btn-dark rounded-0 px-4 py-2 d-none d-lg-block">
+          <button className="btn btn-dark rounded-0 px-4 py-2 d-none d-lg-block subscribeBtn">
             Subscribe
           </button>
 
@@ -55,33 +55,33 @@ const Navabar = ({ setCategory }) => {
       {/* ================= DESKTOP CATEGORY NAV ================= */}
       <nav className="navbar navbar-expand-lg border-top border-bottom border-dark bg-light d-none d-lg-flex">
         <div className="container-fluid justify-content-center fw-bold gap-4 py-3">
-          <div
+          <Link
             className="nav-link link-dark"
             onClick={() => setCategory("technology")}
           >
             Technology
-          </div>
+          </Link>
 
-          <div
+          <Link
             className="nav-link link-dark"
             onClick={() => setCategory("business")}
           >
             Business
-          </div>
+          </Link>
 
-          <div
+          <Link
             className="nav-link link-dark"
             onClick={() => setCategory("health")}
           >
             Health
-          </div>
+          </Link>
 
-          <div
+          <Link
             className="nav-link link-dark"
             onClick={() => setCategory("sports")}
           >
             Sports
-          </div>
+          </Link>
 
           <Link
             className="nav-link link-dark"
@@ -132,7 +132,9 @@ const Navabar = ({ setCategory }) => {
 
           <Link to="contactUs">Contact</Link>
 
-          <button className="btn btn-dark rounded-0 mt-4">Subscribe</button>
+          <button className="btn btn-dark rounded-0 mt-4 subscribeBtn">
+            Subscribe
+          </button>
         </div>
       </div>
     </header>
