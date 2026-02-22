@@ -56,41 +56,41 @@ const Navabar = ({ setCategory }) => {
       <nav className="navbar navbar-expand-lg border-top border-bottom border-dark bg-light d-none d-lg-flex">
         <div className="container-fluid justify-content-center fw-bold gap-4 py-3">
           <div
-            className="nav-link text-dark"
+            className="nav-link link-dark"
             onClick={() => setCategory("technology")}
           >
             Technology
           </div>
 
           <div
-            className="nav-link text-dark"
+            className="nav-link link-dark"
             onClick={() => setCategory("business")}
           >
             Business
           </div>
 
           <div
-            className="nav-link text-dark"
+            className="nav-link link-dark"
             onClick={() => setCategory("health")}
           >
             Health
           </div>
 
           <div
-            className="nav-link text-dark"
+            className="nav-link link-dark"
             onClick={() => setCategory("sports")}
           >
             Sports
           </div>
 
           <Link
-            className="nav-link text-dark"
+            className="nav-link link-dark"
             onClick={() => setCategory("entertainment")}
           >
             Entertainment
           </Link>
 
-          <Link className="nav-link text-dark" to="contactUs">
+          <Link className="nav-link link-dark" to="contactUs">
             Contact Us
           </Link>
         </div>
