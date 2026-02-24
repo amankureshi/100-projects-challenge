@@ -1,16 +1,51 @@
-# React + Vite
+# ⏱️ Project 62: News App (React.js + Node.js Backend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔗 **Live Demo:** [ ]
 
-Currently, two official plugins are available:
+## 📄 Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A full-stack **News Application** where the **frontend is built with React.js & Bootstrap 5** and the **backend is powered by Node.js and Express**.  
+The app fetches real-time news using a **News API**, handled securely through a server-side REST API with proper error handling and environment variables.
 
-## React Compiler
+## 🔧 Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Frontend
 
-## Expanding the ESLint configuration
+- React.js
+- Bootstrap 5
+- React Skeleton Loader
+- useState & useEffect Hooks
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Backend
+
+- Node.js
+- Express.js
+- REST API
+- CORS
+- Environment Variables (`dotenv`)
+- Async / Await
+- Server-side API Calls
+- Error Handling
+
+## 🌟 Features
+
+- Fetch latest news from News API
+- Server-side API integration for security
+- Skeleton loading effect while fetching data
+- Clean and responsive UI using Bootstrap 5
+- Proper error handling for failed API requests
+
+## 🚀 Challenges Faced
+
+- Setting up secure server-side API calls
+- Managing CORS between frontend and backend
+- Handling loading, error, and success states smoothly
+- Implementing skeleton loaders for better UX
+
+## 🎯 Key Learnings
+
+- Full-stack integration between React and Node.js
+- Creating REST APIs using Express
+- Using environment variables to protect API keys
+- Improving user experience with skeleton loaders
+- Handling async operations and errors effectively
