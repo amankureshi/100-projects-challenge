@@ -65,3 +65,5 @@
 | 59  | [Grammar Checker](https://github.com/amankureshi/100-projects-challenge/tree/main/day-59)                | [Live Demo](https://grammer-checker-2025.onrender.com/)                                    |
 | 60  | [Word Scramble Game](https://github.com/amankureshi/100-projects-challenge/tree/main/day-60)             | [Live Demo](https://word-scramble-game-2025.onrender.com/)                                 |
 | 61  | [Word & Letter Counter](https://github.com/amankureshi/100-projects-challenge/tree/main/day-61)          | [Live Demo](https://word-and-letter-counter.onrender.com/)                                 |
+| 62  | [Rephrase Sentence](https://github.com/amankureshi/100-projects-challenge/tree/main/day-62)              | [Live Demo](https://rephrase-sentence-2025.onrender.com/)                                  |
+| 63  | [Sirat News](https://github.com/amankureshi/100-projects-challenge/tree/main/day-62)                     | [Live Demo](https://sirat-news.onrender.com/)                                              |
