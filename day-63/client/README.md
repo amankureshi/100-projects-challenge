@@ -1,6 +1,6 @@
 # ⏱️ Project 62: News App (React.js + Node.js Backend)
 
-🔗 **Live Demo:** [https://sirat-news.onrender.com/ ]
+🔗 **Live Demo:** [https://sirat-news.onrender.com/]
 
 ## 📄 Description
 
