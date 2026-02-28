@@ -25,10 +25,30 @@ const Navabar = ({ setCategory }) => {
       <nav className="navbar navbar-expand-lg navbar-light bg-light container-fluid p-4 border-bottom">
         <div className="container-fluid d-flex align-items-center justify-content-between">
           <div className="d-none d-lg-flex gap-4">
-            <IoLogoInstagram className="fs-5" />
-            <FaLinkedinIn className="fs-5" />
-            <FaBluesky className="fs-5" />
-            <FaGithub className="fs-5" />
+            <a href="" className="text-dark">
+              <IoLogoInstagram className="fs-5" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/aman-kureshi/"
+              target="_blank"
+              className="text-dark"
+            >
+              <FaLinkedinIn className="fs-5" />
+            </a>
+            <a
+              href="https://bsky.app/profile/amankureshi.bsky.social"
+              target="_blank"
+              className="text-dark"
+            >
+              <FaBluesky className="fs-5" />
+            </a>
+            <a
+              href="https://github.com/amankureshi"
+              target="_blank"
+              className="text-dark"
+            >
+              <FaGithub className="fs-5" />
+            </a>
           </div>
 
           <h1 className="navbar-brand mx-auto text-uppercase fs-2 m-0">
